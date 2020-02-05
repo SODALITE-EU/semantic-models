@@ -1,0 +1,384 @@
+# baseURI: https://www.sodalite.eu/ontologies/vehicle/tier1/
+# imports: https://www.sodalite.eu/ontologies/snow-vehicle/tier1/
+
+@prefix : <https://www.sodalite.eu/ontologies/vehicle/tier1/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soda: <https://www.sodalite.eu/ontologies/sodalite-metamodel/> .
+@prefix sv1: <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/> .
+@prefix tosca: <https://www.sodalite.eu/ontologies/tosca/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports sv1: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Interface_1
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_14 ;
+  DUL:hasParameter :SodaliteParameter_4 ;
+  DUL:hasParameter :SodaliteParameter_5 ;
+.
+:Interface_2
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_28 ;
+  DUL:hasParameter :SodaliteParameter_29 ;
+  DUL:hasParameter :SodaliteParameter_34 ;
+.
+:Property_1
+  rdf:type tosca:Property ;
+  dcterms:description "Id of the registered service" ;
+  DUL:classifies :service_id ;
+  DUL:hasParameter :required_true ;
+  DUL:hasParameter :type_string ;
+.
+:Property_2
+  rdf:type tosca:Property ;
+  dcterms:description "Service name of the registered service" ;
+  DUL:classifies :service_name ;
+  DUL:hasParameter :SodaliteParameter_1 ;
+  DUL:hasParameter :required_false ;
+  DUL:hasParameter :type_string ;
+.
+:Property_3
+  rdf:type tosca:Property ;
+  dcterms:description "Address of the registered service - if empty then ansible_ip_v4" ;
+  DUL:classifies :service_address ;
+  DUL:hasParameter :SodaliteParameter_2 ;
+  DUL:hasParameter :required_false ;
+  DUL:hasParameter :type_string ;
+.
+:Property_4
+  rdf:type tosca:Property ;
+  dcterms:description "Port of the registered service" ;
+  DUL:classifies :service_port ;
+  DUL:hasParameter :required_true ;
+  DUL:hasParameter :type_string ;
+.
+:Property_5
+  rdf:type tosca:Property ;
+  dcterms:description "Tags for the service registration in consul " ;
+  DUL:classifies :tags ;
+  DUL:hasParameter :SodaliteParameter_3 ;
+  DUL:hasParameter :required_true ;
+.
+:Property_6
+  rdf:type tosca:Property ;
+  dcterms:description "List of packages to install via pip" ;
+  DUL:classifies :packages ;
+  DUL:hasParameter :SodaliteParameter_26 ;
+  DUL:hasParameter :SodaliteParameter_27 ;
+  DUL:hasParameter :required_true ;
+.
+:Requirement_1
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  DUL:hasParameter :SodaliteParameter_20 ;
+  DUL:hasParameter :SodaliteParameter_21 ;
+  DUL:hasParameter :SodaliteParameter_22 ;
+.
+:Requirement_2
+  rdf:type tosca:Requirement ;
+  DUL:classifies :registers_service ;
+  DUL:hasParameter :SodaliteParameter_19 ;
+  DUL:hasParameter :SodaliteParameter_23 ;
+.
+:Requirement_3
+  rdf:type tosca:Requirement ;
+  DUL:classifies :requires_installation ;
+  DUL:hasParameter :SodaliteParameter_24 ;
+  DUL:hasParameter :SodaliteParameter_25 ;
+.
+:Requirement_4
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  DUL:hasParameter :SodaliteParameter_39 ;
+  DUL:hasParameter :SodaliteParameter_40 ;
+  DUL:hasParameter :SodaliteParameter_41 ;
+.
+:SodaliteDescription_1
+  rdf:type soda:SodaliteDescription ;
+  tosca:interfaces :Interface_1 ;
+  tosca:properties :Property_1 ;
+  tosca:properties :Property_2 ;
+  tosca:properties :Property_3 ;
+  tosca:properties :Property_4 ;
+  tosca:properties :Property_5 ;
+  tosca:requirements :Requirement_1 ;
+  tosca:requirements :Requirement_2 ;
+  tosca:requirements :Requirement_3 ;
+.
+:SodaliteDescription_2
+  rdf:type soda:SodaliteDescription ;
+  tosca:interfaces :Interface_2 ;
+  tosca:properties :Property_6 ;
+  tosca:requirements :Requirement_4 ;
+.
+:SodaliteParameter_1
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "image_name" ;
+.
+:SodaliteParameter_10
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :service_port ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, service_port ] } }" ;
+.
+:SodaliteParameter_11
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :tags ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, tags ] } }" ;
+.
+:SodaliteParameter_12
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_13 ;
+.
+:SodaliteParameter_13
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/software/consul_register_add.yml" ;
+.
+:SodaliteParameter_14
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_15 ;
+  DUL:hasParameter :SodaliteParameter_17 ;
+.
+:SodaliteParameter_15
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_16 ;
+.
+:SodaliteParameter_16
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :service_id ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, service_id ] } }" ;
+.
+:SodaliteParameter_17
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_18 ;
+.
+:SodaliteParameter_18
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/software/consul_register_remove.yml" ;
+.
+:SodaliteParameter_19
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+.
+:SodaliteParameter_2
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue " " ;
+.
+:SodaliteParameter_20
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+.
+:SodaliteParameter_21
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:node ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Compute> ;
+.
+:SodaliteParameter_22
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.HostedOn> ;
+.
+:SodaliteParameter_23
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.DependsOn> ;
+.
+:SodaliteParameter_24
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+.
+:SodaliteParameter_25
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.DependsOn> ;
+.
+:SodaliteParameter_26
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:list ;
+.
+:SodaliteParameter_27
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "null" ;
+.
+:SodaliteParameter_28
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_29
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_30 ;
+  DUL:hasParameter :SodaliteParameter_32 ;
+.
+:SodaliteParameter_3
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:list ;
+.
+:SodaliteParameter_30
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_31 ;
+.
+:SodaliteParameter_31
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :packages ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, packages ] } }" ;
+.
+:SodaliteParameter_32
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_33 ;
+.
+:SodaliteParameter_33
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/software/pip_add.yml" ;
+.
+:SodaliteParameter_34
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_35 ;
+  DUL:hasParameter :SodaliteParameter_37 ;
+.
+:SodaliteParameter_35
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_36 ;
+.
+:SodaliteParameter_36
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :packages ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, packages ] } }" ;
+.
+:SodaliteParameter_37
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_38 ;
+.
+:SodaliteParameter_38
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/software/pip_remove.yml" ;
+.
+:SodaliteParameter_39
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+.
+:SodaliteParameter_4
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_40
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:node ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Compute> ;
+.
+:SodaliteParameter_41
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.HostedOn> ;
+.
+:SodaliteParameter_5
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_12 ;
+  DUL:hasParameter :SodaliteParameter_6 ;
+.
+:SodaliteParameter_6
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_10 ;
+  DUL:hasParameter :SodaliteParameter_11 ;
+  DUL:hasParameter :SodaliteParameter_7 ;
+  DUL:hasParameter :SodaliteParameter_8 ;
+  DUL:hasParameter :SodaliteParameter_9 ;
+.
+:SodaliteParameter_7
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :service_id ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, service_id ] } }" ;
+.
+:SodaliteParameter_8
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :service_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, service_name ] } }" ;
+.
+:SodaliteParameter_9
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :service_address ;
+  tosca:hasDataValue "{ default: { get_attribute: [ SELF, registers_service, host, ansible_ip ] } } " ;
+.
+:packages
+  rdf:type rdf:Property ;
+.
+:registers_service
+  rdf:type rdf:Property ;
+.
+:required_false
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:required_true
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:requires_installation
+  rdf:type rdf:Property ;
+.
+:service_address
+  rdf:type rdf:Property ;
+.
+:service_id
+  rdf:type rdf:Property ;
+.
+:service_name
+  rdf:type rdf:Property ;
+.
+:service_port
+  rdf:type rdf:Property ;
+.
+<https://www.sodalite.eu/ontologies/vehicle/tier1/sodalite.nodes.software.PipPackagesSetup>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+  soda:hasContext :SodaliteDescription_2 ;
+.
+<https://www.sodalite.eu/ontologies/vehicle/tier1/sodalite.nodes.software.Register2consul>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+  soda:hasContext :SodaliteDescription_1 ;
+.
+:tags
+  rdf:type rdf:Property ;
+.
+:type_string
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.

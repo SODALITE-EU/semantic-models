@@ -1,0 +1,580 @@
+# baseURI: https://www.sodalite.eu/ontologies/vehicle/tier2/
+# imports: https://www.sodalite.eu/ontologies/vehicle/tier1/
+
+@prefix : <https://www.sodalite.eu/ontologies/vehicle/tier2/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soda: <https://www.sodalite.eu/ontologies/sodalite-metamodel/> .
+@prefix sv1: <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/> .
+@prefix tosca: <https://www.sodalite.eu/ontologies/tosca/> .
+@prefix v1: <https://www.sodalite.eu/ontologies/vehicle/tier1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports v1: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:AbstractApplicationDeployment_2
+  rdf:type soda:AbstractApplicationDeployment ;
+  soda:createdAt "2020-02-04T23:00:48.204+02:00"^^xsd:dateTime ;
+  soda:createdBy :User_2 ;
+  soda:includesInput :parameters ;
+  soda:includesTemplate :consul-agent ;
+  soda:includesTemplate :docker-host ;
+  soda:includesTemplate :go-region-router ;
+  soda:includesTemplate :http-echo-de ;
+  soda:includesTemplate :notification-callback-server ;
+  soda:includesTemplate :notification-server ;
+  soda:includesTemplate :pip-setup ;
+  soda:includesTemplate :register-service-de ;
+  soda:includesTemplate :reverse-geocoder ;
+  soda:includesTemplate :security-rules-vehicle-iot ;
+  soda:includesTemplate :vm ;
+.
+:Feature_1
+  rdf:type tosca:Feature ;
+  DUL:classifies :ssh-key-name ;
+  DUL:hasParameter :SodaliteParameter_13 ;
+.
+:Feature_2
+  rdf:type tosca:Feature ;
+  DUL:classifies :docker-registry-ip ;
+  DUL:hasParameter :SodaliteParameter_14 ;
+.
+:Property_1
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:group_name ;
+  tosca:hasDataValue "vehicle-iot-delete" ;
+.
+:Property_10
+  rdf:type tosca:Property ;
+  DUL:classifies v1:packages ;
+  tosca:hasDataValue "python-consul" ;
+.
+:Property_11
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:registry_ip ;
+  tosca:hasDataValue "{ get_input: docker-registry-ip }" ;
+.
+:Property_12
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "linvirt/echo-server" ;
+.
+:Property_13
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "notification-callback-server" ;
+.
+:Property_14
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:command ;
+  tosca:hasDataValue "http-echo-server 8443" ;
+.
+:Property_15
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "8443:8443" ;
+.
+:Property_16
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "8443" ;
+.
+:Property_17
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "hashicorp/http-echo" ;
+.
+:Property_18
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "http-echo-de" ;
+.
+:Property_19
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:command ;
+  tosca:hasDataValue "-text=\"hello from the DE endpoint\"" ;
+.
+:Property_2
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:group_description ;
+  tosca:hasDataValue "vehicle-iot security group" ;
+.
+:Property_20
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "5678:5678" ;
+.
+:Property_21
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "5678" ;
+.
+:Property_22
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "consul" ;
+.
+:Property_23
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "consul" ;
+.
+:Property_24
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "8500:8500" ;
+.
+:Property_25
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "8500" ;
+.
+:Property_26
+  rdf:type tosca:Property ;
+  DUL:classifies v1:service_id ;
+  tosca:hasDataValue "apigw0" ;
+.
+:Property_27
+  rdf:type tosca:Property ;
+  DUL:classifies v1:service_name ;
+  tosca:hasDataValue "api" ;
+.
+:Property_28
+  rdf:type tosca:Property ;
+  DUL:classifies v1:service_port ;
+  tosca:hasDataValue "5678" ;
+.
+:Property_29
+  rdf:type tosca:Property ;
+  DUL:classifies v1:tags ;
+  tosca:hasDataValue "region-de" ;
+  tosca:hasDataValue "v1" ;
+.
+:Property_3
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  DUL:hasParameter :SodaliteParameter_1 ;
+  DUL:hasParameter :SodaliteParameter_6 ;
+.
+:Property_30
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "adaptant/reverse-geocoding-service" ;
+.
+:Property_31
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "reverse-geocoding-service" ;
+.
+:Property_32
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:command ;
+  tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+.
+:Property_33
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "4041:4041" ;
+.
+:Property_34
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "4041" ;
+.
+:Property_35
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "linvirt/echo-server" ;
+.
+:Property_36
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "notification-callback-server" ;
+.
+:Property_37
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:command ;
+  tosca:hasDataValue "http-echo-server 8443" ;
+.
+:Property_38
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "8443:8443" ;
+.
+:Property_39
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "8443" ;
+.
+:Property_4
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:name ;
+  tosca:hasDataValue "vehicle-demo-vm" ;
+.
+:Property_40
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image_name ;
+  tosca:hasDataValue "adaptant/go-region-router:notifications" ;
+.
+:Property_41
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:alias ;
+  tosca:hasDataValue "go-region-router" ;
+.
+:Property_42
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:command ;
+  tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+.
+:Property_43
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:restart_policy ;
+  tosca:hasDataValue "always" ;
+.
+:Property_44
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:env ;
+  DUL:hasParameter :SodaliteParameter_11 ;
+  DUL:hasParameter :SodaliteParameter_12 ;
+.
+:Property_45
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:ports ;
+  tosca:hasDataValue "7000:7000" ;
+.
+:Property_46
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:exposed_ports ;
+  tosca:hasDataValue "7000" ;
+.
+:Property_5
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:image ;
+  tosca:hasDataValue "centos7" ;
+.
+:Property_6
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:flavor ;
+  tosca:hasDataValue "m1.small" ;
+.
+:Property_7
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:network ;
+  tosca:hasDataValue "orchestrator-net" ;
+.
+:Property_8
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:security_groups ;
+  tosca:hasDataValue "default,vehicle-iot" ;
+.
+:Property_9
+  rdf:type tosca:Property ;
+  DUL:classifies sv1:key_name ;
+  tosca:hasDataValue "{ get_input: ssh-key-name }" ;
+.
+:REGION_ROUTER_NOTIFICATION_URL
+  rdf:type rdf:Property ;
+.
+:REVERSE_GEOCODING_SERVICE
+  rdf:type rdf:Property ;
+.
+:Requirement_1
+  rdf:type tosca:Requirement ;
+  DUL:classifies sv1:protected_by ;
+  tosca:hasObjectValue :security-rules-vehicle-iot ;
+.
+:Requirement_10
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_11
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_12
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_2
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :vm ;
+.
+:Requirement_3
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :vm ;
+.
+:Requirement_4
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_5
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_6
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :docker-host ;
+.
+:Requirement_7
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  tosca:hasObjectValue :vm ;
+.
+:Requirement_8
+  rdf:type tosca:Requirement ;
+  DUL:classifies v1:registers_service ;
+  tosca:hasObjectValue :http-echo-de ;
+.
+:Requirement_9
+  rdf:type tosca:Requirement ;
+  DUL:classifies v1:requires_installation ;
+  tosca:hasObjectValue :pip-setup ;
+.
+:SodaliteDescription_1
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_1 ;
+  tosca:properties :Property_2 ;
+  tosca:properties :Property_3 ;
+.
+:SodaliteDescription_10
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_35 ;
+  tosca:properties :Property_36 ;
+  tosca:properties :Property_37 ;
+  tosca:properties :Property_38 ;
+  tosca:properties :Property_39 ;
+  tosca:requirements :Requirement_11 ;
+.
+:SodaliteDescription_11
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_40 ;
+  tosca:properties :Property_41 ;
+  tosca:properties :Property_42 ;
+  tosca:properties :Property_43 ;
+  tosca:properties :Property_44 ;
+  tosca:properties :Property_45 ;
+  tosca:properties :Property_46 ;
+  tosca:requirements :Requirement_12 ;
+.
+:SodaliteDescription_12
+  rdf:type soda:SodaliteDescription ;
+  tosca:input :Feature_1 ;
+  tosca:input :Feature_2 ;
+.
+:SodaliteDescription_2
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_4 ;
+  tosca:properties :Property_5 ;
+  tosca:properties :Property_6 ;
+  tosca:properties :Property_7 ;
+  tosca:properties :Property_8 ;
+  tosca:properties :Property_9 ;
+  tosca:requirements :Requirement_1 ;
+.
+:SodaliteDescription_3
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_10 ;
+  tosca:requirements :Requirement_2 ;
+.
+:SodaliteDescription_4
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_11 ;
+  tosca:requirements :Requirement_3 ;
+.
+:SodaliteDescription_5
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_12 ;
+  tosca:properties :Property_13 ;
+  tosca:properties :Property_14 ;
+  tosca:properties :Property_15 ;
+  tosca:properties :Property_16 ;
+  tosca:requirements :Requirement_4 ;
+.
+:SodaliteDescription_6
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_17 ;
+  tosca:properties :Property_18 ;
+  tosca:properties :Property_19 ;
+  tosca:properties :Property_20 ;
+  tosca:properties :Property_21 ;
+  tosca:requirements :Requirement_5 ;
+.
+:SodaliteDescription_7
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_22 ;
+  tosca:properties :Property_23 ;
+  tosca:properties :Property_24 ;
+  tosca:properties :Property_25 ;
+  tosca:requirements :Requirement_6 ;
+.
+:SodaliteDescription_8
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_26 ;
+  tosca:properties :Property_27 ;
+  tosca:properties :Property_28 ;
+  tosca:properties :Property_29 ;
+  tosca:requirements :Requirement_7 ;
+  tosca:requirements :Requirement_8 ;
+  tosca:requirements :Requirement_9 ;
+.
+:SodaliteDescription_9
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_30 ;
+  tosca:properties :Property_31 ;
+  tosca:properties :Property_32 ;
+  tosca:properties :Property_33 ;
+  tosca:properties :Property_34 ;
+  tosca:requirements :Requirement_10 ;
+.
+:SodaliteParameter_1
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :rooter_port ;
+  DUL:hasParameter :SodaliteParameter_2 ;
+  DUL:hasParameter :SodaliteParameter_3 ;
+  DUL:hasParameter :SodaliteParameter_4 ;
+  DUL:hasParameter :SodaliteParameter_5 ;
+.
+:SodaliteParameter_10
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:remote_ip_prefix ;
+  tosca:hasDataValue "0.0.0.0/0" ;
+.
+:SodaliteParameter_11
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :REVERSE_GEOCODING_SERVICE ;
+  tosca:hasDataValue "{{ansible_default_ipv4.address}}:4041" ;
+.
+:SodaliteParameter_12
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :REGION_ROUTER_NOTIFICATION_URL ;
+  tosca:hasDataValue "{{ansible_default_ipv4.address}}:8443" ;
+.
+:SodaliteParameter_13
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_14
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_2
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:protocol ;
+  tosca:hasDataValue "tcp" ;
+.
+:SodaliteParameter_3
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:port_range_min ;
+  tosca:hasDataValue "7000" ;
+.
+:SodaliteParameter_4
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:port_range_max ;
+  tosca:hasDataValue "7000" ;
+.
+:SodaliteParameter_5
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:remote_ip_prefix ;
+  tosca:hasDataValue "0.0.0.0/0" ;
+.
+:SodaliteParameter_6
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :target_ports ;
+  DUL:hasParameter :SodaliteParameter_10 ;
+  DUL:hasParameter :SodaliteParameter_7 ;
+  DUL:hasParameter :SodaliteParameter_8 ;
+  DUL:hasParameter :SodaliteParameter_9 ;
+.
+:SodaliteParameter_7
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:protocol ;
+  tosca:hasDataValue "tcp" ;
+.
+:SodaliteParameter_8
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:port_range_min ;
+  tosca:hasDataValue "5678" ;
+.
+:SodaliteParameter_9
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies sv1:port_range_max ;
+  tosca:hasDataValue "5680" ;
+.
+:User_2
+  rdf:type soda:User ;
+.
+:consul-agent
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_7 ;
+.
+:docker-host
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
+  soda:hasContext :SodaliteDescription_4 ;
+.
+:docker-registry-ip
+  rdf:type rdf:Property ;
+.
+:go-region-router
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_11 ;
+.
+:http-echo-de
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_6 ;
+.
+:notification-callback-server
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_5 ;
+.
+:notification-server
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_10 ;
+.
+:parameters
+  rdf:type tosca:Input ;
+  soda:hasContext :SodaliteDescription_12 ;
+.
+:pip-setup
+  rdf:type <https://www.sodalite.eu/ontologies/vehicle/tier1/sodalite.nodes.software.PipPackagesSetup> ;
+  soda:hasContext :SodaliteDescription_3 ;
+.
+:register-service-de
+  rdf:type <https://www.sodalite.eu/ontologies/vehicle/tier1/sodalite.nodes.software.Register2consul> ;
+  soda:hasContext :SodaliteDescription_8 ;
+.
+:reverse-geocoder
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+  soda:hasContext :SodaliteDescription_9 ;
+.
+:rooter_port
+  rdf:type rdf:Property ;
+.
+:security-rules-vehicle-iot
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
+  soda:hasContext :SodaliteDescription_1 ;
+.
+:ssh-key-name
+  rdf:type rdf:Property ;
+.
+:target_ports
+  rdf:type rdf:Property ;
+.
+:vm
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.VM> ;
+  soda:hasContext :SodaliteDescription_2 ;
+.

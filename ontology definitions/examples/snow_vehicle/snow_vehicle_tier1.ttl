@@ -1,0 +1,1067 @@
+# baseURI: https://www.sodalite.eu/ontologies/snow-vehicle/tier1/
+# imports: https://www.sodalite.eu/ontologies/tosca/
+
+@prefix : <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soda: <https://www.sodalite.eu/ontologies/sodalite-metamodel/> .
+@prefix tosca: <https://www.sodalite.eu/ontologies/tosca/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports tosca: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Attribute_1
+  rdf:type tosca:Attribute ;
+  dcterms:description "IP of the SODALITE docker registry" ;
+  DUL:classifies :registry_ip ;
+  DUL:hasParameter :SodaliteParameter_4 ;
+.
+:Attribute_2
+  rdf:type tosca:Attribute ;
+  dcterms:description "OpenStack id of the VM" ;
+  DUL:classifies :id ;
+  DUL:hasParameter :SodaliteParameter_49 ;
+.
+:Attribute_3
+  rdf:type tosca:Attribute ;
+  dcterms:description "Private ipv4" ;
+  DUL:classifies :private_address ;
+  DUL:hasParameter :SodaliteParameter_50 ;
+.
+:Attribute_4
+  rdf:type tosca:Attribute ;
+  dcterms:description "Public ipv4" ;
+  DUL:classifies :public_address ;
+  DUL:hasParameter :SodaliteParameter_51 ;
+.
+:Attribute_5
+  rdf:type tosca:Attribute ;
+  dcterms:description "ansible ipv4" ;
+  DUL:hasParameter :SodaliteParameter_66 ;
+.
+:Attribute_6
+  rdf:type tosca:Attribute ;
+  dcterms:description "ansible ipv4" ;
+  DUL:classifies :ansible_ip ;
+  DUL:hasParameter :SodaliteParameter_37 ;
+.
+:Capability_1
+  rdf:type tosca:Capability ;
+  DUL:classifies tosca:host ;
+  DUL:hasParameter :SodaliteParameter_17 ;
+  DUL:hasParameter :SodaliteParameter_18 ;
+.
+:Interface_1
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_12 ;
+  DUL:hasParameter :SodaliteParameter_5 ;
+  DUL:hasParameter :SodaliteParameter_6 ;
+.
+:Interface_2
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_25 ;
+  DUL:hasParameter :SodaliteParameter_26 ;
+  DUL:hasParameter :SodaliteParameter_34 ;
+.
+:Interface_3
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_52 ;
+  DUL:hasParameter :SodaliteParameter_53 ;
+  DUL:hasParameter :SodaliteParameter_62 ;
+.
+:Interface_4
+  rdf:type tosca:Interface ;
+  DUL:classifies tosca:Standard ;
+  DUL:hasParameter :SodaliteParameter_108 ;
+  DUL:hasParameter :SodaliteParameter_109 ;
+  DUL:hasParameter :SodaliteParameter_115 ;
+.
+:List_1
+  rdf:type tosca:List ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
+.
+:List_2
+  rdf:type tosca:List ;
+  tosca:hasDataValue "icmp" ;
+  tosca:hasDataValue "tcp" ;
+  tosca:hasDataValue "udp" ;
+.
+:Property_1
+  rdf:type tosca:Property ;
+  dcterms:description "IP of the SODALITE docker registry" ;
+  DUL:classifies :registry_ip ;
+  DUL:hasParameter :SodaliteParameter_1 ;
+  DUL:hasParameter :SodaliteParameter_2 ;
+  DUL:hasParameter :SodaliteParameter_3 ;
+.
+:Property_10
+  rdf:type tosca:Property ;
+  DUL:classifies :protocol ;
+  DUL:hasParameter :SodaliteParameter_86 ;
+  DUL:hasParameter :SodaliteParameter_87 ;
+  DUL:hasParameter :SodaliteParameter_88 ;
+  DUL:hasParameter :SodaliteParameter_89 ;
+.
+:Property_11
+  rdf:type tosca:Property ;
+  dcterms:description "Alias name for docker container" ;
+  DUL:classifies :alias ;
+  DUL:hasParameter :SodaliteParameter_67 ;
+  DUL:hasParameter :SodaliteParameter_68 ;
+.
+:Property_12
+  rdf:type tosca:Property ;
+  dcterms:description "Commands list for starting the container" ;
+  DUL:classifies :command ;
+  DUL:hasParameter :SodaliteParameter_69 ;
+  DUL:hasParameter :SodaliteParameter_70 ;
+  DUL:hasParameter :SodaliteParameter_71 ;
+.
+:Property_13
+  rdf:type tosca:Property ;
+  dcterms:description "Map for docker enviroment variables key-value dictionary" ;
+  DUL:classifies :env ;
+  DUL:hasParameter :SodaliteParameter_72 ;
+  DUL:hasParameter :SodaliteParameter_73 ;
+.
+:Property_14
+  rdf:type tosca:Property ;
+  dcterms:description "A list of mounted volumes for the docker container \"host_path:container_path\" like \"/tmp/docker:/tmp\"" ;
+  DUL:classifies :volumes ;
+  DUL:hasParameter :SodaliteParameter_74 ;
+  DUL:hasParameter :SodaliteParameter_75 ;
+.
+:Property_15
+  rdf:type tosca:Property ;
+  dcterms:description "Restart policy [no, on-failure, always, unless-stopped]" ;
+  DUL:classifies :restart_policy ;
+  DUL:hasParameter :SodaliteParameter_76 ;
+  DUL:hasParameter :SodaliteParameter_77 ;
+  DUL:hasParameter :SodaliteParameter_78 ;
+.
+:Property_16
+  rdf:type tosca:Property ;
+  DUL:classifies :port_range_min ;
+  DUL:hasParameter :SodaliteParameter_91 ;
+  DUL:hasParameter :SodaliteParameter_92 ;
+.
+:Property_17
+  rdf:type tosca:Property ;
+  DUL:classifies :port_range_max ;
+  DUL:hasParameter :SodaliteParameter_93 ;
+  DUL:hasParameter :SodaliteParameter_94 ;
+.
+:Property_18
+  rdf:type tosca:Property ;
+  DUL:classifies :remote_ip_prefix ;
+  DUL:hasParameter :SodaliteParameter_95 ;
+  DUL:hasParameter :SodaliteParameter_96 ;
+  DUL:hasParameter :SodaliteParameter_97 ;
+.
+:Property_19
+  rdf:type tosca:Property ;
+  dcterms:description "Name of the security group in openstack." ;
+  DUL:classifies :group_name ;
+  DUL:hasParameter :SodaliteParameter_98 ;
+  DUL:hasParameter :SodaliteParameter_99 ;
+.
+:Property_2
+  rdf:type tosca:Property ;
+  dcterms:description "The name of the image on the host" ;
+  DUL:classifies :image_name ;
+  DUL:hasParameter :SodaliteParameter_19 ;
+  DUL:hasParameter :SodaliteParameter_20 ;
+.
+:Property_20
+  rdf:type tosca:Property ;
+  dcterms:description "Description of the security group in openstack." ;
+  DUL:classifies :group_description ;
+  DUL:hasParameter :SodaliteParameter_100 ;
+  DUL:hasParameter :SodaliteParameter_101 ;
+.
+:Property_21
+  rdf:type tosca:Property ;
+  DUL:classifies :ports ;
+  DUL:hasParameter :SodaliteParameter_102 ;
+  DUL:hasParameter :SodaliteParameter_103 ;
+  DUL:hasParameter :SodaliteParameter_104 ;
+  DUL:hasParameter :SodaliteParameter_106 ;
+.
+:Property_22
+  rdf:type tosca:Property ;
+  dcterms:description "OpenStack SSH key name that should be placed on the VM" ;
+  DUL:classifies :key_name ;
+  DUL:hasParameter :SodaliteParameter_119 ;
+.
+:Property_23
+  rdf:type tosca:Property ;
+  dcterms:description "If true, always pull the latest version of an image. Otherwise, will only pull an image when missing." ;
+  DUL:classifies :pull ;
+  DUL:hasParameter :SodaliteParameter_120 ;
+  DUL:hasParameter :SodaliteParameter_121 ;
+  DUL:hasParameter :SodaliteParameter_122 ;
+.
+:Property_3
+  rdf:type tosca:Property ;
+  dcterms:description "Port binding for the docker container \"exposed:internal\" like \"8081:8080\"" ;
+  DUL:classifies :ports ;
+  DUL:hasParameter :SodaliteParameter_21 ;
+  DUL:hasParameter :SodaliteParameter_22 ;
+.
+:Property_4
+  rdf:type tosca:Property ;
+  dcterms:description "Exposed ports of the container like \"8081\"" ;
+  DUL:classifies :exposed_ports ;
+  DUL:hasParameter :SodaliteParameter_23 ;
+  DUL:hasParameter :SodaliteParameter_24 ;
+.
+:Property_5
+  rdf:type tosca:Property ;
+  dcterms:description "Name that should be given to the VM in OpenStack" ;
+  DUL:classifies :name ;
+  DUL:hasParameter :SodaliteParameter_43 ;
+.
+:Property_6
+  rdf:type tosca:Property ;
+  dcterms:description "OpenStack image id (image names are not accepted)" ;
+  DUL:classifies :image ;
+  DUL:hasParameter :SodaliteParameter_44 ;
+.
+:Property_7
+  rdf:type tosca:Property ;
+  dcterms:description "OpenStack flavor id (flavor names are not accepted)" ;
+  DUL:classifies :flavor ;
+  DUL:hasParameter :SodaliteParameter_45 ;
+.
+:Property_8
+  rdf:type tosca:Property ;
+  dcterms:description "OpenStack network id (network names are not accepted)" ;
+  DUL:classifies :network ;
+  DUL:hasParameter :SodaliteParameter_46 ;
+.
+:Property_9
+  rdf:type tosca:Property ;
+  dcterms:description "OpenStack names of the security groups to which the instance should be added.Comma separated string." ;
+  DUL:classifies :security_groups ;
+  DUL:hasParameter :SodaliteParameter_47 ;
+.
+:Requirement_1
+  rdf:type tosca:Requirement ;
+  DUL:classifies tosca:host ;
+  DUL:hasParameter :SodaliteParameter_40 ;
+  DUL:hasParameter :SodaliteParameter_41 ;
+  DUL:hasParameter :SodaliteParameter_42 ;
+.
+:Requirement_2
+  rdf:type tosca:Requirement ;
+  DUL:classifies :protected_by ;
+  DUL:hasParameter :SodaliteParameter_48 ;
+  DUL:hasParameter :SodaliteParameter_85 ;
+.
+:SodaliteDescription_1
+  rdf:type soda:SodaliteDescription ;
+  tosca:attributes :Attribute_1 ;
+  tosca:attributes :Attribute_5 ;
+  tosca:capabilities :Capability_1 ;
+  tosca:interfaces :Interface_1 ;
+  tosca:properties :Property_1 ;
+.
+:SodaliteDescription_2
+  rdf:type soda:SodaliteDescription ;
+  tosca:interfaces :Interface_2 ;
+  tosca:properties :Property_11 ;
+  tosca:properties :Property_12 ;
+  tosca:properties :Property_13 ;
+  tosca:properties :Property_14 ;
+  tosca:properties :Property_15 ;
+  tosca:properties :Property_2 ;
+  tosca:properties :Property_23 ;
+  tosca:properties :Property_3 ;
+  tosca:properties :Property_4 ;
+  tosca:requirements :Requirement_1 ;
+.
+:SodaliteDescription_3
+  rdf:type soda:SodaliteDescription ;
+  tosca:attributes :Attribute_2 ;
+  tosca:attributes :Attribute_3 ;
+  tosca:attributes :Attribute_4 ;
+  tosca:attributes :Attribute_6 ;
+  tosca:interfaces :Interface_3 ;
+  tosca:properties :Property_22 ;
+  tosca:properties :Property_5 ;
+  tosca:properties :Property_6 ;
+  tosca:properties :Property_7 ;
+  tosca:properties :Property_8 ;
+  tosca:properties :Property_9 ;
+  tosca:requirements :Requirement_2 ;
+.
+:SodaliteDescription_4
+  rdf:type soda:SodaliteDescription ;
+  tosca:properties :Property_10 ;
+  tosca:properties :Property_16 ;
+  tosca:properties :Property_17 ;
+  tosca:properties :Property_18 ;
+.
+:SodaliteDescription_5
+  rdf:type soda:SodaliteDescription ;
+  tosca:interfaces :Interface_4 ;
+  tosca:properties :Property_19 ;
+  tosca:properties :Property_20 ;
+  tosca:properties :Property_21 ;
+.
+:SodaliteParameter_1
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "localhost" ;
+.
+:SodaliteParameter_10
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_11 ;
+.
+:SodaliteParameter_100
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_101
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_102
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:map ;
+.
+:SodaliteParameter_103
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_104
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:constraints ;
+  DUL:hasParameter :SodaliteParameter_105 ;
+.
+:SodaliteParameter_105
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:min_length ;
+  tosca:hasDataValue "1" ;
+.
+:SodaliteParameter_106
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:entry_schema ;
+  DUL:hasParameter :SodaliteParameter_107 ;
+.
+:SodaliteParameter_107
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRule> ;
+.
+:SodaliteParameter_108
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_109
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_110 ;
+  DUL:hasParameter :SodaliteParameter_114 ;
+.
+:SodaliteParameter_11
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/docker/create_docker_host.yml" ;
+.
+:SodaliteParameter_110
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_111 ;
+  DUL:hasParameter :SodaliteParameter_112 ;
+  DUL:hasParameter :SodaliteParameter_113 ;
+.
+:SodaliteParameter_111
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :group_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, group_name         ] } }" ;
+.
+:SodaliteParameter_112
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :group_description ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, group_description  ] } }" ;
+.
+:SodaliteParameter_113
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :ports ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, ports  ] } }" ;
+.
+:SodaliteParameter_114
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  tosca:hasDataValue "playbooks/openstack/security-rule/create.yml" ;
+.
+:SodaliteParameter_115
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_116 ;
+  DUL:hasParameter :SodaliteParameter_118 ;
+.
+:SodaliteParameter_116
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_117 ;
+.
+:SodaliteParameter_117
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :group_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, group_name         ] } }" ;
+.
+:SodaliteParameter_118
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  tosca:hasDataValue "playbooks/openstack/security-rule/delete.yml" ;
+.
+:SodaliteParameter_119
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_12
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_13 ;
+  DUL:hasParameter :SodaliteParameter_15 ;
+.
+:SodaliteParameter_120
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_121
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "no" ;
+.
+:SodaliteParameter_122
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_13
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_14 ;
+.
+:SodaliteParameter_14
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :registry_ip ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, registry_ip ] } }" ;
+.
+:SodaliteParameter_15
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_16 ;
+.
+:SodaliteParameter_16
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/docker/destroy_docker_host.yml" ;
+.
+:SodaliteParameter_17
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+.
+:SodaliteParameter_18
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:valid_source_types ;
+  tosca:hasObjectValue :List_1 ;
+.
+:SodaliteParameter_19
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_2
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_20
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_21
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_22
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_23
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_24
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_25
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_26
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_27 ;
+  DUL:hasParameter :SodaliteParameter_32 ;
+.
+:SodaliteParameter_27
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_28 ;
+  DUL:hasParameter :SodaliteParameter_29 ;
+  DUL:hasParameter :SodaliteParameter_30 ;
+  DUL:hasParameter :SodaliteParameter_31 ;
+  DUL:hasParameter :SodaliteParameter_79 ;
+  DUL:hasParameter :SodaliteParameter_80 ;
+  DUL:hasParameter :SodaliteParameter_81 ;
+  DUL:hasParameter :SodaliteParameter_82 ;
+  DUL:hasParameter :SodaliteParameter_83 ;
+  DUL:hasParameter :SodaliteParameter_84 ;
+.
+:SodaliteParameter_28
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :registry_ip ;
+  tosca:hasDataValue "{ default: { get_attribute: [ SELF, host, registry_ip ] } }" ;
+.
+:SodaliteParameter_29
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :image_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, image_name ] } }" ;
+.
+:SodaliteParameter_3
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_30
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :ports ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, ports ] } }" ;
+.
+:SodaliteParameter_31
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :exposed_ports ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, exposed_ports ] } }" ;
+.
+:SodaliteParameter_32
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_33 ;
+.
+:SodaliteParameter_33
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/docker/dockerized_component_deploy.yml" ;
+.
+:SodaliteParameter_34
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_35 ;
+  DUL:hasParameter :SodaliteParameter_38 ;
+.
+:SodaliteParameter_35
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_36 ;
+.
+:SodaliteParameter_36
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :alias ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, alias ] } }" ;
+.
+:SodaliteParameter_37
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_38
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  DUL:hasParameter :SodaliteParameter_39 ;
+.
+:SodaliteParameter_39
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:primary ;
+  tosca:hasDataValue "playbooks/docker/dockerized_component_undeploy.yml" ;
+.
+:SodaliteParameter_4
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_40
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+.
+:SodaliteParameter_41
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.HostedOn> ;
+.
+:SodaliteParameter_42
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:node ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
+.
+:SodaliteParameter_43
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_44
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_45
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_46
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_47
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_48
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:capability ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
+.
+:SodaliteParameter_49
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_5
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_50
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_51
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_52
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> ;
+.
+:SodaliteParameter_53
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_54 ;
+  DUL:hasParameter :SodaliteParameter_61 ;
+.
+:SodaliteParameter_54
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_55 ;
+  DUL:hasParameter :SodaliteParameter_56 ;
+  DUL:hasParameter :SodaliteParameter_57 ;
+  DUL:hasParameter :SodaliteParameter_58 ;
+  DUL:hasParameter :SodaliteParameter_59 ;
+  DUL:hasParameter :SodaliteParameter_60 ;
+.
+:SodaliteParameter_55
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :vm_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, name     ] } }" ;
+.
+:SodaliteParameter_56
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :image ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, image    ] } }" ;
+.
+:SodaliteParameter_57
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :flavor ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, flavor   ] } }" ;
+.
+:SodaliteParameter_58
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :network ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, network  ] } }" ;
+.
+:SodaliteParameter_59
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :security_groups ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, security_groups  ] } }" ;
+.
+:SodaliteParameter_6
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:create ;
+  DUL:hasParameter :SodaliteParameter_10 ;
+  DUL:hasParameter :SodaliteParameter_7 ;
+.
+:SodaliteParameter_60
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :key_name ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, key_name ] } }" ;
+.
+:SodaliteParameter_61
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  tosca:hasDataValue "playbooks/openstack/vm/create.yml" ;
+.
+:SodaliteParameter_62
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:delete ;
+  DUL:hasParameter :SodaliteParameter_63 ;
+  DUL:hasParameter :SodaliteParameter_65 ;
+.
+:SodaliteParameter_63
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_64 ;
+.
+:SodaliteParameter_64
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :id ;
+  tosca:hasDataValue "{ default: { get_attribute: [ SELF, id ] } }" ;
+.
+:SodaliteParameter_65
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:implementation ;
+  tosca:hasDataValue "playbooks/openstack/vm/delete.yml" ;
+.
+:SodaliteParameter_66
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_67
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_68
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_69
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:list ;
+.
+:SodaliteParameter_7
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_8 ;
+  DUL:hasParameter :SodaliteParameter_9 ;
+.
+:SodaliteParameter_70
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_71
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue " " ;
+.
+:SodaliteParameter_72
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:map ;
+.
+:SodaliteParameter_73
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_74
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:list ;
+.
+:SodaliteParameter_75
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_76
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_77
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "no" ;
+.
+:SodaliteParameter_78
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "false"^^xsd:boolean ;
+.
+:SodaliteParameter_79
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :ansible_ip ;
+  tosca:hasDataValue "{ default: { get_attribute: [ SELF, host, ansible_ip ] } }" ;
+.
+:SodaliteParameter_8
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :registry_ip ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, registry_ip ] } }" ;
+.
+:SodaliteParameter_80
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :alias ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, alias ] } }" ;
+.
+:SodaliteParameter_81
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :command ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, command ] } }" ;
+.
+:SodaliteParameter_82
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :env ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, env ] } }" ;
+.
+:SodaliteParameter_83
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :volumes ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, volumes ] } }" ;
+.
+:SodaliteParameter_84
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :restart_policy ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, restart_policy ] } }" ;
+.
+:SodaliteParameter_85
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:relationship ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.DependsOn> ;
+.
+:SodaliteParameter_86
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_87
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_88
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "tcp" ;
+.
+:SodaliteParameter_89
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:constraints ;
+  DUL:hasParameter :SodaliteParameter_90 ;
+.
+:SodaliteParameter_9
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :public_ipv4_address ;
+  tosca:hasDataValue "{ default:  { get_attribute: [ SELF, host, public_address ] } }" ;
+.
+:SodaliteParameter_90
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:valid_values ;
+  tosca:hasObjectValue :List_2 ;
+.
+:SodaliteParameter_91
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_92
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.datatypes.network.PortDef> ;
+.
+:SodaliteParameter_93
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.datatypes.network.PortDef> ;
+.
+:SodaliteParameter_94
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:SodaliteParameter_95
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_96
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true" ;
+.
+:SodaliteParameter_97
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasDataValue "0.0.0.0/0" ;
+.
+:SodaliteParameter_98
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:type ;
+  tosca:hasObjectValue tosca:string ;
+.
+:SodaliteParameter_99
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:required ;
+  tosca:hasDataValue "true"^^xsd:boolean ;
+.
+:alias
+  rdf:type rdf:Property ;
+.
+:ansible_ip
+  rdf:type rdf:Property ;
+.
+:command
+  rdf:type rdf:Property ;
+.
+:env
+  rdf:type rdf:Property ;
+.
+:exposed_ports
+  rdf:type rdf:Property ;
+.
+:flavor
+  rdf:type rdf:Property ;
+.
+:group_description
+  rdf:type rdf:Property ;
+.
+:group_name
+  rdf:type rdf:Property ;
+.
+:id
+  rdf:type rdf:Property ;
+.
+:image
+  rdf:type rdf:Property ;
+.
+:image_name
+  rdf:type rdf:Property ;
+.
+:key_name
+  rdf:type rdf:Property ;
+.
+:name
+  rdf:type rdf:Property ;
+.
+:network
+  rdf:type rdf:Property ;
+.
+:port_range_max
+  rdf:type rdf:Property ;
+.
+:port_range_min
+  rdf:type rdf:Property ;
+.
+:ports
+  rdf:type rdf:Property ;
+.
+:private_address
+  rdf:type rdf:Property ;
+.
+:protected_by
+  rdf:type rdf:Property ;
+.
+:protocol
+  rdf:type rdf:Property ;
+.
+:public_address
+  rdf:type rdf:Property ;
+.
+:public_ipv4_address
+  rdf:type rdf:Property ;
+.
+:pull
+  rdf:type rdf:Property ;
+.
+:registry_ip
+  rdf:type rdf:Property ;
+.
+:remote_ip_prefix
+  rdf:type rdf:Property ;
+.
+:restart_policy
+  rdf:type rdf:Property ;
+.
+:security_groups
+  rdf:type rdf:Property ;
+.
+<https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+  soda:hasContext :SodaliteDescription_1 ;
+.
+<https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.SoftwareComponent> ;
+  soda:hasContext :SodaliteDescription_2 ;
+.
+<https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRule>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.datatypes.Root> ;
+  soda:hasContext :SodaliteDescription_4 ;
+.
+<https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Root> ;
+  soda:hasContext :SodaliteDescription_5 ;
+.
+<https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.VM>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Compute> ;
+  soda:hasContext :SodaliteDescription_3 ;
+.
+:vm_name
+  rdf:type rdf:Property ;
+.
+:volumes
+  rdf:type rdf:Property ;
+.

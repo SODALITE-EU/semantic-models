@@ -217,6 +217,10 @@ DUL:hasParameter
   rdf:type owl:Class ;
   rdfs:subClassOf soda:SodaliteConcept ;
 .
+:Input
+  rdf:type owl:Class ;
+  rdfs:subClassOf soda:SodaliteSituation ;
+.
 :Interface
   rdf:type owl:Class ;
   rdfs:subClassOf soda:SodaliteConcept ;
@@ -1780,6 +1784,11 @@ DUL:hasParameter
 .
 :initiator
   rdf:type rdf:Property ;
+.
+:input
+  rdf:type owl:ObjectProperty ;
+  rdfs:range soda:SodaliteConcept ;
+  rdfs:subPropertyOf soda:specification ;
 .
 :inputs
   rdf:type rdf:Property ;

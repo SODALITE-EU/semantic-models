@@ -96,6 +96,12 @@
       :hasContext
     ) ;
 .
+:includesInput
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :AbstractApplicationDeployment ;
+  rdfs:range :SodaliteSituation ;
+  rdfs:subPropertyOf DUL:isSettingFor ;
+.
 :includesTemplate
   rdf:type owl:ObjectProperty ;
   rdfs:domain :AbstractApplicationDeployment ;
