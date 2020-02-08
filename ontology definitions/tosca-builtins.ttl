@@ -140,7 +140,6 @@ DUL:hasParameter
   rdf:type :Capability ;
   DUL:classifies :host ;
   DUL:hasParameter :SodaliteParameter_11 ;
-  DUL:hasParameter :SodaliteParameter_5 ;
 .
 :Capability_8
   rdf:type :Capability ;
@@ -1379,11 +1378,6 @@ DUL:hasParameter
   rdf:type soda:SodaliteParameter ;
   DUL:classifies :constraints ;
   DUL:hasParameter :SodaliteParameter_43 ;
-.
-:SodaliteParameter_5
-  rdf:type soda:SodaliteParameter ;
-  DUL:classifies :valid_source_types ;
-  :hasObjectValue :List_2 ;
 .
 :SodaliteParameter_50
   rdf:type soda:SodaliteParameter ;

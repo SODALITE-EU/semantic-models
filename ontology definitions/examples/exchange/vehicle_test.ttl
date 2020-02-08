@@ -1,0 +1,99 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/vehicle/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/vehicle/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:AADM_1
+  rdf:type exchange:AADM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:hasParameter :Parameter_2 ;
+  exchange:hasParameter :Parameter_3 ;
+  exchange:hasParameter :Parameter_4 ;
+  exchange:hasParameter :Parameter_5 ;
+  exchange:name "rooter_port" ;
+.
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_ip_prefix" ;
+  exchange:value "0.0.0.0/0" ;
+.
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "protocol" ;
+  exchange:value "tcp" ;
+.
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "port_range_min" ;
+  exchange:value "7000" ;
+.
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "port_range_max" ;
+  exchange:value "7000" ;
+.
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_ip_prefix" ;
+  exchange:value "0.0.0.0/0" ;
+.
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:hasParameter :Parameter_10 ;
+  exchange:hasParameter :Parameter_7 ;
+  exchange:hasParameter :Parameter_8 ;
+  exchange:hasParameter :Parameter_9 ;
+  exchange:name "target_ports" ;
+.
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "protocol" ;
+  exchange:value "tcp" ;
+.
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "port_range_min" ;
+  exchange:value "5678" ;
+.
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "port_range_max" ;
+  exchange:value "5680" ;
+.
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "group_name" ;
+  exchange:value "vehicle-iot-delete" ;
+.
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "group_description" ;
+  exchange:value "vehicle-iot security group" ;
+.
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:hasParameter :Parameter_1 ;
+  exchange:hasParameter :Parameter_6 ;
+  exchange:name "ports" ;
+.
+:Template_1
+  rdf:type exchange:Template ;
+  exchange:name "security-rules-vehicle-iot" ;
+  exchange:properties :Property_1 ;
+  exchange:properties :Property_2 ;
+  exchange:properties :Property_3 ;
+  exchange:type "sodalite.nodes.OpenStack.SecurityRules" ;
+.

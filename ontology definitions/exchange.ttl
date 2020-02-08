@@ -27,6 +27,10 @@
   rdf:type owl:Class ;
   rdfs:subClassOf :Resource ;
 .
+:Input
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Entity ;
+.
 :Interface
   rdf:type owl:Class ;
   rdfs:subClassOf :Entity ;
@@ -87,6 +91,10 @@
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Entity ;
   rdfs:range :Interface ;
+.
+:listValue
+  rdf:type rdf:Property ;
+  rdfs:subPropertyOf :value ;
 .
 :name
   rdf:type owl:DatatypeProperty ;

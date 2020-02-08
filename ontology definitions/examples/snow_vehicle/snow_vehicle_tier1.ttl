@@ -95,6 +95,18 @@
   tosca:hasDataValue "tcp" ;
   tosca:hasDataValue "udp" ;
 .
+:List_3
+  rdf:type tosca:List ;
+.
+:List_4
+  rdf:type tosca:List ;
+.
+:List_5
+  rdf:type tosca:List ;
+.
+:List_6
+  rdf:type tosca:List ;
+.
 :Property_1
   rdf:type tosca:Property ;
   dcterms:description "IP of the SODALITE docker registry" ;
@@ -137,6 +149,7 @@
   rdf:type tosca:Property ;
   dcterms:description "A list of mounted volumes for the docker container \"host_path:container_path\" like \"/tmp/docker:/tmp\"" ;
   DUL:classifies :volumes ;
+  DUL:hasParameter :SodaliteParameter_125 ;
   DUL:hasParameter :SodaliteParameter_74 ;
   DUL:hasParameter :SodaliteParameter_75 ;
 .
@@ -214,6 +227,7 @@
   rdf:type tosca:Property ;
   dcterms:description "Port binding for the docker container \"exposed:internal\" like \"8081:8080\"" ;
   DUL:classifies :ports ;
+  DUL:hasParameter :SodaliteParameter_123 ;
   DUL:hasParameter :SodaliteParameter_21 ;
   DUL:hasParameter :SodaliteParameter_22 ;
 .
@@ -221,6 +235,7 @@
   rdf:type tosca:Property ;
   dcterms:description "Exposed ports of the container like \"8081\"" ;
   DUL:classifies :exposed_ports ;
+  DUL:hasParameter :SodaliteParameter_124 ;
   DUL:hasParameter :SodaliteParameter_23 ;
   DUL:hasParameter :SodaliteParameter_24 ;
 .
@@ -264,6 +279,7 @@
 :Requirement_2
   rdf:type tosca:Requirement ;
   DUL:classifies :protected_by ;
+  DUL:hasParameter :SodaliteParameter_126 ;
   DUL:hasParameter :SodaliteParameter_48 ;
   DUL:hasParameter :SodaliteParameter_85 ;
 .
@@ -458,6 +474,26 @@
   DUL:classifies tosca:required ;
   tosca:hasDataValue "false"^^xsd:boolean ;
 .
+:SodaliteParameter_123
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasObjectValue :List_4 ;
+.
+:SodaliteParameter_124
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasObjectValue :List_5 ;
+.
+:SodaliteParameter_125
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  tosca:hasObjectValue :List_6 ;
+.
+:SodaliteParameter_126
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:node ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
+.
 :SodaliteParameter_13
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:inputs ;
@@ -481,7 +517,7 @@
 :SodaliteParameter_17
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:type ;
-  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Node> ;
 .
 :SodaliteParameter_18
   rdf:type soda:SodaliteParameter ;
@@ -622,7 +658,7 @@
 :SodaliteParameter_40
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:capability ;
-  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Compute> ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Node> ;
 .
 :SodaliteParameter_41
   rdf:type soda:SodaliteParameter ;
@@ -662,7 +698,7 @@
 :SodaliteParameter_48
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:capability ;
-  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
+  tosca:hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Node> ;
 .
 :SodaliteParameter_49
   rdf:type soda:SodaliteParameter ;
@@ -802,6 +838,7 @@
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:default ;
   tosca:hasDataValue " " ;
+  tosca:hasObjectValue :List_3 ;
 .
 :SodaliteParameter_72
   rdf:type soda:SodaliteParameter ;

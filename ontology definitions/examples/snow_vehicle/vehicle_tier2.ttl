@@ -21,9 +21,8 @@
   rdf:type soda:AbstractApplicationDeployment ;
   soda:createdAt "2020-02-04T23:00:48.204+02:00"^^xsd:dateTime ;
   soda:createdBy :User_2 ;
-  soda:includesInput :parameters ;
+  soda:includesInput :topology_template_inputs ;
   soda:includesTemplate :consul-agent ;
-  soda:includesTemplate :docker-host ;
   soda:includesTemplate :go-region-router ;
   soda:includesTemplate :http-echo-de ;
   soda:includesTemplate :notification-callback-server ;
@@ -32,7 +31,8 @@
   soda:includesTemplate :register-service-de ;
   soda:includesTemplate :reverse-geocoder ;
   soda:includesTemplate :security-rules-vehicle-iot ;
-  soda:includesTemplate :vm ;
+  soda:includesTemplate :vehicle-demo-docker-host ;
+  soda:includesTemplate :vehicle-demo-vm ;
 .
 :Feature_1
   rdf:type tosca:Feature ;
@@ -44,10 +44,83 @@
   DUL:classifies :docker-registry-ip ;
   DUL:hasParameter :SodaliteParameter_14 ;
 .
+:List_1
+  rdf:type tosca:List ;
+  tosca:hasDataValue "http-echo-server 8443" ;
+.
+:List_10
+  rdf:type tosca:List ;
+  tosca:hasDataValue "4041" ;
+.
+:List_11
+  rdf:type tosca:List ;
+  tosca:hasDataValue "4041:4041" ;
+.
+:List_12
+  rdf:type tosca:List ;
+  tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+.
+:List_13
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8443" ;
+.
+:List_14
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8443:8443" ;
+.
+:List_15
+  rdf:type tosca:List ;
+  tosca:hasDataValue "http-echo-server 8443" ;
+.
+:List_16
+  rdf:type tosca:List ;
+  tosca:hasDataValue "7000" ;
+.
+:List_17
+  rdf:type tosca:List ;
+  tosca:hasDataValue "7000:7000" ;
+.
+:List_18
+  rdf:type tosca:List ;
+  tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+.
+:List_2
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8443:8443" ;
+.
+:List_3
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8443" ;
+.
+:List_4
+  rdf:type tosca:List ;
+  tosca:hasDataValue "5678" ;
+.
+:List_5
+  rdf:type tosca:List ;
+  tosca:hasDataValue "5678:5678" ;
+.
+:List_6
+  rdf:type tosca:List ;
+  tosca:hasDataValue "-text=\"hello from the DE endpoint\"" ;
+.
+:List_7
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8500" ;
+.
+:List_8
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8500:8500" ;
+.
+:List_9
+  rdf:type tosca:List ;
+  tosca:hasDataValue "region-de" ;
+  tosca:hasDataValue "v1" ;
+.
 :Property_1
   rdf:type tosca:Property ;
   DUL:classifies sv1:group_name ;
-  tosca:hasDataValue "vehicle-iot-delete" ;
+  tosca:hasDataValue "vehicle-iot" ;
 .
 :Property_10
   rdf:type tosca:Property ;
@@ -72,17 +145,17 @@
 :Property_14
   rdf:type tosca:Property ;
   DUL:classifies sv1:command ;
-  tosca:hasDataValue "http-echo-server 8443" ;
+  tosca:hasObjectValue :List_1 ;
 .
 :Property_15
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "8443:8443" ;
+  tosca:hasObjectValue :List_2 ;
 .
 :Property_16
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "8443" ;
+  tosca:hasObjectValue :List_3 ;
 .
 :Property_17
   rdf:type tosca:Property ;
@@ -97,7 +170,7 @@
 :Property_19
   rdf:type tosca:Property ;
   DUL:classifies sv1:command ;
-  tosca:hasDataValue "-text=\"hello from the DE endpoint\"" ;
+  tosca:hasObjectValue :List_6 ;
 .
 :Property_2
   rdf:type tosca:Property ;
@@ -107,12 +180,12 @@
 :Property_20
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "5678:5678" ;
+  tosca:hasObjectValue :List_5 ;
 .
 :Property_21
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "5678" ;
+  tosca:hasObjectValue :List_4 ;
 .
 :Property_22
   rdf:type tosca:Property ;
@@ -127,12 +200,12 @@
 :Property_24
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "8500:8500" ;
+  tosca:hasObjectValue :List_8 ;
 .
 :Property_25
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "8500" ;
+  tosca:hasObjectValue :List_7 ;
 .
 :Property_26
   rdf:type tosca:Property ;
@@ -152,8 +225,7 @@
 :Property_29
   rdf:type tosca:Property ;
   DUL:classifies v1:tags ;
-  tosca:hasDataValue "region-de" ;
-  tosca:hasDataValue "v1" ;
+  tosca:hasObjectValue :List_9 ;
 .
 :Property_3
   rdf:type tosca:Property ;
@@ -175,16 +247,17 @@
   rdf:type tosca:Property ;
   DUL:classifies sv1:command ;
   tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+  tosca:hasObjectValue :List_12 ;
 .
 :Property_33
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "4041:4041" ;
+  tosca:hasObjectValue :List_11 ;
 .
 :Property_34
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "4041" ;
+  tosca:hasObjectValue :List_10 ;
 .
 :Property_35
   rdf:type tosca:Property ;
@@ -199,17 +272,17 @@
 :Property_37
   rdf:type tosca:Property ;
   DUL:classifies sv1:command ;
-  tosca:hasDataValue "http-echo-server 8443" ;
+  tosca:hasObjectValue :List_15 ;
 .
 :Property_38
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "8443:8443" ;
+  tosca:hasObjectValue :List_14 ;
 .
 :Property_39
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "8443" ;
+  tosca:hasObjectValue :List_13 ;
 .
 :Property_4
   rdf:type tosca:Property ;
@@ -229,7 +302,7 @@
 :Property_42
   rdf:type tosca:Property ;
   DUL:classifies sv1:command ;
-  tosca:hasDataValue "\"--consul-agent {{ansible_default_ipv4.address}}:8500\"" ;
+  tosca:hasObjectValue :List_18 ;
 .
 :Property_43
   rdf:type tosca:Property ;
@@ -245,12 +318,12 @@
 :Property_45
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "7000:7000" ;
+  tosca:hasObjectValue :List_17 ;
 .
 :Property_46
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "7000" ;
+  tosca:hasObjectValue :List_16 ;
 .
 :Property_5
   rdf:type tosca:Property ;
@@ -291,47 +364,47 @@
 :Requirement_10
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_11
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_12
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_2
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :vm ;
+  tosca:hasObjectValue :vehicle-demo-vm ;
 .
 :Requirement_3
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :vm ;
+  tosca:hasObjectValue :vehicle-demo-vm ;
 .
 :Requirement_4
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_5
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_6
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :vehicle-demo-docker-host ;
 .
 :Requirement_7
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :vm ;
+  tosca:hasObjectValue :vehicle-demo-vm ;
 .
 :Requirement_8
   rdf:type tosca:Requirement ;
@@ -522,10 +595,6 @@
   rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
   soda:hasContext :SodaliteDescription_7 ;
 .
-:docker-host
-  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
-  soda:hasContext :SodaliteDescription_4 ;
-.
 :docker-registry-ip
   rdf:type rdf:Property ;
 .
@@ -544,10 +613,6 @@
 :notification-server
   rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
   soda:hasContext :SodaliteDescription_10 ;
-.
-:parameters
-  rdf:type tosca:Input ;
-  soda:hasContext :SodaliteDescription_12 ;
 .
 :pip-setup
   rdf:type <https://www.sodalite.eu/ontologies/vehicle/tier1/sodalite.nodes.software.PipPackagesSetup> ;
@@ -574,7 +639,15 @@
 :target_ports
   rdf:type rdf:Property ;
 .
-:vm
+:topology_template_inputs
+  rdf:type tosca:Input ;
+  soda:hasContext :SodaliteDescription_12 ;
+.
+:vehicle-demo-docker-host
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
+  soda:hasContext :SodaliteDescription_4 ;
+.
+:vehicle-demo-vm
   rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.VM> ;
   soda:hasContext :SodaliteDescription_2 ;
 .

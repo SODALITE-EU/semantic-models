@@ -16,12 +16,12 @@ sv1:AbstractApplicationDeployment_1
   rdf:type soda:AbstractApplicationDeployment ;
   soda:createdAt "2019-11-19T20:52:04.814+02:00"^^xsd:dateTime ;
   soda:createdBy sv1:User_1 ;
-  soda:includesInput :parameters ;
-  soda:includesTemplate :docker-host ;
+  soda:includesInput :topology_template_inputs ;
   soda:includesTemplate :security-rules-snow ;
   soda:includesTemplate :skyline-alignment ;
   soda:includesTemplate :skyline-extractor ;
-  soda:includesTemplate :vm ;
+  soda:includesTemplate :snow-docker-host ;
+  soda:includesTemplate :snow-vm ;
 .
 sv1:User_1
   rdf:type soda:User ;
@@ -40,6 +40,23 @@ sv1:User_1
   rdf:type tosca:Feature ;
   DUL:classifies :docker-registry-ip ;
   DUL:hasParameter :SodaliteParameter_11 ;
+.
+:List_1
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8081:8080" ;
+  tosca:hasDataValue "80:8080" ;
+.
+:List_2
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8080:8080" ;
+.
+:List_3
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8080" ;
+.
+:List_4
+  rdf:type tosca:List ;
+  tosca:hasDataValue "8080" ;
 .
 :Parameter_1
   rdf:type soda:SodaliteParameter ;
@@ -94,7 +111,7 @@ sv1:User_1
 :Property_19
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "8080:8080" ;
+  tosca:hasObjectValue :List_2 ;
 .
 :Property_2
   rdf:type tosca:Property ;
@@ -104,7 +121,7 @@ sv1:User_1
 :Property_20
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "8080" ;
+  tosca:hasObjectValue :List_3 ;
 .
 :Property_21
   rdf:type tosca:Property ;
@@ -114,13 +131,12 @@ sv1:User_1
 :Property_22
   rdf:type tosca:Property ;
   DUL:classifies sv1:ports ;
-  tosca:hasDataValue "8081:8080" ;
-  tosca:hasDataValue "80:8080" ;
+  tosca:hasObjectValue :List_1 ;
 .
 :Property_23
   rdf:type tosca:Property ;
   DUL:classifies sv1:exposed_ports ;
-  tosca:hasDataValue "8080" ;
+  tosca:hasObjectValue :List_4 ;
 .
 :Property_3
   rdf:type tosca:Property ;
@@ -146,17 +162,17 @@ sv1:User_1
 :Requirement_2
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :vm ;
+  tosca:hasObjectValue :snow-vm ;
 .
 :Requirement_3
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :snow-docker-host ;
 .
 :Requirement_4
   rdf:type tosca:Requirement ;
   DUL:classifies tosca:host ;
-  tosca:hasObjectValue :docker-host ;
+  tosca:hasObjectValue :snow-docker-host ;
 .
 :SodaliteDescription_1
   rdf:type soda:SodaliteDescription ;
@@ -264,19 +280,11 @@ sv1:User_1
 :component_ports
   rdf:type rdf:Property ;
 .
-:docker-host
-  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
-  soda:hasContext :SodaliteDescription_5 ;
-.
 :docker-registry-ip
   rdf:type rdf:Property ;
 .
 :http_port
   rdf:type rdf:Property ;
-.
-:parameters
-  rdf:type tosca:Input ;
-  soda:hasContext :SodaliteDescription_2 ;
 .
 :security-rules-snow
   rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
@@ -290,10 +298,18 @@ sv1:User_1
   rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerizedComponent> ;
   soda:hasContext :SodaliteDescription_6 ;
 .
+:snow-docker-host
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.DockerHost> ;
+  soda:hasContext :SodaliteDescription_5 ;
+.
+:snow-vm
+  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.VM> ;
+  soda:hasContext :SodaliteDescription_4 ;
+.
 :ssh-key-name
   rdf:type rdf:Property ;
 .
-:vm
-  rdf:type <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.VM> ;
-  soda:hasContext :SodaliteDescription_4 ;
+:topology_template_inputs
+  rdf:type tosca:Input ;
+  soda:hasContext :SodaliteDescription_2 ;
 .
