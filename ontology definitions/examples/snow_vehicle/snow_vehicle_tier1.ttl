@@ -142,6 +142,7 @@
   rdf:type tosca:Property ;
   dcterms:description "Map for docker enviroment variables key-value dictionary" ;
   DUL:classifies :env ;
+  DUL:hasParameter :SodaliteParameter_127 ;
   DUL:hasParameter :SodaliteParameter_72 ;
   DUL:hasParameter :SodaliteParameter_73 ;
 .
@@ -493,6 +494,11 @@
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:node ;
   tosca:hasObjectValue <https://www.sodalite.eu/ontologies/snow-vehicle/tier1/sodalite.nodes.OpenStack.SecurityRules> ;
+.
+:SodaliteParameter_127
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies tosca:default ;
+  DUL:hasDataValue "{}" ;
 .
 :SodaliteParameter_13
   rdf:type soda:SodaliteParameter ;
