@@ -500,6 +500,11 @@
   DUL:classifies tosca:default ;
   DUL:hasDataValue "{}" ;
 .
+:SodaliteParameter_128
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :pull ;
+  tosca:hasDataValue "{ default: { get_property: [ SELF, pull ] } }" ;
+.
 :SodaliteParameter_13
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:inputs ;
@@ -579,6 +584,7 @@
 :SodaliteParameter_27
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:inputs ;
+  DUL:hasParameter :SodaliteParameter_128 ;
   DUL:hasParameter :SodaliteParameter_28 ;
   DUL:hasParameter :SodaliteParameter_29 ;
   DUL:hasParameter :SodaliteParameter_30 ;
@@ -843,7 +849,6 @@
 :SodaliteParameter_71
   rdf:type soda:SodaliteParameter ;
   DUL:classifies tosca:default ;
-  tosca:hasDataValue " " ;
   tosca:hasObjectValue :List_3 ;
 .
 :SodaliteParameter_72
