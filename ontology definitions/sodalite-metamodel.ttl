@@ -9,13 +9,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 :
   rdf:type owl:Ontology ;
   owl:imports <http://www.loa-cnr.it/ontologies/DUL.owl> ;
   owl:imports <http://www.w3.org/2006/time> ;
   owl:versionInfo "Created with TopBraid Composer" ;
-.
+  dc:date "2019-02-01" ;
+  dc:creator "George Meditskos" ;
+  dc:contributor "xxx" ;
+  dc:description "sodalite metamodel introduction" ;
+  rdfs:comment "abstract text" ;
+  dc:title "SODALITE METAMODEL ONTOLOGY".
+
 :AbstractApplicationDeployment
   rdf:type owl:Class ;
   rdfs:subClassOf DUL:Situation ;
@@ -34,6 +41,7 @@
       owl:onProperty owl:versionInfo ;
       owl:someValuesFrom xsd:string ;
     ] ;
+  rdfs:comment "xxxxxxx"
 .
 :SodaliteConcept
   rdf:type owl:Class ;
@@ -43,6 +51,7 @@
       owl:allValuesFrom :SodaliteParameter ;
       owl:onProperty DUL:hasParameter ;
     ] ;
+  rdfs:comment "xxxxxxx"
 .
 :SodaliteDescription
   rdf:type owl:Class ;
@@ -52,11 +61,13 @@
       owl:onProperty :specification ;
       owl:someValuesFrom :SodaliteConcept ;
     ] ;
+   rdfs:comment "xxxxxxx"
 .
 :SodaliteParameter
   rdf:type owl:Class ;
   rdfs:subClassOf DUL:Parameter ;
   rdfs:subClassOf :SodaliteConcept ;
+  rdfs:comment "xxxxxxx"
 .
 :SodaliteSituation
   rdf:type owl:Class ;
