@@ -77,10 +77,12 @@
       owl:onProperty :hasContext ;
       owl:someValuesFrom :SodaliteDescription ;
     ] ;
+  rdfs:comment "xxxxxxx"
 .
 :User
   rdf:type owl:Class ;
   rdfs:subClassOf DUL:NaturalPerson ;
+  rdfs:comment "xxxxxxx"
 .
 :createdAt
   rdf:type owl:DatatypeProperty ;
