@@ -12,6 +12,7 @@
 @prefix soda: <https://www.sodalite.eu/ontologies/sodalite-metamodel/> .
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 DUL:hasParameter
   rdfs:range soda:SodaliteParameter ;
@@ -22,10 +23,17 @@ DUL:hasParameter
   owl:imports dc: ;
   owl:imports soda: ;
   owl:versionInfo "Created with TopBraid Composer" ;
-.
+  dc:date "2019-02-01" ;
+  dc:creator "George Meditskos" ;
+  dc:contributor "xxx" ;
+  dc:description "tosca builtins introduction" ;
+  rdfs:comment "abstract text" ;
+  dc:title "TOSCA BUILTINS ONTOLOGY" .
+
 :Attribute
   rdf:type owl:Class ;
   rdfs:subClassOf :Feature ;
+  rdfs:comment "xxxxxxx"
 .
 :Attribute_1
   rdf:type :Attribute ;
@@ -1688,6 +1696,7 @@ DUL:hasParameter
 :boolean
   rdf:type owl:Class ;
   rdfs:subClassOf :DataType ;
+  rdfs:comment "xxxxxxx"
 .
 :capabilities
   rdf:type owl:ObjectProperty ;
