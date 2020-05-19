@@ -40,6 +40,25 @@
       owl:someValuesFrom xsd:string ;
     ] ;
 .
+:ResourceModel
+  rdf:type owl:Class ;
+  rdfs:subClassOf DUL:Situation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom :SodaliteSituation ;
+      owl:onProperty :includesNode ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty DUL:includesAgent ;
+      owl:someValuesFrom :User ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty owl:versionInfo ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+.
 :SodaliteConcept
   rdf:type owl:Class ;
   rdfs:subClassOf DUL:Concept ;
@@ -110,6 +129,12 @@
 :includesTemplate
   rdf:type owl:ObjectProperty ;
   rdfs:domain :AbstractApplicationDeployment ;
+  rdfs:range :SodaliteSituation ;
+  rdfs:subPropertyOf DUL:isSettingFor ;
+.
+:includesNode
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ResourceModel ;
   rdfs:range :SodaliteSituation ;
   rdfs:subPropertyOf DUL:isSettingFor ;
 .
