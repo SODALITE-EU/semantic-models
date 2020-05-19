@@ -1,0 +1,110 @@
+# baseURI: https://www.sodalite.eu/ontologies/optimizations
+# imports: http://datashapes.org/dash
+# imports: http://topbraid.org/schema/schema-single-range
+# prefix: optimizations
+
+@prefix optimizations: <https://www.sodalite.eu/ontologies/optimizations#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.sodalite.eu/ontologies/optimizations>
+  rdf:type owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://topbraid.org/schema/schema-single-range> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+optimizations:CPU
+  rdf:type owl:Class ;
+  rdfs:label "" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf optimizations:Capability ;
+.
+optimizations:CPU_1
+  rdf:type optimizations:CPU ;
+  rdfs:label "" ;
+.
+optimizations:Capability
+  rdf:type owl:Class ;
+  rdfs:label "" ;
+  rdfs:subClassOf owl:Thing ;
+.
+optimizations:Framework
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Framework such as Tensorflow,PyTorch " ;
+  rdfs:subClassOf owl:Thing ;
+.
+optimizations:GPU
+  rdf:type owl:Class ;
+  rdfs:label "" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf optimizations:Capability ;
+.
+optimizations:GPU_1
+  rdf:type optimizations:GPU ;
+  rdfs:label "" ;
+  optimizations:hasOptimization "enable CUDADNN" ;
+  optimizations:hasOptimization "enable XLA" ;
+  optimizations:hasValue_greater_or_equal 0 ;
+.
+optimizations:Memsize
+  rdf:type owl:Class ;
+  rdfs:label "" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf optimizations:Capability ;
+.
+optimizations:Memsize_1
+  rdf:type optimizations:Memsize ;
+  rdfs:label "" ;
+  optimizations:hasOptimization "enable caching" ;
+  optimizations:hasOptimization "enable prefetching" ;
+  optimizations:hasValue_greater_or_equal 1 ;
+.
+optimizations:OSArchitecture
+  rdf:type owl:Class ;
+  rdfs:label "" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf optimizations:Capability ;
+.
+optimizations:OSArchitecture_1
+  rdf:type optimizations:OSArchitecture ;
+  rdfs:label "" ;
+  optimizations:hasArchitecture "ARM" ;
+  optimizations:hasArchitecture "x86_64" ;
+  optimizations:hasOptimization "enable src build" ;
+.
+optimizations:hasArchitecture
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain optimizations:OSArchitecture ;
+  rdfs:label "" ;
+  rdfs:range xsd:string ;
+.
+optimizations:hasCapability
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain optimizations:Framework ;
+  rdfs:label "" ;
+  rdfs:range optimizations:Capability ;
+.
+optimizations:hasOptimization
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain optimizations:Capability ;
+  rdfs:label "" ;
+  rdfs:range xsd:string ;
+.
+optimizations:hasValue_greater_or_equal
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain optimizations:Capability ;
+  rdfs:label "" ;
+  rdfs:range xsd:integer ;
+.
+optimizations:Tensorflow
+  rdf:type optimizations:Framework ;
+  rdfs:label "" ;
+  optimizations:hasCapability optimizations:CPU_1 ;
+  optimizations:hasCapability optimizations:GPU_1 ;
+  optimizations:hasCapability optimizations:Memsize_1 ;
+  optimizations:hasCapability optimizations:OSArchitecture_1 ;
+.
