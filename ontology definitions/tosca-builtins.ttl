@@ -1902,6 +1902,11 @@ DUL:hasParameter
 .
 :properties
   rdf:type owl:ObjectProperty ;
+  rdf:domain  [ rdf:type owl:Class ;
+                          owl:unionOf ( :SodaliteDescription
+                                        :SodaliteConcept
+                                      )
+                        ] ;
   rdfs:range :Property ;
   rdfs:subPropertyOf soda:specification ;
 .
