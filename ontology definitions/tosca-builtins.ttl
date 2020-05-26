@@ -1904,7 +1904,7 @@ DUL:hasParameter
   rdf:type owl:ObjectProperty ;
   rdf:domain  [ rdf:type owl:Class ;
                           owl:unionOf ( :SodaliteDescription
-                                        :SodaliteConcept
+                                        :Capability
                                       )
                         ] ;
   rdfs:range :Property ;
