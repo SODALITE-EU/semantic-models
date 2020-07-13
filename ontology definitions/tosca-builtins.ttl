@@ -1867,6 +1867,11 @@ DUL:hasParameter
   rdf:type owl:ObjectProperty ;
   rdfs:subPropertyOf soda:specification ;
 .
+:optimizations
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SodaliteDescription ;
+  rdfs:range :string ;
+.
 :os
   rdf:type rdf:Property ;
 .

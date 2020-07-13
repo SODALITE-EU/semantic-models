@@ -31,12 +31,6 @@ optimizations:Capability
   rdfs:label "" ;
   rdfs:subClassOf owl:Thing ;
 .
-optimizations:Framework
-  rdf:type owl:Class ;
-  rdf:type sh:NodeShape ;
-  rdfs:label "Framework such as Tensorflow,PyTorch " ;
-  rdfs:subClassOf owl:Thing ;
-.
 optimizations:GPU
   rdf:type owl:Class ;
   rdfs:label "" ;
@@ -46,8 +40,20 @@ optimizations:GPU
 optimizations:GPU_1
   rdf:type optimizations:GPU ;
   rdfs:label "" ;
-  optimizations:hasOptimization "enable CUDADNN" ;
-  optimizations:hasOptimization "enable XLA" ;
+  optimizations:hasOptimization "{ \"path\": { \"app_type-ai_training\": {\"data\":{ } } } ,  \"jsonelement\": etl, \"value\": { prefetch: 100.0, cache: 100.0 } } " ;
+  optimizations:hasOptimization "{\"path\":{ \"app_type-ai_training\": {\"ai_framework-tensorflow\":{}}}, \"jsonelement\": xla, \"value\": true}" ;
+  optimizations:hasValue_greater_or_equal 0 ;
+.
+optimizations:GPU_2
+  rdf:type optimizations:GPU ;
+  optimizations:hasOptimization "{ \"path\": { \"app_type-ai_training\": {\"data\":{ } } } ,  \"jsonelement\": etl, \"value\": { prefetch: 100.0, cache: 100.0 } } " ;
+  optimizations:hasOptimization "{\"path\":{ \"app_type-ai_training\": {\"ai_framework-pytorch\":{}}}, \"jsonelement\": glow, \"value\": true}" ;
+  optimizations:hasValue_greater_or_equal 0 ;
+.
+optimizations:GPU_3
+  rdf:type optimizations:GPU ;
+  optimizations:hasOptimization "  { \"path\": {\"app_type-hpc\": {\"config\":{}}}, \"jsonelement\": parallelisation, \"value\": \"OPENACC, OPENCL\" }" ;
+  optimizations:hasOptimization " { \"path\": { \"app_type-hpc\": {\"data\":{ } } } ,  \"jsonelement\": etl, \"value\": { prefetch: 100.0, cache: 100.0 }}" ;
   optimizations:hasValue_greater_or_equal 0 ;
 .
 optimizations:Memsize
@@ -76,6 +82,12 @@ optimizations:OSArchitecture_1
   optimizations:hasArchitecture "x86_64" ;
   optimizations:hasOptimization "enable src build" ;
 .
+optimizations:OptimConcept
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Framework such as Tensorflow,PyTorch " ;
+  rdfs:subClassOf owl:Thing ;
+.
 optimizations:hasArchitecture
   rdf:type owl:DatatypeProperty ;
   rdfs:domain optimizations:OSArchitecture ;
@@ -84,7 +96,7 @@ optimizations:hasArchitecture
 .
 optimizations:hasCapability
   rdf:type owl:ObjectProperty ;
-  rdfs:domain optimizations:Framework ;
+  rdfs:domain optimizations:OptimConcept ;
   rdfs:label "" ;
   rdfs:range optimizations:Capability ;
 .
@@ -100,8 +112,16 @@ optimizations:hasValue_greater_or_equal
   rdfs:label "" ;
   rdfs:range xsd:integer ;
 .
-optimizations:Tensorflow
-  rdf:type optimizations:Framework ;
+optimizations:hpc
+  rdf:type optimizations:OptimConcept ;
+  optimizations:hasCapability optimizations:GPU_3 ;
+.
+optimizations:pytorch
+  rdf:type optimizations:OptimConcept ;
+  optimizations:hasCapability optimizations:GPU_2 ;
+.
+optimizations:tensorflow
+  rdf:type optimizations:OptimConcept ;
   rdfs:label "" ;
   optimizations:hasCapability optimizations:CPU_1 ;
   optimizations:hasCapability optimizations:GPU_1 ;
