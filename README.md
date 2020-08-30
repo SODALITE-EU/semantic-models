@@ -5,3 +5,4 @@ The repository contains two main folders:
 - ontology definitions: the core SODALITE ontologies
     - import: imported ontologies
     - examples: example instantiation of the core SODALITE models
+ 
