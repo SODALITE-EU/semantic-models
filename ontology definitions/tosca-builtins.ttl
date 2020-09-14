@@ -1775,6 +1775,10 @@ DUL:hasParameter
 :host
   rdf:type rdf:Property ;
 .
+:float
+  rdf:type owl:Class ;
+  rdfs:subClassOf :DataType ;
+.
 :implementation
   rdf:type rdf:Property ;
 .
