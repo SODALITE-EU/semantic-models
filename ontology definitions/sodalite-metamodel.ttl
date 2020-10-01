@@ -46,7 +46,8 @@
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom :SodaliteSituation ;
-      owl:onProperty :includesNode ;
+      owl:onProperty :includesNodeType ;
+      owl:onProperty :includesCapabilityType;
       owl:onProperty :includesDataType;
       owl:onProperty :includesRelationshipType;
     ] ;
@@ -99,12 +100,22 @@
 .
 :createdAt
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain :AbstractApplicationDeployment ;
+  rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( 
+                                        :AbstractApplicationDeployment
+                                        :ResourceModel
+                                      )
+				] ;
   rdfs:subPropertyOf time:inXSDDateTime ;
 .
 :createdBy
   rdf:type owl:ObjectProperty ;
-  rdfs:domain :AbstractApplicationDeployment ;
+  rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( 
+                                        :AbstractApplicationDeployment
+                                        :ResourceModel
+                                      )
+				] ;
   rdfs:range :User ;
   rdfs:subPropertyOf DUL:includesAgent ;
 .
@@ -134,7 +145,13 @@
   rdfs:range :SodaliteSituation ;
   rdfs:subPropertyOf DUL:isSettingFor ;
 .
-:includesNode
+:includesNodeType
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ResourceModel ;
+  rdfs:range :SodaliteSituation ;
+  rdfs:subPropertyOf DUL:isSettingFor ;
+.
+:includesCapabilityType
   rdf:type owl:ObjectProperty ;
   rdfs:domain :ResourceModel ;
   rdfs:range :SodaliteSituation ;
