@@ -175,3 +175,19 @@
   rdfs:range :SodaliteConcept ;
   rdfs:subPropertyOf DUL:defines ;
 .
+:hasName
+  rdf:type owl:DatatypeProperty ;
+   rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( 
+                                        :AbstractApplicationDeployment
+                                        :ResourceModel
+                                        :SodaliteSituation
+                                      )
+        ] ;
+  rdfs:range xsd:string ;
+.
+:hasDSL
+  rdf:type owl:DatatypeProperty ;
+  rdf:domain :SodaliteSituation ;
+  rdfs:range xsd:string ;
+.
