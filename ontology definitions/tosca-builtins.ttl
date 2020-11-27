@@ -2216,6 +2216,32 @@ DUL:hasParameter
   :attributes :Attribute_5 ;
   :interfaces :Interface_1 ;
 .
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type all other TOSCA Policy Types derive from." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.entity.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Placement>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Scaling>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern scaling of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Update>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Performance>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+
 :tosca_id
   rdf:type rdf:Property ;
 .
