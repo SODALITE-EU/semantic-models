@@ -28,6 +28,7 @@
       rdf:type owl:Restriction ;
       owl:allValuesFrom :SodaliteSituation ;
       owl:onProperty :includesTemplate ;
+      owl:onProperty :includesInput ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -46,10 +47,7 @@
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom :SodaliteSituation ;
-      owl:onProperty :includesNodeType ;
-      owl:onProperty :includesCapabilityType;
-      owl:onProperty :includesDataType;
-      owl:onProperty :includesRelationshipType;
+      owl:onProperty :includesType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -145,25 +143,7 @@
   rdfs:range :SodaliteSituation ;
   rdfs:subPropertyOf DUL:isSettingFor ;
 .
-:includesNodeType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :ResourceModel ;
-  rdfs:range :SodaliteSituation ;
-  rdfs:subPropertyOf DUL:isSettingFor ;
-.
-:includesCapabilityType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :ResourceModel ;
-  rdfs:range :SodaliteSituation ;
-  rdfs:subPropertyOf DUL:isSettingFor ;
-.
-:includesDataType
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain :ResourceModel ;
-  rdfs:range :SodaliteSituation ;
-  rdfs:subPropertyOf DUL:isSettingFor ;
-.
-:includesRelationshipType
+:includesType
   rdf:type owl:ObjectProperty ;
   rdfs:domain :ResourceModel ;
   rdfs:range :SodaliteSituation ;
