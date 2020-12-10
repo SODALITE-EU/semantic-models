@@ -2248,4 +2248,91 @@ DUL:hasParameter
 :volume_id
   rdf:type rdf:Property ;
 .
-
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type all other TOSCA Policy Types derive from." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.entity.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Placement>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern placement of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Scaling>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern scaling of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Update>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.policies.Performance>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Policy Type definition that is used to govern update of TOSCA nodes or groups of nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Root> ;
+.
+:triggers
+  rdf:type owl:ObjectProperty ;
+  rdfs:range :Trigger ;
+  rdfs:subPropertyOf soda:specification ;
+.
+:Policy
+  rdf:type owl:Class ;
+  rdfs:subClassOf soda:SodaliteConcept ;
+.
+:event
+   rdf:type rdf:Property ;
+.
+:condition
+   rdf:type rdf:Property ;
+.
+:and
+   rdf:type rdf:Property ;
+.
+:not
+   rdf:type rdf:Property ;
+.
+:target_filter
+   rdf:type rdf:Property ;
+.
+:call_operation
+   rdf:type rdf:Property ;
+.
+:operation
+   rdf:type rdf:Property ;
+.
+:adjustment
+   rdf:type rdf:Property ;
+.
+:action
+   rdf:type rdf:Property ;
+.
+:evaluations
+   rdf:type rdf:Property ;
+.
+:period
+   rdf:type rdf:Property ;
+.
+:method
+   rdf:type rdf:Property ;
+.
+:schedule
+   rdf:type rdf:Property ;
+.
+:start_time
+   rdf:type rdf:Property ;
+.
+:end_time
+   rdf:type rdf:Property ;
+.
+:targets
+  rdf:type owl:ObjectProperty ;
+  rdfs:range :Target ;
+  rdfs:subPropertyOf soda:specification ;
+.
+:Target
+  rdf:type owl:Class ;
+  rdfs:subClassOf soda:SodaliteConcept ;
+.
