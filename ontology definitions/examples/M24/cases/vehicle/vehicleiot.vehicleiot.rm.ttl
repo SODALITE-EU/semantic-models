@@ -1,0 +1,313 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+	
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'TARGET' ; 
+.
+
+
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_1 ;
+  exchange:hasParameter :Parameter_2 ;
+.	
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'tosca.nodes.SoftwareComponent.host' ; 
+.
+
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_4 ;
+  exchange:hasParameter :Parameter_5 ;
+  exchange:hasParameter :Parameter_6 ;
+.	
+
+
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_3 ; 
+.
+
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "public_address" ;
+  exchange:hasParameter :Parameter_8 ;
+.	
+
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_7 ; 
+.
+
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "public_address" ;
+  exchange:hasParameter :Parameter_10 ;
+.	
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_9 ;
+.
+
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/vehicleiot-uc/full-demo/playbooks/configure_prometheus.yml' ;
+.
+
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '- hosts: all\n  become_user: root\n  gather_facts: yes\n  become: yes    \n  vars:\n    project_home: "{{ lookup(\'env\', \'HOME\') }}"\n    project_root: "{{ project_home }}/.knowgo"\n  tasks:  \n  - name: "Ensuring Prometheus Configuration directory exists in {{ project_root }}/conf/prometheus"\n    file: path={{ project_root }}/conf/prometheus state=directory\n  - name: "Generating Prometheus Configuration"\n    template:\n      src: "prometheus.yml.tmpl"\n      dest: "{{ project_root }}/conf/prometheus/prometheus.yml"\n' ;
+.
+
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_13 ;
+  exchange:hasParameter :Parameter_14 ;
+.
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/vehicleiot-uc/full-demo/playbooks/prometheus.yml.tmpl' ; 
+ .
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value 'global:\n    scrape_interval: 15s\nscrape_configs:\n- job_name: prometheus\n    scrape_interval: 5s\n    static_configs:\n    - targets:\n    - localhost:9000\n- job_name: knowgo-api-gateway\n    scrape_interval: 10s\n    static_configs:\n    - targets:\n    - "{{ public_address }}:8081"' ;
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_16 ;
+  exchange:hasParameter :Parameter_17 ;
+.
+
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_18 ; 
+.
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_15 ;
+ exchange:hasParameter :Parameter_19 ;
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "pre_configure_target" ;
+  exchange:hasParameter :Parameter_12 ;
+  exchange:hasParameter :Parameter_20 ;
+.
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_11 ;
+.
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/vehicleiot-uc/full-demo/playbooks/configure_prometheus.yml' ;
+.
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '- hosts: all\n  become_user: root\n  gather_facts: yes\n  become: yes    \n  vars:\n    project_home: "{{ lookup(\'env\', \'HOME\') }}"\n    project_root: "{{ project_home }}/.knowgo"\n  tasks:  \n  - name: "Ensuring Prometheus Configuration directory exists in {{ project_root }}/conf/prometheus"\n    file: path={{ project_root }}/conf/prometheus state=directory\n  - name: "Generating Prometheus Configuration"\n    template:\n      src: "prometheus.yml.tmpl"\n      dest: "{{ project_root }}/conf/prometheus/prometheus.yml"\n' ;
+.
+
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_24 ;
+.
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/vehicleiot-uc/full-demo/playbooks/prometheus.yml.tmpl' ; 
+ .
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value 'global:\n    scrape_interval: 15s\nscrape_configs:\n- job_name: prometheus\n    scrape_interval: 5s\n    static_configs:\n    - targets:\n    - localhost:9000\n- job_name: knowgo-api-gateway\n    scrape_interval: 10s\n    static_configs:\n    - targets:\n    - "{{ public_address }}:8081"' ;
+.
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_26 ;
+  exchange:hasParameter :Parameter_27 ;
+.
+
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_28 ; 
+.
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_25 ;
+ exchange:hasParameter :Parameter_29 ;
+.
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_22 ;
+  exchange:hasParameter :Parameter_30 ;
+.
+
+
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.relationship.Configure' ;
+.
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_21 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Configure" ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_33 ;
+.
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_31 ;
+.
+
+:Interface_2
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_34 ;
+  exchange:hasParameter :Parameter_35 ;
+.
+
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Node' ;  
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'vehicleiot/sodalite.nodes.PrometheusConfiguration' ;  
+.
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.DependsOn' ;  
+.
+
+:Requirement_1
+  rdf:type exchange:Requirement ;
+  exchange:name "configuration" ;
+  exchange:hasParameter :Parameter_36 ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_38 ;
+.		
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.PrometheusConfiguration" ;
+  exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
+  exchange:interfaces :Interface_2 ; 
+.  
+:NodeType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.PrometheusDockerizedComponent" ;
+  exchange:derivesFrom 'docker/sodalite.nodes.DockerizedComponent' ;  
+  exchange:requirements :Requirement_1 ; 
+.  
+
+
+
+
+
+:RelationshipType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.relationships.PrometheusHosting" ;
+  exchange:derivesFrom 'tosca.relationships.HostedOn' ;  
+  exchange:interfaces :Interface_1 ; 
+.

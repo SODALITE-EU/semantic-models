@@ -1,0 +1,1559 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+	
+
+
+
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'node-1.novalocal' ;
+.
+
+
+
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_1 ;
+  exchange:hasParameter :Parameter_2 ;
+  exchange:hasParameter :Parameter_3 ;
+.
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:hasParameter :Parameter_4 ;
+  exchange:hasParameter :Parameter_5 ;
+  exchange:hasParameter :Parameter_6 ;
+.
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "total_sockets" ;
+  exchange:hasParameter :Parameter_7 ;
+  exchange:hasParameter :Parameter_8 ;
+  exchange:hasParameter :Parameter_9 ;
+.
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "total_numa_nodes" ;
+  exchange:hasParameter :Parameter_10 ;
+  exchange:hasParameter :Parameter_11 ;
+  exchange:hasParameter :Parameter_12 ;
+.
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "total_cores" ;
+  exchange:hasParameter :Parameter_13 ;
+  exchange:hasParameter :Parameter_14 ;
+  exchange:hasParameter :Parameter_15 ;
+.
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "available_sockets" ;
+  exchange:hasParameter :Parameter_16 ;
+  exchange:hasParameter :Parameter_17 ;
+  exchange:hasParameter :Parameter_18 ;
+.
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "available_numa_nodes" ;
+  exchange:hasParameter :Parameter_19 ;
+  exchange:hasParameter :Parameter_20 ;
+  exchange:hasParameter :Parameter_21 ;
+.
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_8
+  rdf:type exchange:Property ;
+  exchange:name "available_cores" ;
+  exchange:hasParameter :Parameter_22 ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_24 ;
+.
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'linux' ;
+.
+
+
+
+
+
+:Property_9
+  rdf:type exchange:Property ;
+  exchange:name "operating_system" ;
+  exchange:hasParameter :Parameter_25 ;
+  exchange:hasParameter :Parameter_26 ;
+  exchange:hasParameter :Parameter_27 ;
+.
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '126693628' ;
+.
+
+
+
+
+
+:Property_10
+  rdf:type exchange:Property ;
+  exchange:name "available_memory_kb" ;
+  exchange:hasParameter :Parameter_28 ;
+  exchange:hasParameter :Parameter_29 ;
+  exchange:hasParameter :Parameter_30 ;
+.
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'node-2.novalocal' ;
+.
+
+
+
+
+
+:Property_11
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_31 ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_33 ;
+.
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_12
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:hasParameter :Parameter_34 ;
+  exchange:hasParameter :Parameter_35 ;
+  exchange:hasParameter :Parameter_36 ;
+.
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_13
+  rdf:type exchange:Property ;
+  exchange:name "total_sockets" ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_38 ;
+  exchange:hasParameter :Parameter_39 ;
+.
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_14
+  rdf:type exchange:Property ;
+  exchange:name "total_numa_nodes" ;
+  exchange:hasParameter :Parameter_40 ;
+  exchange:hasParameter :Parameter_41 ;
+  exchange:hasParameter :Parameter_42 ;
+.
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_15
+  rdf:type exchange:Property ;
+  exchange:name "total_cores" ;
+  exchange:hasParameter :Parameter_43 ;
+  exchange:hasParameter :Parameter_44 ;
+  exchange:hasParameter :Parameter_45 ;
+.
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_16
+  rdf:type exchange:Property ;
+  exchange:name "available_sockets" ;
+  exchange:hasParameter :Parameter_46 ;
+  exchange:hasParameter :Parameter_47 ;
+  exchange:hasParameter :Parameter_48 ;
+.
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_17
+  rdf:type exchange:Property ;
+  exchange:name "available_numa_nodes" ;
+  exchange:hasParameter :Parameter_49 ;
+  exchange:hasParameter :Parameter_50 ;
+  exchange:hasParameter :Parameter_51 ;
+.
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_18
+  rdf:type exchange:Property ;
+  exchange:name "available_cores" ;
+  exchange:hasParameter :Parameter_52 ;
+  exchange:hasParameter :Parameter_53 ;
+  exchange:hasParameter :Parameter_54 ;
+.
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'linux' ;
+.
+
+
+
+
+
+:Property_19
+  rdf:type exchange:Property ;
+  exchange:name "operating_system" ;
+  exchange:hasParameter :Parameter_55 ;
+  exchange:hasParameter :Parameter_56 ;
+  exchange:hasParameter :Parameter_57 ;
+.
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '126754384' ;
+.
+
+
+
+
+
+:Property_20
+  rdf:type exchange:Property ;
+  exchange:name "available_memory_kb" ;
+  exchange:hasParameter :Parameter_58 ;
+  exchange:hasParameter :Parameter_59 ;
+  exchange:hasParameter :Parameter_60 ;
+.
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'cloud7' ;
+.
+
+
+
+
+
+:Property_21
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_61 ;
+  exchange:hasParameter :Parameter_62 ;
+  exchange:hasParameter :Parameter_63 ;
+.
+:Parameter_64
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_65
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_66
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_22
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:hasParameter :Parameter_64 ;
+  exchange:hasParameter :Parameter_65 ;
+  exchange:hasParameter :Parameter_66 ;
+.
+:Parameter_67
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_68
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_69
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_23
+  rdf:type exchange:Property ;
+  exchange:name "total_sockets" ;
+  exchange:hasParameter :Parameter_67 ;
+  exchange:hasParameter :Parameter_68 ;
+  exchange:hasParameter :Parameter_69 ;
+.
+:Parameter_70
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_71
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_72
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_24
+  rdf:type exchange:Property ;
+  exchange:name "total_numa_nodes" ;
+  exchange:hasParameter :Parameter_70 ;
+  exchange:hasParameter :Parameter_71 ;
+  exchange:hasParameter :Parameter_72 ;
+.
+:Parameter_73
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_74
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_75
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_25
+  rdf:type exchange:Property ;
+  exchange:name "total_cores" ;
+  exchange:hasParameter :Parameter_73 ;
+  exchange:hasParameter :Parameter_74 ;
+  exchange:hasParameter :Parameter_75 ;
+.
+:Parameter_76
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_77
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_78
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_26
+  rdf:type exchange:Property ;
+  exchange:name "available_sockets" ;
+  exchange:hasParameter :Parameter_76 ;
+  exchange:hasParameter :Parameter_77 ;
+  exchange:hasParameter :Parameter_78 ;
+.
+:Parameter_79
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_80
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_81
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_27
+  rdf:type exchange:Property ;
+  exchange:name "available_numa_nodes" ;
+  exchange:hasParameter :Parameter_79 ;
+  exchange:hasParameter :Parameter_80 ;
+  exchange:hasParameter :Parameter_81 ;
+.
+:Parameter_82
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_83
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_84
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_28
+  rdf:type exchange:Property ;
+  exchange:name "available_cores" ;
+  exchange:hasParameter :Parameter_82 ;
+  exchange:hasParameter :Parameter_83 ;
+  exchange:hasParameter :Parameter_84 ;
+.
+:Parameter_85
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_86
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_87
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'linux' ;
+.
+
+
+
+
+
+:Property_29
+  rdf:type exchange:Property ;
+  exchange:name "operating_system" ;
+  exchange:hasParameter :Parameter_85 ;
+  exchange:hasParameter :Parameter_86 ;
+  exchange:hasParameter :Parameter_87 ;
+.
+:Parameter_88
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_89
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_90
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '130850912' ;
+.
+
+
+
+
+
+:Property_30
+  rdf:type exchange:Property ;
+  exchange:name "available_memory_kb" ;
+  exchange:hasParameter :Parameter_88 ;
+  exchange:hasParameter :Parameter_89 ;
+  exchange:hasParameter :Parameter_90 ;
+.
+:Parameter_91
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_92
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_93
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'cloud8' ;
+.
+
+
+
+
+
+:Property_31
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_91 ;
+  exchange:hasParameter :Parameter_92 ;
+  exchange:hasParameter :Parameter_93 ;
+.
+:Parameter_94
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_95
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_96
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_32
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:hasParameter :Parameter_94 ;
+  exchange:hasParameter :Parameter_95 ;
+  exchange:hasParameter :Parameter_96 ;
+.
+:Parameter_97
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_98
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_99
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_33
+  rdf:type exchange:Property ;
+  exchange:name "total_sockets" ;
+  exchange:hasParameter :Parameter_97 ;
+  exchange:hasParameter :Parameter_98 ;
+  exchange:hasParameter :Parameter_99 ;
+.
+:Parameter_100
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_101
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_102
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_34
+  rdf:type exchange:Property ;
+  exchange:name "total_numa_nodes" ;
+  exchange:hasParameter :Parameter_100 ;
+  exchange:hasParameter :Parameter_101 ;
+  exchange:hasParameter :Parameter_102 ;
+.
+:Parameter_103
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_104
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_105
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_35
+  rdf:type exchange:Property ;
+  exchange:name "total_cores" ;
+  exchange:hasParameter :Parameter_103 ;
+  exchange:hasParameter :Parameter_104 ;
+  exchange:hasParameter :Parameter_105 ;
+.
+:Parameter_106
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_107
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_108
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_36
+  rdf:type exchange:Property ;
+  exchange:name "available_sockets" ;
+  exchange:hasParameter :Parameter_106 ;
+  exchange:hasParameter :Parameter_107 ;
+  exchange:hasParameter :Parameter_108 ;
+.
+:Parameter_109
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_110
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_111
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_37
+  rdf:type exchange:Property ;
+  exchange:name "available_numa_nodes" ;
+  exchange:hasParameter :Parameter_109 ;
+  exchange:hasParameter :Parameter_110 ;
+  exchange:hasParameter :Parameter_111 ;
+.
+:Parameter_112
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_113
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_114
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_38
+  rdf:type exchange:Property ;
+  exchange:name "available_cores" ;
+  exchange:hasParameter :Parameter_112 ;
+  exchange:hasParameter :Parameter_113 ;
+  exchange:hasParameter :Parameter_114 ;
+.
+:Parameter_115
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_116
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_117
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'linux' ;
+.
+
+
+
+
+
+:Property_39
+  rdf:type exchange:Property ;
+  exchange:name "operating_system" ;
+  exchange:hasParameter :Parameter_115 ;
+  exchange:hasParameter :Parameter_116 ;
+  exchange:hasParameter :Parameter_117 ;
+.
+:Parameter_118
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_119
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_120
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '132583840' ;
+.
+
+
+
+
+
+:Property_40
+  rdf:type exchange:Property ;
+  exchange:name "available_memory_kb" ;
+  exchange:hasParameter :Parameter_118 ;
+  exchange:hasParameter :Parameter_119 ;
+  exchange:hasParameter :Parameter_120 ;
+.
+:Parameter_121
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_122
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_123
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'node-6.novalocal' ;
+.
+
+
+
+
+
+:Property_41
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_121 ;
+  exchange:hasParameter :Parameter_122 ;
+  exchange:hasParameter :Parameter_123 ;
+.
+:Parameter_124
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_125
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_126
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_42
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:hasParameter :Parameter_124 ;
+  exchange:hasParameter :Parameter_125 ;
+  exchange:hasParameter :Parameter_126 ;
+.
+:Parameter_127
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_128
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_129
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_43
+  rdf:type exchange:Property ;
+  exchange:name "total_sockets" ;
+  exchange:hasParameter :Parameter_127 ;
+  exchange:hasParameter :Parameter_128 ;
+  exchange:hasParameter :Parameter_129 ;
+.
+:Parameter_130
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_131
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_132
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_44
+  rdf:type exchange:Property ;
+  exchange:name "total_numa_nodes" ;
+  exchange:hasParameter :Parameter_130 ;
+  exchange:hasParameter :Parameter_131 ;
+  exchange:hasParameter :Parameter_132 ;
+.
+:Parameter_133
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_134
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_135
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_45
+  rdf:type exchange:Property ;
+  exchange:name "total_cores" ;
+  exchange:hasParameter :Parameter_133 ;
+  exchange:hasParameter :Parameter_134 ;
+  exchange:hasParameter :Parameter_135 ;
+.
+:Parameter_136
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_137
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_138
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_46
+  rdf:type exchange:Property ;
+  exchange:name "available_sockets" ;
+  exchange:hasParameter :Parameter_136 ;
+  exchange:hasParameter :Parameter_137 ;
+  exchange:hasParameter :Parameter_138 ;
+.
+:Parameter_139
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_140
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_141
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_47
+  rdf:type exchange:Property ;
+  exchange:name "available_numa_nodes" ;
+  exchange:hasParameter :Parameter_139 ;
+  exchange:hasParameter :Parameter_140 ;
+  exchange:hasParameter :Parameter_141 ;
+.
+:Parameter_142
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_143
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_144
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '40' ;
+.
+
+
+
+
+
+:Property_48
+  rdf:type exchange:Property ;
+  exchange:name "available_cores" ;
+  exchange:hasParameter :Parameter_142 ;
+  exchange:hasParameter :Parameter_143 ;
+  exchange:hasParameter :Parameter_144 ;
+.
+:Parameter_145
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_146
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_147
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'linux' ;
+.
+
+
+
+
+
+:Property_49
+  rdf:type exchange:Property ;
+  exchange:name "operating_system" ;
+  exchange:hasParameter :Parameter_145 ;
+  exchange:hasParameter :Parameter_146 ;
+  exchange:hasParameter :Parameter_147 ;
+.
+:Parameter_148
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_149
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_150
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '128471284' ;
+.
+
+
+
+
+
+:Property_50
+  rdf:type exchange:Property ;
+  exchange:name "available_memory_kb" ;
+  exchange:hasParameter :Parameter_148 ;
+  exchange:hasParameter :Parameter_149 ;
+  exchange:hasParameter :Parameter_150 ;
+.
+
+
+
+
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.hpc.resources.node-1.novalocal" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+  exchange:properties :Property_5 ; 
+  exchange:properties :Property_6 ; 
+  exchange:properties :Property_7 ; 
+  exchange:properties :Property_8 ; 
+  exchange:properties :Property_9 ; 
+  exchange:properties :Property_10 ; 
+.  
+:NodeType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.hpc.resources.node-2.novalocal" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:properties :Property_11 ; 
+  exchange:properties :Property_12 ; 
+  exchange:properties :Property_13 ; 
+  exchange:properties :Property_14 ; 
+  exchange:properties :Property_15 ; 
+  exchange:properties :Property_16 ; 
+  exchange:properties :Property_17 ; 
+  exchange:properties :Property_18 ; 
+  exchange:properties :Property_19 ; 
+  exchange:properties :Property_20 ; 
+.  
+:NodeType_3
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.hpc.resources.cloud7" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:properties :Property_21 ; 
+  exchange:properties :Property_22 ; 
+  exchange:properties :Property_23 ; 
+  exchange:properties :Property_24 ; 
+  exchange:properties :Property_25 ; 
+  exchange:properties :Property_26 ; 
+  exchange:properties :Property_27 ; 
+  exchange:properties :Property_28 ; 
+  exchange:properties :Property_29 ; 
+  exchange:properties :Property_30 ; 
+.  
+:NodeType_4
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.hpc.resources.cloud8" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:properties :Property_31 ; 
+  exchange:properties :Property_32 ; 
+  exchange:properties :Property_33 ; 
+  exchange:properties :Property_34 ; 
+  exchange:properties :Property_35 ; 
+  exchange:properties :Property_36 ; 
+  exchange:properties :Property_37 ; 
+  exchange:properties :Property_38 ; 
+  exchange:properties :Property_39 ; 
+  exchange:properties :Property_40 ; 
+.  
+:NodeType_5
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.hpc.resources.node-6.novalocal" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:properties :Property_41 ; 
+  exchange:properties :Property_42 ; 
+  exchange:properties :Property_43 ; 
+  exchange:properties :Property_44 ; 
+  exchange:properties :Property_45 ; 
+  exchange:properties :Property_46 ; 
+  exchange:properties :Property_47 ; 
+  exchange:properties :Property_48 ; 
+  exchange:properties :Property_49 ; 
+  exchange:properties :Property_50 ; 
+.  
+
+
+

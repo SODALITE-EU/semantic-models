@@ -1,0 +1,496 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+	
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'registry_ip' ; 
+.
+
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_1 ;
+  exchange:hasParameter :Parameter_2 ;
+.	
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'country_name' ; 
+.
+
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_4 ;
+  exchange:hasParameter :Parameter_5 ;
+.	
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'organization_name' ; 
+.
+
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_7 ;
+  exchange:hasParameter :Parameter_8 ;
+.	
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'email_address' ; 
+.
+
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_10 ;
+  exchange:hasParameter :Parameter_11 ;
+.	
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'registry_ip' ; 
+.
+
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_13 ;
+  exchange:hasParameter :Parameter_14 ;
+.	
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'tosca.nodes.SoftwareComponent.host' ; 
+.
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_16 ;
+  exchange:hasParameter :Parameter_17 ;
+  exchange:hasParameter :Parameter_18 ;
+.	
+
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_3 ; 
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "registry_ip" ;
+  exchange:hasParameter :Parameter_20 ;
+.	
+
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_6 ; 
+.
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "country_name" ;
+  exchange:hasParameter :Parameter_22 ;
+.	
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_9 ; 
+.
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "organization_name" ;
+  exchange:hasParameter :Parameter_24 ;
+.	
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_12 ; 
+.
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "email_address" ;
+  exchange:hasParameter :Parameter_26 ;
+.	
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_19 ; 
+.
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "public_ipv4_address" ;
+  exchange:hasParameter :Parameter_28 ;
+.	
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_15 ; 
+.
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "registry_ip" ;
+  exchange:hasParameter :Parameter_30 ;
+.	
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_21 ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_25 ;
+  exchange:hasParameter :Parameter_27 ;
+  exchange:hasParameter :Parameter_29 ;
+.
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/docker/playbooks/add_cert.yml' ;
+.
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  become_user: root\n  become: yes\n  vars:\n    pip_install_packages:\n      - name: cryptography\n  tasks:\n    - name: Create certs and storage folders\n      block:\n        - file:\n            path: "/home/xopera/drive"\n            state: directory\n        - file:\n            path: "/home/xopera/certs"\n            state: directory\n    - name: Copy root CA files\n      block:\n        - copy:\n            src: ca.crt\n            dest: "/home/xopera/certs/ca.crt"\n        - copy:\n            src: ca.key\n            dest: "/home/xopera/certs/ca.key"\n    - name: Install root CA\n      block:\n        - command: "cp /home/xopera/certs/ca.crt /etc/pki/ca-trust/source/anchors/ca.crt"\n        - command: update-ca-trust\n    - name: Generate certificates and clean up\n      block:\n        - openssl_privatekey:\n            path: "/home/xopera/certs/image.docker.local.key"\n            size: 4096\n        - openssl_csr:\n            path: "/home/xopera/certs/image.docker.local.csr"\n            privatekey_path: "/home/xopera/certs/image.docker.local.key"\n            country_name: "{{ country_name }}"\n            organization_name: "{{ organization_name }}"\n            email_address:  "{{ email_address }}"\n            common_name: "image.docker.local"\n            subject_alt_name: "IP:{{ public_ipv4_address }}"\n        - openssl_certificate:\n            path: "/home/xopera/certs/image.docker.local.crt"\n            csr_path: "/home/xopera/certs/image.docker.local.csr"\n            ownca_path: "/home/xopera/certs/ca.crt"\n            ownca_privatekey_path: "/home/xopera/certs/ca.key"\n            provider: "ownca"\n        - file:\n            state: absent\n            path: "/home/xopera/certs/image.docker.local.csr"\n    - name: Install certificates for communication with the registry\n      block:\n        - file:\n            path: "/etc/docker/certs.d/{{ registry_ip }}"\n            state: directory\n        - command: "cp /home/xopera/certs/ca.crt /etc/docker/certs.d/{{ registry_ip }}"\n        - command: "cp /home/xopera/certs/image.docker.local.key /etc/docker/certs.d/{{ registry_ip }}"\n        - command: "cp /home/xopera/certs/image.docker.local.crt /etc/docker/certs.d/{{ registry_ip }}/image.docker.local.cert"\n  roles:\n    - role: geerlingguy.pip' ;
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "relative_path" ;
+  exchange:value 'playbooks' ;
+.
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_33 ;
+  exchange:hasParameter :Parameter_34 ;
+  exchange:hasParameter :Parameter_35 ;
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/ide/dsl/org.sodalite.dsl.examples/certificates/docker/ca.crt' ; 
+ .
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '-----BEGIN CERTIFICATE-----\n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\njD0RqcHKtz3yud2tsZhgGZDMqkdYieNflO3U\n-----END CERTIFICATE-----\n' ;
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_38 ;
+.
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/ide/dsl/org.sodalite.dsl.examples/certificates/docker/ca.key' ; 
+ .
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '-----BEGIN PRIVATE KEY-----\n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\nra5L6asa0EasQ5whz2A9bAVdjEyUq+Y=\n-----END PRIVATE KEY-----\n' ;
+.
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_40 ;
+  exchange:hasParameter :Parameter_41 ;
+.
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "relative_path" ;
+  exchange:value 'artifacts' ;
+.
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_39 ; 
+  exchange:hasParameter :Parameter_42 ; 
+  exchange:hasParameter :Parameter_43 ;
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_36 ;
+ exchange:hasParameter :Parameter_44 ;
+.
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_45 ;
+.
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_31 ;
+.
+
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/docker/playbooks/remove_cert.yml' ;
+.
+
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  become_user: root\n  become: yes\n  vars:\n    pip_install_packages:\n      - name: cryptography\n        state: absent\n  tasks:\n    - name: Delete the path to registry communication keys\n      file:\n          path: "/etc/docker/certs.d/{{ registry_ip }}"\n          state: absent\n  roles:\n    - geerlingguy.pip\n' ;
+.
+
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_48 ;
+  exchange:hasParameter :Parameter_49 ;
+.
+
+
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_50 ;
+.
+
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "delete" ;
+  exchange:hasParameter :Parameter_47 ;
+  exchange:hasParameter :Parameter_51 ;
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'localhost' ;
+.
+
+
+
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "registry_ip" ;
+  exchange:description 'IP of the SODALITE docker registry' ;
+  exchange:hasParameter :Parameter_53 ;
+  exchange:hasParameter :Parameter_54 ;
+  exchange:hasParameter :Parameter_55 ;
+.
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "country_name" ;
+  exchange:description 'Country name field of the certificate signing request subject.' ;
+  exchange:hasParameter :Parameter_56 ;
+  exchange:hasParameter :Parameter_57 ;
+.
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "organization_name" ;
+  exchange:description 'The organizationName field of the certificate signing request subject.' ;
+  exchange:hasParameter :Parameter_58 ;
+  exchange:hasParameter :Parameter_59 ;
+.
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "email_address" ;
+  exchange:description 'The email address field of the certificate signing request subject.' ;
+  exchange:hasParameter :Parameter_60 ;
+  exchange:hasParameter :Parameter_61 ;
+.
+
+
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_46 ;
+  exchange:hasParameter :Parameter_52 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_62 ;
+  exchange:hasParameter :Parameter_63 ;
+.
+
+
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.RegistryCertificate" ;
+  exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+  exchange:interfaces :Interface_1 ; 
+.  
+
+
+

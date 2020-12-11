@@ -1,0 +1,538 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "tcp" ;
+  exchange:listValue "udp" ;
+  exchange:listValue "icmp" ;
+.		
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "min_length" ;
+  exchange:value "1" ;
+.		
+	
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'ports' ; 
+.
+
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_3 ;
+  exchange:hasParameter :Parameter_4 ;
+.	
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'group_name' ; 
+.
+
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_6 ;
+  exchange:hasParameter :Parameter_7 ;
+.	
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'group_description' ; 
+.
+
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_9 ;
+  exchange:hasParameter :Parameter_10 ;
+.	
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'group_name' ; 
+.
+
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_12 ;
+  exchange:hasParameter :Parameter_13 ;
+.	
+
+
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_5 ; 
+.
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "ports" ;
+  exchange:hasParameter :Parameter_15 ;
+.	
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_8 ; 
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "group_name" ;
+  exchange:hasParameter :Parameter_17 ;
+.	
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_11 ; 
+.
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "group_description" ;
+  exchange:hasParameter :Parameter_19 ;
+.	
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_14 ; 
+.
+
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "group_name" ;
+  exchange:hasParameter :Parameter_21 ;
+.	
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_16 ;
+  exchange:hasParameter :Parameter_18 ;
+  exchange:hasParameter :Parameter_20 ;
+.
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/openstack/playbooks/security_rule_create.yml' ;
+.
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- name: Refresh token and update env\n  import_playbook: egi_refresh_token.yml\n  when: env.checkin_env is defined\n- hosts: all\n  gather_facts: no\n  tasks:\n    - set_fact:\n        os_env: "{{ env.os_env }}"\n      when: env.os_env is defined  \n    - name: Create security group\n      os_security_group:  \n        name: "{{ group_name }}"\n        state: present\n        description: "{{ group_description }}"\n      environment: "{{ os_env if os_env is defined }}"\n    - name: Add security rules \n      os_security_group_rule:\n        security_group: "{{ group_name }}"\n        protocol: "{{ item.value.protocol }}"\n        port_range_min: "{{ item.value.port_range_min }}"\n        port_range_max: "{{ item.value.port_range_max }}"\n        remote_ip_prefix: "{{ item.value.remote_ip_prefix }}"\n        direction: "{{ item.value.direction if item.value.direction is defined else \'ingress\' }}"\n      loop: "{{ ports | dict2items }}"\n      environment: "{{ os_env if os_env is defined }}"' ;
+.
+
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_24 ;
+  exchange:hasParameter :Parameter_25 ;
+.
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/openstack/playbooks/egi_refresh_token.yml' ; 
+ .
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  \n  vars:\n# Some Global Vars\n    CHECKIN_CLIENT_ID: "{{ env.checkin_env.CHECKIN_CLIENT_ID }}"\n    CHECKIN_CLIENT_SECRET: "{{ env.checkin_env.CHECKIN_CLIENT_SECRET }}"\n    CHECKIN_REFRESH_TOKEN: "{{ env.checkin_env.CHECKIN_REFRESH_TOKEN }}"\n    EGI_SITE: "{{ env.checkin_env.EGI_SITE }}"\n    CHECKIN_OIDC_URL: https://aai.egi.eu/oidc\n    GOCDB_PUBLICURL: https://goc.egi.eu/gocdbpi/public/\n    # TODO: protocal can be also "oidc", make fallback to it\n    PROTOCOL: openid\n    auth_path: "{{ \'/v3/OS-FEDERATION/identity_providers/egi.eu/protocols/\' + PROTOCOL + \'/auth\' }}"\n    project_path: /v3/auth/projects\n    token_path: /v3/auth/tokens\n  \n  tasks:\n# Getting access token from CHECKIN\n    - name: Discover OIDC\n      uri:\n        url: "{{ CHECKIN_OIDC_URL }}/.well-known/openid-configuration"\n        method: GET\n      register: oidc_discovery\n    - set_fact:\n        OIDC_ENDPOINT: "{{ oidc_discovery.json.token_endpoint }}"\n    - debug:\n        msg: "{{ OIDC_ENDPOINT }}"\n    - set_fact:\n        refresh_token_request:\n          client_id: "{{ CHECKIN_CLIENT_ID }}"\n          client_secret: "{{ CHECKIN_CLIENT_SECRET }}"\n          grant_type: "refresh_token"\n          refresh_token: "{{ CHECKIN_REFRESH_TOKEN }}"\n          scope: "openid email profile"\n    - name: Refresh token\n      uri:\n        url: "{{ OIDC_ENDPOINT }}"\n        method: POST\n        body_format: form-urlencoded\n        body: "{{ refresh_token_request }}"\n      register: refresh_token\n    - set_fact:\n        access_token: "{{ refresh_token.json.access_token }}"\n    - debug:\n        msg: "{{ access_token }}"\n# Getting Site Information\n    - set_fact:\n        site_info_request:\n          method: "get_service_endpoint"\n          service_type: org.openstack.nova\n          monitored: "Y"\n          sitename: "{{ EGI_SITE }}"\n    - name: Get site\n      uri:\n        url: "{{ GOCDB_PUBLICURL }}?{{ site_info_request | urlencode }}"\n        method: GET\n        return_content: yes\n      register: site_xml\n    # TODO: Check the PRODUCTION state\n    # # xml module version to obtain URL\n    # - name: Parse site xml response\n    #   xml:\n    #     xmlstring: "{{ site_xml.content }}"\n    #     xpath: /results/SERVICE_ENDPOINT/URL\n    #     content: text\n    #   register: site_xml\n    # - set_fact:\n    #     site_endpoint: "{{ site_xml.matches.0.URL }}"\n    # - debug:\n    #     msg: "{{ site_endpoint }}"\n    # regex version to obtain URL\n    - set_fact:\n        site_endpoint: "{{ ( site_xml.content | regex_search(\'<URL>(.+)</URL>\', \'\\\\1\') | first ).rstrip(\'/\') }}"\n    - debug:\n        msg: "{{ site_endpoint }}"\n# Getting unscoped token, project id and env for openstack\n    - block:\n      - debug:\n          msg: "{{ site_auth_endpoint }} {{ site_project_endpoint }}"\n        \n      - name: Get unscoped token\n        uri: \n          url: "{{ site_auth_endpoint }}"\n          method: POST\n          status_code: 201\n          headers:\n            Authorization: "Bearer {{ access_token }}"\n        register: site_auth_token_response\n      - set_fact:\n          unscoped_token: "{{ site_auth_token_response.x_subject_token }}"\n      - debug:\n          msg: "{{ unscoped_token }}"\n      - name: Get project id\n        uri: \n          url: "{{ site_project_endpoint }}"\n          method: GET\n          headers:\n            X-Auth-Token: "{{ unscoped_token }}"\n        register: site_project_response\n      - set_fact:\n          # TODO: can be several projects\n          # TODO: check other parameters, e.g. enabled\n          project_id: "{{ site_project_response.json.projects.0.id }}"\n      - debug:\n          msg: "{{ project_id }}"\n      - set_fact:\n          scoped_token_request:\n            auth:\n              identity:\n                methods: ["token"]\n                token:\n                  id: "{{ unscoped_token }}"\n              scope:\n                project:\n                  id: "{{ project_id }}"\n      - name: Get scoped token\n        uri: \n          url: "{{ site_token_endpoint }}"\n          method: POST\n          body: "{{ scoped_token_request }}"\n          body_format: json\n          status_code: 201\n        register: scoped_token_response\n      - set_fact:\n          scoped_token: "{{ scoped_token_response.x_subject_token }}"\n      - debug:\n          msg: "{{ scoped_token }}"\n      - set_fact:\n          os_env:\n            OS_AUTH_URL: "{{ site_endpoint }}"\n            OS_AUTH_TYPE: "v3oidcaccesstoken"\n            OS_IDENTITY_PROVIDER: "egi.eu"\n            OS_PROTOCOL: "{{ PROTOCOL }}"\n            OS_ACCESS_TOKEN: "{{ access_token }}"\n            OS_PROJECT_ID: "{{ project_id }}"   \n            OS_USER_DOMAIN_NAME: ""\n            OS_REGION_NAME: ""\n            OS_PROJECT_NAME: ""        \n      - debug:\n          msg: "{{ os_env }}"\n      vars:\n        site_ep_basename: "{{ site_endpoint | basename }}"\n        site_ep_dirname: "{{ site_endpoint | dirname }}"\n        site_endpoint_prefix: "{{ (site_ep_dirname + \'%s\') if (\'v3\' in site_ep_basename or \'v2.0\' in site_ep_basename) else (site_endpoint + \'%s\') }}"\n        site_auth_endpoint: "{{ site_endpoint_prefix | format(auth_path) }}"\n        site_project_endpoint: "{{ site_endpoint_prefix | format(project_path) }}"\n        site_token_endpoint: "{{ site_endpoint_prefix | format(token_path) }}"\n' ;
+.
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_27 ;
+  exchange:hasParameter :Parameter_28 ;
+.
+
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_29 ; 
+.
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_26 ;
+ exchange:hasParameter :Parameter_30 ;
+.
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_31 ;
+.
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_22 ;
+.
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/openstack/playbooks/security_rule_delete.yml' ;
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- name: Refresh token and update env\n  import_playbook: egi_refresh_token.yml\n  when: env.checkin_env is defined\n- hosts: all\n  gather_facts: no\n  tasks:\n    - set_fact:\n        os_env: "{{ env.os_env }}"\n      when: env.os_env is defined  \n    - name: Delete security group\n      os_security_group:  \n        name: "{{ group_name }}"\n        state: absent\n      ignore_errors: True\n      environment: "{{ os_env if os_env is defined }}"\n' ;
+.
+
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_34 ;
+  exchange:hasParameter :Parameter_35 ;
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/openstack/playbooks/egi_refresh_token.yml' ; 
+ .
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  \n  vars:\n# Some Global Vars\n    CHECKIN_CLIENT_ID: "{{ env.checkin_env.CHECKIN_CLIENT_ID }}"\n    CHECKIN_CLIENT_SECRET: "{{ env.checkin_env.CHECKIN_CLIENT_SECRET }}"\n    CHECKIN_REFRESH_TOKEN: "{{ env.checkin_env.CHECKIN_REFRESH_TOKEN }}"\n    EGI_SITE: "{{ env.checkin_env.EGI_SITE }}"\n    CHECKIN_OIDC_URL: https://aai.egi.eu/oidc\n    GOCDB_PUBLICURL: https://goc.egi.eu/gocdbpi/public/\n    # TODO: protocal can be also "oidc", make fallback to it\n    PROTOCOL: openid\n    auth_path: "{{ \'/v3/OS-FEDERATION/identity_providers/egi.eu/protocols/\' + PROTOCOL + \'/auth\' }}"\n    project_path: /v3/auth/projects\n    token_path: /v3/auth/tokens\n  \n  tasks:\n# Getting access token from CHECKIN\n    - name: Discover OIDC\n      uri:\n        url: "{{ CHECKIN_OIDC_URL }}/.well-known/openid-configuration"\n        method: GET\n      register: oidc_discovery\n    - set_fact:\n        OIDC_ENDPOINT: "{{ oidc_discovery.json.token_endpoint }}"\n    - debug:\n        msg: "{{ OIDC_ENDPOINT }}"\n    - set_fact:\n        refresh_token_request:\n          client_id: "{{ CHECKIN_CLIENT_ID }}"\n          client_secret: "{{ CHECKIN_CLIENT_SECRET }}"\n          grant_type: "refresh_token"\n          refresh_token: "{{ CHECKIN_REFRESH_TOKEN }}"\n          scope: "openid email profile"\n    - name: Refresh token\n      uri:\n        url: "{{ OIDC_ENDPOINT }}"\n        method: POST\n        body_format: form-urlencoded\n        body: "{{ refresh_token_request }}"\n      register: refresh_token\n    - set_fact:\n        access_token: "{{ refresh_token.json.access_token }}"\n    - debug:\n        msg: "{{ access_token }}"\n# Getting Site Information\n    - set_fact:\n        site_info_request:\n          method: "get_service_endpoint"\n          service_type: org.openstack.nova\n          monitored: "Y"\n          sitename: "{{ EGI_SITE }}"\n    - name: Get site\n      uri:\n        url: "{{ GOCDB_PUBLICURL }}?{{ site_info_request | urlencode }}"\n        method: GET\n        return_content: yes\n      register: site_xml\n    # TODO: Check the PRODUCTION state\n    # # xml module version to obtain URL\n    # - name: Parse site xml response\n    #   xml:\n    #     xmlstring: "{{ site_xml.content }}"\n    #     xpath: /results/SERVICE_ENDPOINT/URL\n    #     content: text\n    #   register: site_xml\n    # - set_fact:\n    #     site_endpoint: "{{ site_xml.matches.0.URL }}"\n    # - debug:\n    #     msg: "{{ site_endpoint }}"\n    # regex version to obtain URL\n    - set_fact:\n        site_endpoint: "{{ ( site_xml.content | regex_search(\'<URL>(.+)</URL>\', \'\\\\1\') | first ).rstrip(\'/\') }}"\n    - debug:\n        msg: "{{ site_endpoint }}"\n# Getting unscoped token, project id and env for openstack\n    - block:\n      - debug:\n          msg: "{{ site_auth_endpoint }} {{ site_project_endpoint }}"\n        \n      - name: Get unscoped token\n        uri: \n          url: "{{ site_auth_endpoint }}"\n          method: POST\n          status_code: 201\n          headers:\n            Authorization: "Bearer {{ access_token }}"\n        register: site_auth_token_response\n      - set_fact:\n          unscoped_token: "{{ site_auth_token_response.x_subject_token }}"\n      - debug:\n          msg: "{{ unscoped_token }}"\n      - name: Get project id\n        uri: \n          url: "{{ site_project_endpoint }}"\n          method: GET\n          headers:\n            X-Auth-Token: "{{ unscoped_token }}"\n        register: site_project_response\n      - set_fact:\n          # TODO: can be several projects\n          # TODO: check other parameters, e.g. enabled\n          project_id: "{{ site_project_response.json.projects.0.id }}"\n      - debug:\n          msg: "{{ project_id }}"\n      - set_fact:\n          scoped_token_request:\n            auth:\n              identity:\n                methods: ["token"]\n                token:\n                  id: "{{ unscoped_token }}"\n              scope:\n                project:\n                  id: "{{ project_id }}"\n      - name: Get scoped token\n        uri: \n          url: "{{ site_token_endpoint }}"\n          method: POST\n          body: "{{ scoped_token_request }}"\n          body_format: json\n          status_code: 201\n        register: scoped_token_response\n      - set_fact:\n          scoped_token: "{{ scoped_token_response.x_subject_token }}"\n      - debug:\n          msg: "{{ scoped_token }}"\n      - set_fact:\n          os_env:\n            OS_AUTH_URL: "{{ site_endpoint }}"\n            OS_AUTH_TYPE: "v3oidcaccesstoken"\n            OS_IDENTITY_PROVIDER: "egi.eu"\n            OS_PROTOCOL: "{{ PROTOCOL }}"\n            OS_ACCESS_TOKEN: "{{ access_token }}"\n            OS_PROJECT_ID: "{{ project_id }}"   \n            OS_USER_DOMAIN_NAME: ""\n            OS_REGION_NAME: ""\n            OS_PROJECT_NAME: ""        \n      - debug:\n          msg: "{{ os_env }}"\n      vars:\n        site_ep_basename: "{{ site_endpoint | basename }}"\n        site_ep_dirname: "{{ site_endpoint | dirname }}"\n        site_endpoint_prefix: "{{ (site_ep_dirname + \'%s\') if (\'v3\' in site_ep_basename or \'v2.0\' in site_ep_basename) else (site_endpoint + \'%s\') }}"\n        site_auth_endpoint: "{{ site_endpoint_prefix | format(auth_path) }}"\n        site_project_endpoint: "{{ site_endpoint_prefix | format(project_path) }}"\n        site_token_endpoint: "{{ site_endpoint_prefix | format(token_path) }}"\n' ;
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_38 ;
+.
+
+
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_39 ; 
+.
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_36 ;
+ exchange:hasParameter :Parameter_40 ;
+.
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "delete" ;
+  exchange:hasParameter :Parameter_33 ;
+  exchange:hasParameter :Parameter_41 ;
+.
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'tcp' ;
+.
+
+
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_1 ;
+.
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "protocol" ;
+  exchange:hasParameter :Parameter_43 ;
+  exchange:hasParameter :Parameter_44 ;
+  exchange:hasParameter :Parameter_45 ;
+  exchange:hasParameter :Parameter_46 ;
+.
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.datatypes.network.PortDef' ;  
+.
+
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "port_range_min" ;
+  exchange:hasParameter :Parameter_47 ;
+  exchange:hasParameter :Parameter_48 ;
+.
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.datatypes.network.PortDef' ;  
+.
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "port_range_max" ;
+  exchange:hasParameter :Parameter_49 ;
+  exchange:hasParameter :Parameter_50 ;
+.
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '0.0.0.0/0' ;
+.
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "remote_ip_prefix" ;
+  exchange:hasParameter :Parameter_51 ;
+  exchange:hasParameter :Parameter_52 ;
+  exchange:hasParameter :Parameter_53 ;
+.
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "group_name" ;
+  exchange:description 'Name of the security group in openstack.' ;
+  exchange:hasParameter :Parameter_54 ;
+  exchange:hasParameter :Parameter_55 ;
+.
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;  
+.
+
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'org.sodalite.dsl.rM.impl.EPREFIX_TYPEImpl@5be0eace (type: sodalite.datatypes.OpenStack.SecurityRule) (module: openstack)' ;
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_58
+.
+
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_2 ;
+.
+
+
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "ports" ;
+  exchange:hasParameter :Parameter_56 ;
+  exchange:hasParameter :Parameter_57 ;
+  exchange:hasParameter :Parameter_59 ;
+  exchange:hasParameter :Parameter_60 ;
+.
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "group_description" ;
+  exchange:description 'Description of the security group in openstack' ;
+  exchange:hasParameter :Parameter_61 ;
+  exchange:hasParameter :Parameter_62 ;
+.
+
+
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_64
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_42 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_63 ;
+  exchange:hasParameter :Parameter_64 ;
+.
+
+
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.OpenStack.SecurityRules" ;
+  exchange:derivesFrom 'tosca.nodes.Root' ;  
+  exchange:properties :Property_5 ; 
+  exchange:properties :Property_6 ; 
+  exchange:properties :Property_7 ; 
+  exchange:interfaces :Interface_1 ; 
+.  
+
+:DataType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.OpenStack.SecurityRule" ;
+  exchange:derivesFrom 'tosca.datatypes.Root' ;
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+.  
+
+

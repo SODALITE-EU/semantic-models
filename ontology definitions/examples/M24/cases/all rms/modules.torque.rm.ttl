@@ -1,0 +1,3584 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "batch" ;
+  exchange:listValue "ssd" ;
+  exchange:listValue "gpu" ;
+  exchange:listValue "cpu" ;
+.		
+	
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'name' ; 
+.
+
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_2 ;
+  exchange:hasParameter :Parameter_3 ;
+.	
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'script' ; 
+.
+
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_5 ;
+  exchange:hasParameter :Parameter_6 ;
+.	
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'workspace' ; 
+.
+
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_8 ;
+  exchange:hasParameter :Parameter_9 ;
+.	
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'email' ; 
+.
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_11 ;
+  exchange:hasParameter :Parameter_12 ;
+.	
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'name' ; 
+.
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.wm.torque.job_node' ; 
+.
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_14 ;
+  exchange:hasParameter :Parameter_15 ;
+  exchange:hasParameter :Parameter_16 ;
+.	
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'ppn' ; 
+.
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_18 ;
+  exchange:hasParameter :Parameter_19 ;
+.	
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'gpus' ; 
+.
+
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_21 ;
+  exchange:hasParameter :Parameter_22 ;
+.	
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'walltime' ; 
+.
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_24 ;
+  exchange:hasParameter :Parameter_25 ;
+.	
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'enable_audit' ; 
+.
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_27 ;
+  exchange:hasParameter :Parameter_28 ;
+.	
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'name' ; 
+.
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_30 ;
+  exchange:hasParameter :Parameter_31 ;
+.	
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'script' ; 
+.
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_33 ;
+  exchange:hasParameter :Parameter_34 ;
+.	
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'queue' ; 
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_36 ;
+  exchange:hasParameter :Parameter_37 ;
+.	
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'scratch' ; 
+.
+
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_39 ;
+  exchange:hasParameter :Parameter_40 ;
+.	
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'workspace' ; 
+.
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_42 ;
+  exchange:hasParameter :Parameter_43 ;
+.	
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'email' ; 
+.
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_45 ;
+  exchange:hasParameter :Parameter_46 ;
+.	
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'nb_nodes' ; 
+.
+
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_48 ;
+  exchange:hasParameter :Parameter_49 ;
+.	
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'ppn' ; 
+.
+
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_51 ;
+  exchange:hasParameter :Parameter_52 ;
+.	
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'gpus' ; 
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_54 ;
+  exchange:hasParameter :Parameter_55 ;
+.	
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'walltime' ; 
+.
+
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_57 ;
+  exchange:hasParameter :Parameter_58 ;
+.	
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'enable_audit' ; 
+.
+
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_60 ;
+  exchange:hasParameter :Parameter_61 ;
+.	
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'name' ; 
+.
+
+:Parameter_64
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_65
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_63 ;
+  exchange:hasParameter :Parameter_64 ;
+.	
+:Parameter_66
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'script' ; 
+.
+
+:Parameter_67
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_68
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_66 ;
+  exchange:hasParameter :Parameter_67 ;
+.	
+:Parameter_69
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'workspace' ; 
+.
+
+:Parameter_70
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_71
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_69 ;
+  exchange:hasParameter :Parameter_70 ;
+.	
+:Parameter_72
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'enable_audit' ; 
+.
+
+:Parameter_73
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_74
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_72 ;
+  exchange:hasParameter :Parameter_73 ;
+.	
+:Parameter_75
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'workspace' ; 
+.
+
+:Parameter_76
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_77
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configured_job' ; 
+.
+
+:Parameter_78
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_75 ;
+  exchange:hasParameter :Parameter_76 ;
+  exchange:hasParameter :Parameter_77 ;
+.	
+:Parameter_79
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'name' ; 
+.
+
+:Parameter_80
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_81
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configured_job' ; 
+.
+
+:Parameter_82
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_79 ;
+  exchange:hasParameter :Parameter_80 ;
+  exchange:hasParameter :Parameter_81 ;
+.	
+:Parameter_83
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'workspace' ; 
+.
+
+:Parameter_84
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_85
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configured_job' ; 
+.
+
+:Parameter_86
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_83 ;
+  exchange:hasParameter :Parameter_84 ;
+  exchange:hasParameter :Parameter_85 ;
+.	
+:Parameter_87
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'env' ; 
+.
+
+:Parameter_88
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_89
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configured_job' ; 
+.
+
+:Parameter_90
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_87 ;
+  exchange:hasParameter :Parameter_88 ;
+  exchange:hasParameter :Parameter_89 ;
+.	
+:Parameter_91
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'enable_audit' ; 
+.
+
+:Parameter_92
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_93
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configured_job' ; 
+.
+
+:Parameter_94
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_91 ;
+  exchange:hasParameter :Parameter_92 ;
+  exchange:hasParameter :Parameter_93 ;
+.	
+:Parameter_95
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'monitor_period' ; 
+.
+
+:Parameter_96
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_97
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_95 ;
+  exchange:hasParameter :Parameter_96 ;
+.	
+:Parameter_98
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'monitor_retries_headroom' ; 
+.
+
+:Parameter_99
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_100
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_98 ;
+  exchange:hasParameter :Parameter_99 ;
+.	
+
+:Parameter_101
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_102
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_103
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_104
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_101 ;
+  exchange:hasParameter :Parameter_102 ;
+  exchange:hasParameter :Parameter_103 ;
+.	
+:Parameter_105
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_106
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_107
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_108
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_105 ;
+  exchange:hasParameter :Parameter_106 ;
+  exchange:hasParameter :Parameter_107 ;
+.	
+:Parameter_109
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_110
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_111
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_112
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_109 ;
+  exchange:hasParameter :Parameter_110 ;
+  exchange:hasParameter :Parameter_111 ;
+.	
+:Parameter_113
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_114
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_115
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_116
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_113 ;
+  exchange:hasParameter :Parameter_114 ;
+  exchange:hasParameter :Parameter_115 ;
+.	
+:Parameter_117
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_118
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_119
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_120
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_117 ;
+  exchange:hasParameter :Parameter_118 ;
+  exchange:hasParameter :Parameter_119 ;
+.	
+:Parameter_121
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_122
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_123
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_124
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_121 ;
+  exchange:hasParameter :Parameter_122 ;
+  exchange:hasParameter :Parameter_123 ;
+.	
+:Parameter_125
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_126
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_127
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_128
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_125 ;
+  exchange:hasParameter :Parameter_126 ;
+  exchange:hasParameter :Parameter_127 ;
+.	
+:Parameter_129
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_130
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_131
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_132
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_129 ;
+  exchange:hasParameter :Parameter_130 ;
+  exchange:hasParameter :Parameter_131 ;
+.	
+:Parameter_133
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_134
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_135
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_136
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_133 ;
+  exchange:hasParameter :Parameter_134 ;
+  exchange:hasParameter :Parameter_135 ;
+.	
+:Parameter_137
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_138
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_139
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_140
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_137 ;
+  exchange:hasParameter :Parameter_138 ;
+  exchange:hasParameter :Parameter_139 ;
+.	
+:Parameter_141
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_142
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_143
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_144
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_141 ;
+  exchange:hasParameter :Parameter_142 ;
+  exchange:hasParameter :Parameter_143 ;
+.	
+:Parameter_145
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_146
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_147
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_148
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_145 ;
+  exchange:hasParameter :Parameter_146 ;
+  exchange:hasParameter :Parameter_147 ;
+.	
+:Parameter_149
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_150
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_151
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_152
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_149 ;
+  exchange:hasParameter :Parameter_150 ;
+  exchange:hasParameter :Parameter_151 ;
+.	
+:Parameter_153
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_154
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_155
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_156
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_153 ;
+  exchange:hasParameter :Parameter_154 ;
+  exchange:hasParameter :Parameter_155 ;
+.	
+:Parameter_157
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_158
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_159
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_160
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_157 ;
+  exchange:hasParameter :Parameter_158 ;
+  exchange:hasParameter :Parameter_159 ;
+.	
+:Parameter_161
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_162
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_163
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_164
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_161 ;
+  exchange:hasParameter :Parameter_162 ;
+  exchange:hasParameter :Parameter_163 ;
+.	
+:Parameter_165
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_166
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_167
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_168
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_165 ;
+  exchange:hasParameter :Parameter_166 ;
+  exchange:hasParameter :Parameter_167 ;
+.	
+:Parameter_169
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_170
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_171
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_172
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_169 ;
+  exchange:hasParameter :Parameter_170 ;
+  exchange:hasParameter :Parameter_171 ;
+.	
+:Parameter_173
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'job_id' ; 
+.
+
+:Parameter_174
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_175
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.job' ; 
+.
+
+:Parameter_176
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_173 ;
+  exchange:hasParameter :Parameter_174 ;
+  exchange:hasParameter :Parameter_175 ;
+.	
+:Parameter_177
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'job_name' ; 
+.
+
+:Parameter_178
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_179
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.job' ; 
+.
+
+:Parameter_180
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_177 ;
+  exchange:hasParameter :Parameter_178 ;
+  exchange:hasParameter :Parameter_179 ;
+.	
+:Parameter_181
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'job_workspace' ; 
+.
+
+:Parameter_182
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_183
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.job' ; 
+.
+
+:Parameter_184
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_181 ;
+  exchange:hasParameter :Parameter_182 ;
+  exchange:hasParameter :Parameter_183 ;
+.	
+:Parameter_185
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'job_walltime' ; 
+.
+
+:Parameter_186
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_187
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.job' ; 
+.
+
+:Parameter_188
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_185 ;
+  exchange:hasParameter :Parameter_186 ;
+  exchange:hasParameter :Parameter_187 ;
+.	
+:Parameter_189
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'job_enable_audit' ; 
+.
+
+:Parameter_190
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_191
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.job' ; 
+.
+
+:Parameter_192
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_189 ;
+  exchange:hasParameter :Parameter_190 ;
+  exchange:hasParameter :Parameter_191 ;
+.	
+
+
+:Parameter_193
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_104 ; 
+.
+
+:Parameter_194
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_193 ;
+.	
+
+:Parameter_195
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_108 ; 
+.
+
+:Parameter_196
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_195 ;
+.	
+
+:Parameter_197
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_112 ; 
+.
+
+:Parameter_198
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_197 ;
+.	
+
+:Parameter_199
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_4 ; 
+.
+
+:Parameter_200
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_199 ;
+.	
+
+:Parameter_201
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_7 ; 
+.
+
+:Parameter_202
+  rdf:type exchange:Parameter ;
+  exchange:name "job_script" ;
+  exchange:hasParameter :Parameter_201 ;
+.	
+
+:Parameter_203
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_10 ; 
+.
+
+:Parameter_204
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_203 ;
+.	
+
+:Parameter_205
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_13 ; 
+.
+
+:Parameter_206
+  rdf:type exchange:Parameter ;
+  exchange:name "job_email" ;
+  exchange:hasParameter :Parameter_205 ;
+.	
+
+:Parameter_207
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_17 ; 
+.
+
+:Parameter_208
+  rdf:type exchange:Parameter ;
+  exchange:name "job_node_name" ;
+  exchange:hasParameter :Parameter_207 ;
+.	
+
+:Parameter_209
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_20 ; 
+.
+
+:Parameter_210
+  rdf:type exchange:Parameter ;
+  exchange:name "job_ppn" ;
+  exchange:hasParameter :Parameter_209 ;
+.	
+
+:Parameter_211
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_23 ; 
+.
+
+:Parameter_212
+  rdf:type exchange:Parameter ;
+  exchange:name "job_gpus" ;
+  exchange:hasParameter :Parameter_211 ;
+.	
+
+:Parameter_213
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_26 ; 
+.
+
+:Parameter_214
+  rdf:type exchange:Parameter ;
+  exchange:name "job_walltime" ;
+  exchange:hasParameter :Parameter_213 ;
+.	
+
+:Parameter_215
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_29 ; 
+.
+
+:Parameter_216
+  rdf:type exchange:Parameter ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_215 ;
+.	
+
+:Parameter_217
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_116 ; 
+.
+
+:Parameter_218
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_217 ;
+.	
+
+:Parameter_219
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_120 ; 
+.
+
+:Parameter_220
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_219 ;
+.	
+
+:Parameter_221
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_124 ; 
+.
+
+:Parameter_222
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_221 ;
+.	
+
+:Parameter_223
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_32 ; 
+.
+
+:Parameter_224
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_223 ;
+.	
+
+:Parameter_225
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_35 ; 
+.
+
+:Parameter_226
+  rdf:type exchange:Parameter ;
+  exchange:name "job_script" ;
+  exchange:hasParameter :Parameter_225 ;
+.	
+
+:Parameter_227
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_38 ; 
+.
+
+:Parameter_228
+  rdf:type exchange:Parameter ;
+  exchange:name "job_queue" ;
+  exchange:hasParameter :Parameter_227 ;
+.	
+
+:Parameter_229
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_41 ; 
+.
+
+:Parameter_230
+  rdf:type exchange:Parameter ;
+  exchange:name "job_scratch" ;
+  exchange:hasParameter :Parameter_229 ;
+.	
+
+:Parameter_231
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_44 ; 
+.
+
+:Parameter_232
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_231 ;
+.	
+
+:Parameter_233
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_47 ; 
+.
+
+:Parameter_234
+  rdf:type exchange:Parameter ;
+  exchange:name "job_email" ;
+  exchange:hasParameter :Parameter_233 ;
+.	
+
+:Parameter_235
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_50 ; 
+.
+
+:Parameter_236
+  rdf:type exchange:Parameter ;
+  exchange:name "job_nb_nodes" ;
+  exchange:hasParameter :Parameter_235 ;
+.	
+
+:Parameter_237
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_53 ; 
+.
+
+:Parameter_238
+  rdf:type exchange:Parameter ;
+  exchange:name "job_ppn" ;
+  exchange:hasParameter :Parameter_237 ;
+.	
+
+:Parameter_239
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_56 ; 
+.
+
+:Parameter_240
+  rdf:type exchange:Parameter ;
+  exchange:name "job_gpus" ;
+  exchange:hasParameter :Parameter_239 ;
+.	
+
+:Parameter_241
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_59 ; 
+.
+
+:Parameter_242
+  rdf:type exchange:Parameter ;
+  exchange:name "job_walltime" ;
+  exchange:hasParameter :Parameter_241 ;
+.	
+
+:Parameter_243
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_62 ; 
+.
+
+:Parameter_244
+  rdf:type exchange:Parameter ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_243 ;
+.	
+
+:Parameter_245
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_128 ; 
+.
+
+:Parameter_246
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_245 ;
+.	
+
+:Parameter_247
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_132 ; 
+.
+
+:Parameter_248
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_247 ;
+.	
+
+:Parameter_249
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_136 ; 
+.
+
+:Parameter_250
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_249 ;
+.	
+
+:Parameter_251
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_65 ; 
+.
+
+:Parameter_252
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_251 ;
+.	
+
+:Parameter_253
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_68 ; 
+.
+
+:Parameter_254
+  rdf:type exchange:Parameter ;
+  exchange:name "job_script" ;
+  exchange:hasParameter :Parameter_253 ;
+.	
+
+:Parameter_255
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_71 ; 
+.
+
+:Parameter_256
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_255 ;
+.	
+
+:Parameter_257
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_74 ; 
+.
+
+:Parameter_258
+  rdf:type exchange:Parameter ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_257 ;
+.	
+
+:Parameter_259
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_140 ; 
+.
+
+:Parameter_260
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_259 ;
+.	
+
+:Parameter_261
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_144 ; 
+.
+
+:Parameter_262
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_261 ;
+.	
+
+:Parameter_263
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_148 ; 
+.
+
+:Parameter_264
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_263 ;
+.	
+
+:Parameter_265
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_78 ; 
+.
+
+:Parameter_266
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_265 ;
+.	
+
+:Parameter_267
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_152 ; 
+.
+
+:Parameter_268
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_267 ;
+.	
+
+:Parameter_269
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_156 ; 
+.
+
+:Parameter_270
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_269 ;
+.	
+
+:Parameter_271
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_160 ; 
+.
+
+:Parameter_272
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_271 ;
+.	
+
+:Parameter_273
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_82 ; 
+.
+
+:Parameter_274
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_273 ;
+.	
+
+:Parameter_275
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_86 ; 
+.
+
+:Parameter_276
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_275 ;
+.	
+
+:Parameter_277
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_90 ; 
+.
+
+:Parameter_278
+  rdf:type exchange:Parameter ;
+  exchange:name "job_env" ;
+  exchange:hasParameter :Parameter_277 ;
+.	
+
+:Parameter_279
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_94 ; 
+.
+
+:Parameter_280
+  rdf:type exchange:Parameter ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_279 ;
+.	
+
+:Parameter_281
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_164 ; 
+.
+
+:Parameter_282
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_public_address" ;
+  exchange:hasParameter :Parameter_281 ;
+.	
+
+:Parameter_283
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_168 ; 
+.
+
+:Parameter_284
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_username" ;
+  exchange:hasParameter :Parameter_283 ;
+.	
+
+:Parameter_285
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_172 ; 
+.
+
+:Parameter_286
+  rdf:type exchange:Parameter ;
+  exchange:name "wm_keypath" ;
+  exchange:hasParameter :Parameter_285 ;
+.	
+
+:Parameter_287
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_176 ; 
+.
+
+:Parameter_288
+  rdf:type exchange:Parameter ;
+  exchange:name "job_id" ;
+  exchange:hasParameter :Parameter_287 ;
+.	
+
+:Parameter_289
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_180 ; 
+.
+
+:Parameter_290
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_289 ;
+.	
+
+:Parameter_291
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_184 ; 
+.
+
+:Parameter_292
+  rdf:type exchange:Parameter ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_291 ;
+.	
+
+:Parameter_293
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_188 ; 
+.
+
+:Parameter_294
+  rdf:type exchange:Parameter ;
+  exchange:name "job_walltime" ;
+  exchange:hasParameter :Parameter_293 ;
+.	
+
+:Parameter_295
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_97 ; 
+.
+
+:Parameter_296
+  rdf:type exchange:Parameter ;
+  exchange:name "job_monitor_period" ;
+  exchange:hasParameter :Parameter_295 ;
+.	
+
+:Parameter_297
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_100 ; 
+.
+
+:Parameter_298
+  rdf:type exchange:Parameter ;
+  exchange:name "job_monitor_retries_headroom" ;
+  exchange:hasParameter :Parameter_297 ;
+.	
+
+:Parameter_299
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_192 ; 
+.
+
+:Parameter_300
+  rdf:type exchange:Parameter ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_299 ;
+.	
+
+:Parameter_301
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_194 ;
+  exchange:hasParameter :Parameter_196 ;
+  exchange:hasParameter :Parameter_198 ;
+  exchange:hasParameter :Parameter_200 ;
+  exchange:hasParameter :Parameter_202 ;
+  exchange:hasParameter :Parameter_204 ;
+  exchange:hasParameter :Parameter_206 ;
+  exchange:hasParameter :Parameter_208 ;
+  exchange:hasParameter :Parameter_210 ;
+  exchange:hasParameter :Parameter_212 ;
+  exchange:hasParameter :Parameter_214 ;
+  exchange:hasParameter :Parameter_216 ;
+.
+
+:Parameter_302
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/create.yml' ;
+.
+
+:Parameter_303
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: wm\n  gather_facts: yes\n  vars:\n    job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n  tasks:\n    - name: "Create workspace dir"\n      file:\n        dest: "{{ job_workspace_path }}"\n        state: directory\n    - name: "Create job script"\n      template:\n        src: "job.pbs.j2"\n        dest: "{{ job_workspace_path }}/{{ job_name }}.pbs"\n    - name: "Create audit script"\n      template:\n        src: "audit.sh.j2"\n        dest: "{{ job_workspace_path }}/audit.sh"\n        mode: 0500\n      when: job_enable_audit\n' ;
+.
+
+
+:Parameter_304
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_302 ;
+  exchange:hasParameter :Parameter_303 ;
+.
+
+:Parameter_305
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/job.sh' ; 
+ .
+
+:Parameter_306
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 0' ;
+.
+
+:Parameter_307
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_305 ;
+  exchange:hasParameter :Parameter_306 ;
+.
+:Parameter_308
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/failed.job.sh' ; 
+ .
+
+:Parameter_309
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 1' ;
+.
+
+:Parameter_310
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_308 ;
+  exchange:hasParameter :Parameter_309 ;
+.
+:Parameter_311
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/audit.sh.j2' ; 
+ .
+
+:Parameter_312
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/bash\n# argv[1]       job id\n# argv[2]       job execution user name\n# argv[3]       job execution group name\n# argv[4]       job name\n# argv[5]       session id\n# argv[6]       list of requested resource limits\n# argv[7]       list of resources used by job\n# argv[8]       job execution queue\n# argv[9]       job account\n# argv[10]      job exit code\n# argv[11]      job script location\necho "\nJob_Id: $1\neuser: $2\negroup: $3\nJob_Name: $4\nsession_id: $5\nResource_List: $6\nresources_used: $7\nqueue: $8\nexit_status: ${10}\nscript_location: ${11}\n" > {{ job_workspace_path }}/$4.$1.stat\n# $ cat job.stat \n# Job_Id = 615.cloudserver\n# euser = kamil\n# egroup = kamil\n# Job_Name = demo-cmd.pbs\n# session_id = 11502\n# Resource_List = nodes=1:ppn=20,walltime=00:01:00,epilogue=epilogue.sh,neednodes=1:ppn=20\n# resources_used = cput=00:00:00,vmem=0kb,walltime=00:00:02,mem=0kb,energy_used=0\n# queue = batch\n# account = \n# exit_status = 0\n# script_location = /var/spool/torque/mom_priv/jobs/615.cloudserver.SC' ;
+.
+
+:Parameter_313
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_311 ;
+  exchange:hasParameter :Parameter_312 ;
+.
+:Parameter_314
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/job.pbs.j2' ; 
+ .
+
+:Parameter_315
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '{% set lines = lookup(\'file\', job_script).splitlines() %}\n{% if  lines[0].startswith("#!") %}\n#PBS -S {{ lines[0][2:] }}\n{% else %}\n#PBS -S /bin/bash\n{% endif %}\n#PBS -m abe\n#PBS -N {{ job_name }}\n#PBS -l nodes={{ job_node_name if job_node_name is defined else job_nb_nodes }}:ppn={{ job_ppn }}{% if job_gpus > 0 %},gpus={{ job_gpus }}{% endif %}{% if (job_queue is defined) and (job_queue|length > 0) %}:{{ job_queue }}{% endif %},walltime={{ job_walltime }}\n{% if job_email is defined and job_email != "" %}\n#PBS -M {{ job_email }}\n{% endif %}\n{% if job_enable_audit %}\n#PBS -l epilogue={{ job_workspace_path }}/audit.sh\n{% endif %}\n{% if job_queue is defined %}\n#PBS -q {{ job_queue }}\n{% endif %}\n{% if job_scratch is defined %}\nexport SCRATCH={{ job_scratch }}\n{% endif %}\n{% for line in lines[1:] %}\n{{ line }}\n{% endfor%}' ;
+.
+
+:Parameter_316
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_314 ;
+  exchange:hasParameter :Parameter_315 ;
+.
+
+
+:Parameter_317
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_307 ; 
+  exchange:hasParameter :Parameter_310 ; 
+  exchange:hasParameter :Parameter_313 ; 
+  exchange:hasParameter :Parameter_316 ; 
+.
+
+:Parameter_318
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_304 ;
+ exchange:hasParameter :Parameter_317 ;
+.
+
+:Parameter_319
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_301 ;
+  exchange:hasParameter :Parameter_318 ;
+.
+:Parameter_320
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_218 ;
+  exchange:hasParameter :Parameter_220 ;
+  exchange:hasParameter :Parameter_222 ;
+  exchange:hasParameter :Parameter_224 ;
+  exchange:hasParameter :Parameter_226 ;
+  exchange:hasParameter :Parameter_228 ;
+  exchange:hasParameter :Parameter_230 ;
+  exchange:hasParameter :Parameter_232 ;
+  exchange:hasParameter :Parameter_234 ;
+  exchange:hasParameter :Parameter_236 ;
+  exchange:hasParameter :Parameter_238 ;
+  exchange:hasParameter :Parameter_240 ;
+  exchange:hasParameter :Parameter_242 ;
+  exchange:hasParameter :Parameter_244 ;
+.
+
+:Parameter_321
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/create.yml' ;
+.
+
+:Parameter_322
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: wm\n  gather_facts: yes\n  vars:\n    job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n  tasks:\n    - name: "Create workspace dir"\n      file:\n        dest: "{{ job_workspace_path }}"\n        state: directory\n    - name: "Create job script"\n      template:\n        src: "job.pbs.j2"\n        dest: "{{ job_workspace_path }}/{{ job_name }}.pbs"\n    - name: "Create audit script"\n      template:\n        src: "audit.sh.j2"\n        dest: "{{ job_workspace_path }}/audit.sh"\n        mode: 0500\n      when: job_enable_audit\n' ;
+.
+
+
+:Parameter_323
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_321 ;
+  exchange:hasParameter :Parameter_322 ;
+.
+
+:Parameter_324
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/audit.sh.j2' ; 
+ .
+
+:Parameter_325
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/bash\n# argv[1]       job id\n# argv[2]       job execution user name\n# argv[3]       job execution group name\n# argv[4]       job name\n# argv[5]       session id\n# argv[6]       list of requested resource limits\n# argv[7]       list of resources used by job\n# argv[8]       job execution queue\n# argv[9]       job account\n# argv[10]      job exit code\n# argv[11]      job script location\necho "\nJob_Id: $1\neuser: $2\negroup: $3\nJob_Name: $4\nsession_id: $5\nResource_List: $6\nresources_used: $7\nqueue: $8\nexit_status: ${10}\nscript_location: ${11}\n" > {{ job_workspace_path }}/$4.$1.stat\n# $ cat job.stat \n# Job_Id = 615.cloudserver\n# euser = kamil\n# egroup = kamil\n# Job_Name = demo-cmd.pbs\n# session_id = 11502\n# Resource_List = nodes=1:ppn=20,walltime=00:01:00,epilogue=epilogue.sh,neednodes=1:ppn=20\n# resources_used = cput=00:00:00,vmem=0kb,walltime=00:00:02,mem=0kb,energy_used=0\n# queue = batch\n# account = \n# exit_status = 0\n# script_location = /var/spool/torque/mom_priv/jobs/615.cloudserver.SC' ;
+.
+
+:Parameter_326
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_324 ;
+  exchange:hasParameter :Parameter_325 ;
+.
+:Parameter_327
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/job.pbs.j2' ; 
+ .
+
+:Parameter_328
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '{% set lines = lookup(\'file\', job_script).splitlines() %}\n{% if  lines[0].startswith("#!") %}\n#PBS -S {{ lines[0][2:] }}\n{% else %}\n#PBS -S /bin/bash\n{% endif %}\n#PBS -m abe\n#PBS -N {{ job_name }}\n#PBS -l nodes={{ job_node_name if job_node_name is defined else job_nb_nodes }}:ppn={{ job_ppn }}{% if job_gpus > 0 %},gpus={{ job_gpus }}{% endif %}{% if (job_queue is defined) and (job_queue|length > 0) %}:{{ job_queue }}{% endif %},walltime={{ job_walltime }}\n{% if job_email is defined and job_email != "" %}\n#PBS -M {{ job_email }}\n{% endif %}\n{% if job_enable_audit %}\n#PBS -l epilogue={{ job_workspace_path }}/audit.sh\n{% endif %}\n{% if job_queue is defined %}\n#PBS -q {{ job_queue }}\n{% endif %}\n{% if job_scratch is defined %}\nexport SCRATCH={{ job_scratch }}\n{% endif %}\n{% for line in lines[1:] %}\n{{ line }}\n{% endfor%}' ;
+.
+
+:Parameter_329
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_327 ;
+  exchange:hasParameter :Parameter_328 ;
+.
+:Parameter_330
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/job.sh' ; 
+ .
+
+:Parameter_331
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 0' ;
+.
+
+:Parameter_332
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_330 ;
+  exchange:hasParameter :Parameter_331 ;
+.
+:Parameter_333
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/failed.job.sh' ; 
+ .
+
+:Parameter_334
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 1' ;
+.
+
+:Parameter_335
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_333 ;
+  exchange:hasParameter :Parameter_334 ;
+.
+
+
+:Parameter_336
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_326 ; 
+  exchange:hasParameter :Parameter_329 ; 
+  exchange:hasParameter :Parameter_332 ; 
+  exchange:hasParameter :Parameter_335 ; 
+.
+
+:Parameter_337
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_323 ;
+ exchange:hasParameter :Parameter_336 ;
+.
+
+:Parameter_338
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_320 ;
+  exchange:hasParameter :Parameter_337 ;
+.
+:Parameter_339
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_246 ;
+  exchange:hasParameter :Parameter_248 ;
+  exchange:hasParameter :Parameter_250 ;
+  exchange:hasParameter :Parameter_252 ;
+  exchange:hasParameter :Parameter_254 ;
+  exchange:hasParameter :Parameter_256 ;
+  exchange:hasParameter :Parameter_258 ;
+.
+
+:Parameter_340
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/create-preconfigured.yml' ;
+.
+
+:Parameter_341
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: wm\n  gather_facts: yes\n  vars:\n    job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n  tasks:\n    - name: "Create workspace dir"\n      file:\n        dest: "{{ job_workspace_path }}"\n        state: directory\n    - name: "Create job script"\n      template:\n        src: "preconfigured-job.pbs.j2"\n        dest: "{{ job_workspace_path }}/{{ job_name }}.pbs"\n    - name: "Create audit script"\n      template:\n        src: "audit.sh.j2"\n        dest: "{{ job_workspace_path }}/audit.sh"\n        mode: 0500\n      when: job_enable_audit\n' ;
+.
+
+
+:Parameter_342
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_340 ;
+  exchange:hasParameter :Parameter_341 ;
+.
+
+:Parameter_343
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/audit.sh.j2' ; 
+ .
+
+:Parameter_344
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/bash\n# argv[1]       job id\n# argv[2]       job execution user name\n# argv[3]       job execution group name\n# argv[4]       job name\n# argv[5]       session id\n# argv[6]       list of requested resource limits\n# argv[7]       list of resources used by job\n# argv[8]       job execution queue\n# argv[9]       job account\n# argv[10]      job exit code\n# argv[11]      job script location\necho "\nJob_Id: $1\neuser: $2\negroup: $3\nJob_Name: $4\nsession_id: $5\nResource_List: $6\nresources_used: $7\nqueue: $8\nexit_status: ${10}\nscript_location: ${11}\n" > {{ job_workspace_path }}/$4.$1.stat\n# $ cat job.stat \n# Job_Id = 615.cloudserver\n# euser = kamil\n# egroup = kamil\n# Job_Name = demo-cmd.pbs\n# session_id = 11502\n# Resource_List = nodes=1:ppn=20,walltime=00:01:00,epilogue=epilogue.sh,neednodes=1:ppn=20\n# resources_used = cput=00:00:00,vmem=0kb,walltime=00:00:02,mem=0kb,energy_used=0\n# queue = batch\n# account = \n# exit_status = 0\n# script_location = /var/spool/torque/mom_priv/jobs/615.cloudserver.SC' ;
+.
+
+:Parameter_345
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_343 ;
+  exchange:hasParameter :Parameter_344 ;
+.
+:Parameter_346
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/templates/preconfigured-job.pbs.j2' ; 
+ .
+
+:Parameter_347
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '{% if job_enable_audit %}\n#PBS -l epilogue={{ job_workspace_path }}/audit.sh\n{% endif %}\n{{ lookup(\'file\', job_script) }}' ;
+.
+
+:Parameter_348
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_346 ;
+  exchange:hasParameter :Parameter_347 ;
+.
+:Parameter_349
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/job.sh' ; 
+ .
+
+:Parameter_350
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 0' ;
+.
+
+:Parameter_351
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_349 ;
+  exchange:hasParameter :Parameter_350 ;
+.
+:Parameter_352
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/hpc-discovery/artifacts/failed.job.sh' ; 
+ .
+
+:Parameter_353
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '#!/bin/sh\nsleep 10\nexit 1' ;
+.
+
+:Parameter_354
+  rdf:type exchange:Parameter ;
+  exchange:name "file" ;
+  exchange:hasParameter :Parameter_352 ;
+  exchange:hasParameter :Parameter_353 ;
+.
+
+
+:Parameter_355
+  rdf:type exchange:Parameter ;
+  exchange:name "dependencies" ;
+  exchange:hasParameter :Parameter_345 ; 
+  exchange:hasParameter :Parameter_348 ; 
+  exchange:hasParameter :Parameter_351 ; 
+  exchange:hasParameter :Parameter_354 ; 
+.
+
+:Parameter_356
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_342 ;
+ exchange:hasParameter :Parameter_355 ;
+.
+
+:Parameter_357
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_339 ;
+  exchange:hasParameter :Parameter_356 ;
+.
+:Parameter_358
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_260 ;
+  exchange:hasParameter :Parameter_262 ;
+  exchange:hasParameter :Parameter_264 ;
+  exchange:hasParameter :Parameter_266 ;
+.
+
+:Parameter_359
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/configure.yml' ;
+.
+
+:Parameter_360
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: wm\n  gather_facts: yes\n  vars:\n    job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n  tasks:\n    - name: There should be pulling of the singularity images for respective components\n      shell: echo "should be pulled" # singularity pull -F docker://tensorflow/tensorflow:1.11.0-gpu\n      args:\n        chdir: "{{ job_workspace_path }}"' ;
+.
+
+
+:Parameter_361
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_359 ;
+  exchange:hasParameter :Parameter_360 ;
+.
+
+
+:Parameter_362
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_361 ;
+.
+
+:Parameter_363
+  rdf:type exchange:Parameter ;
+  exchange:name "configure" ;
+  exchange:hasParameter :Parameter_358 ;
+  exchange:hasParameter :Parameter_362 ;
+.
+:Parameter_364
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_268 ;
+  exchange:hasParameter :Parameter_270 ;
+  exchange:hasParameter :Parameter_272 ;
+  exchange:hasParameter :Parameter_274 ;
+  exchange:hasParameter :Parameter_276 ;
+  exchange:hasParameter :Parameter_278 ;
+  exchange:hasParameter :Parameter_280 ;
+.
+
+:Parameter_365
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/start.yml' ;
+.
+
+:Parameter_366
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: wm # should be ansible module for Torque to handle jobs and their states\n  gather_facts: yes\n  vars:\n    job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n  tasks:\n    - name: Submit the job\n      shell: qsub -V {{ job_name }}.pbs\n      args:\n        chdir: "{{ job_workspace_path }}"\n      register: job\n      environment: "{{ job_env if job_env is defined }}"\n    - name: Saving job_id\n      set_fact:\n        job_id: "{{ job.stdout }}"\n    - name: Obtain walltime\n      shell: qstat -f {{ job_id }} | grep \'Resource_List.walltime\' | egrep -o \'[^ ]+$\'\n      register: walltime_result\n    - name: Obtain job name\n      shell: qstat -f {{ job_id }} | grep \'Job_Name\' | egrep -o \'[^ ]+$\'\n      register: job_name_result\n    - name: Set attribute\n      set_stats:\n        data:\n          job_id: "{{ job_id }}"\n          job_name: "{{ job_name_result.stdout }}"\n          job_walltime: "{{ walltime_result.stdout }}"\n          job_workspace: "{{ job_workspace_path }}"\n          job_enable_audit: "{{ job_enable_audit }}"\n' ;
+.
+
+
+:Parameter_367
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_365 ;
+  exchange:hasParameter :Parameter_366 ;
+.
+
+
+:Parameter_368
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_367 ;
+.
+
+:Parameter_369
+  rdf:type exchange:Parameter ;
+  exchange:name "start" ;
+  exchange:hasParameter :Parameter_364 ;
+  exchange:hasParameter :Parameter_368 ;
+.
+:Parameter_370
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_282 ;
+  exchange:hasParameter :Parameter_284 ;
+  exchange:hasParameter :Parameter_286 ;
+  exchange:hasParameter :Parameter_288 ;
+  exchange:hasParameter :Parameter_290 ;
+  exchange:hasParameter :Parameter_292 ;
+  exchange:hasParameter :Parameter_294 ;
+  exchange:hasParameter :Parameter_296 ;
+  exchange:hasParameter :Parameter_298 ;
+  exchange:hasParameter :Parameter_300 ;
+.
+
+:Parameter_371
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/torque/torque-job/playbooks/check.yml' ;
+.
+
+:Parameter_372
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n  - hosts: all\n    gather_facts: no\n    tasks:\n    - name: >\n        Create temporary inventory for wm, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: wm\n        groups: wm\n        ansible_host: "{{ wm_public_address }}"\n        ansible_user: "{{ wm_username }}"\n        ansible_ssh_private_key_file: "{{ wm_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n  \n  - hosts: wm # should be ansible module for Torque to handle jobs and their states\n    gather_facts: yes\n    vars:\n      epoch: "00:00:00"\n      walltime: "{{ job_walltime }}"\n      walltime_sec: "{{ (walltime | to_datetime(\'%H:%M:%S\')).strftime(\'%s\') | int - (epoch | to_datetime(\'%H:%M:%S\')).strftime(\'%s\') | int }}"\n      monitor_period: "{{ job_monitor_period }}" # overall monitoring delay: consists of 2 delay steps due to poll of async and delay of until loop\n      monitor_delay_step: "{{ (monitor_period / 2) | round | int }}" # each step is half of overall delay\n      monitor_retries_headroom: "{{ job_monitor_retries_headroom }}" # additional retries for long job completion\n      monitor_retries: "{{ (walltime_sec | int /  monitor_period) | round | int + monitor_retries_headroom }}"\n      job_workspace_path: \'{{ ( ( job_workspace != None ) | ternary(job_workspace, ansible_env.HOME) ) | replace("~", ansible_env.HOME) }}\'\n    tasks:\n    - name: Run continuously qstat to monitor the status of the job\n      shell: qstat -f {{ job_id }} | grep \'job_state\' | grep -o \'.$\'\n      register: job_monitor\n      until: "job_monitor.stdout == \'C\'"\n      delay: "{{ monitor_delay_step }}"\n      retries: "{{ monitor_retries }}"\n      async: "{{ walltime_sec | int }}"\n      poll: "{{ monitor_delay_step }}"\n    - name: Wait the status monitoring to finish\n      async_status:\n        jid: "{{ job_monitor.ansible_job_id }}"\n      register: job_result\n      until: job_result.finished\n      retries: "{{ monitor_retries }}"\n    - name: set state deleted after job is completed\n      set_stats:\n        data:\n          state: "deleted"\n    - name: Check the exit status\n      shell: qstat -f {{ job_id }} | grep \'exit_status\' | egrep -o \'[^ ]+$\'\n      register: job_exit_status\n    # Do some failure mitigation actions here\n    - name: React to the error\n      shell: echo "Here should be failure management"\n      when: "job_exit_status.stdout != \'0\'"\n    - fail:\n        msg: "Job stopped with non-zero exit {{ job_exit_status.stdout }}"\n      when: "job_exit_status.stdout != \'0\'"\n    # audit.yml is not copied to /tmp by xOpera, therefore the location should be hardcoded\n    # - name: Audit the job\n    #   include: audit.yml \n    #   when: job_enable_audit\n    - name: Audit the job\n      block:\n        - name: Register audit statistics\n          slurp:\n            src: "{{ job_workspace_path }}/{{ job_name }}.{{ job_id }}.stat"\n          register: audit\n        - debug:\n            msg: "{{ audit[\'content\'] | b64decode | from_yaml }}"\n        - name: save audit attribute\n          set_stats:\n            data:\n              audit: "{{ audit[\'content\'] | b64decode | from_yaml }}"\n      \n      when: job_enable_audit' ;
+.
+
+
+:Parameter_373
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_371 ;
+  exchange:hasParameter :Parameter_372 ;
+.
+
+
+:Parameter_374
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_373 ;
+.
+
+:Parameter_375
+  rdf:type exchange:Parameter ;
+  exchange:name "start" ;
+  exchange:hasParameter :Parameter_370 ;
+  exchange:hasParameter :Parameter_374 ;
+.
+
+:Parameter_376
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_377
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:description 'Name of the job' ;
+  exchange:hasParameter :Parameter_376 ;
+  exchange:hasParameter :Parameter_377 ;
+.
+:Parameter_378
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_379
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "script" ;
+  exchange:description 'Job script that will be wrapped with j2 template to provide a PBS job script, Ansible can process it with the template module' ;
+  exchange:hasParameter :Parameter_378 ;
+  exchange:hasParameter :Parameter_379 ;
+.
+:Parameter_380
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_381
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_382
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '~/' ;
+.
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "workspace" ;
+  exchange:description 'Location of the sources and the job script' ;
+  exchange:hasParameter :Parameter_380 ;
+  exchange:hasParameter :Parameter_381 ;
+  exchange:hasParameter :Parameter_382 ;
+.
+:Parameter_383
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;  
+.
+
+:Parameter_384
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_385
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:hasParameter :Parameter_383 ;
+  exchange:hasParameter :Parameter_384 ;
+  exchange:hasParameter :Parameter_385 ;
+.
+:Parameter_386
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;  
+.
+
+:Parameter_387
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_388
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;
+.
+
+
+
+
+
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "env" ;
+  exchange:hasParameter :Parameter_386 ;
+  exchange:hasParameter :Parameter_387 ;
+  exchange:hasParameter :Parameter_388 ;
+.
+:Parameter_389
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_390
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:description 'Name of the job' ;
+  exchange:hasParameter :Parameter_389 ;
+  exchange:hasParameter :Parameter_390 ;
+.
+:Parameter_391
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_392
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "script" ;
+  exchange:description 'Job script that will be wrapped with j2 template to provide a PBS job script, Ansible can process it with the template module' ;
+  exchange:hasParameter :Parameter_391 ;
+  exchange:hasParameter :Parameter_392 ;
+.
+:Parameter_393
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_394
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_395
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '' ;
+.
+
+
+
+:Parameter_396
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_1 ;
+.
+
+
+:Property_8
+  rdf:type exchange:Property ;
+  exchange:name "queue" ;
+  exchange:description 'Select queue for the job. Infrastructure specific - default and constraints values MUST be provided by Resource Expert' ;
+  exchange:hasParameter :Parameter_393 ;
+  exchange:hasParameter :Parameter_394 ;
+  exchange:hasParameter :Parameter_395 ;
+  exchange:hasParameter :Parameter_396 ;
+.
+:Parameter_397
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_398
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_399
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '/workspace' ;
+.
+
+
+
+
+
+:Property_9
+  rdf:type exchange:Property ;
+  exchange:name "scratch" ;
+  exchange:description 'Select scratch (temporary, fast storage) path for the job, if available. Infrastructure specific - default value MUST be provided by Resource Expert' ;
+  exchange:hasParameter :Parameter_397 ;
+  exchange:hasParameter :Parameter_398 ;
+  exchange:hasParameter :Parameter_399 ;
+.
+:Parameter_400
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_401
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_402
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '~/' ;
+.
+
+
+
+
+
+:Property_10
+  rdf:type exchange:Property ;
+  exchange:name "workspace" ;
+  exchange:description 'Location of the sources and the job script' ;
+  exchange:hasParameter :Parameter_400 ;
+  exchange:hasParameter :Parameter_401 ;
+  exchange:hasParameter :Parameter_402 ;
+.
+:Parameter_403
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_404
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_405
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '' ;
+.
+
+
+
+
+
+:Property_11
+  rdf:type exchange:Property ;
+  exchange:name "email" ;
+  exchange:description 'Job status will be notified to this email' ;
+  exchange:hasParameter :Parameter_403 ;
+  exchange:hasParameter :Parameter_404 ;
+  exchange:hasParameter :Parameter_405 ;
+.
+:Parameter_406
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_407
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_408
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_12
+  rdf:type exchange:Property ;
+  exchange:name "nb_nodes" ;
+  exchange:description 'Number of requested nodes if node name is not specified' ;
+  exchange:hasParameter :Parameter_406 ;
+  exchange:hasParameter :Parameter_407 ;
+  exchange:hasParameter :Parameter_408 ;
+.
+:Parameter_409
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_410
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_411
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+
+
+:Property_13
+  rdf:type exchange:Property ;
+  exchange:name "ppn" ;
+  exchange:description 'Number of processes per node' ;
+  exchange:hasParameter :Parameter_409 ;
+  exchange:hasParameter :Parameter_410 ;
+  exchange:hasParameter :Parameter_411 ;
+.
+:Parameter_412
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_413
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_414
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '0' ;
+.
+
+
+
+
+
+:Property_14
+  rdf:type exchange:Property ;
+  exchange:name "gpus" ;
+  exchange:description 'Number of requested GPUs' ;
+  exchange:hasParameter :Parameter_412 ;
+  exchange:hasParameter :Parameter_413 ;
+  exchange:hasParameter :Parameter_414 ;
+.
+:Parameter_415
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_416
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_15
+  rdf:type exchange:Property ;
+  exchange:name "walltime" ;
+  exchange:description 'Expected time of execution FORMAT: HH:MM:SS' ;
+  exchange:hasParameter :Parameter_415 ;
+  exchange:hasParameter :Parameter_416 ;
+.
+:Parameter_417
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;  
+.
+
+:Parameter_418
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_419
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+:Property_16
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:hasParameter :Parameter_417 ;
+  exchange:hasParameter :Parameter_418 ;
+  exchange:hasParameter :Parameter_419 ;
+.
+:Parameter_420
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;  
+.
+
+:Parameter_421
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_422
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;
+.
+
+
+
+
+
+:Property_17
+  rdf:type exchange:Property ;
+  exchange:name "env" ;
+  exchange:hasParameter :Parameter_420 ;
+  exchange:hasParameter :Parameter_421 ;
+  exchange:hasParameter :Parameter_422 ;
+.
+:Parameter_423
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_424
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_425
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '10' ;
+.
+
+
+
+
+
+:Property_18
+  rdf:type exchange:Property ;
+  exchange:name "monitor_period" ;
+  exchange:hasParameter :Parameter_423 ;
+  exchange:hasParameter :Parameter_424 ;
+  exchange:hasParameter :Parameter_425 ;
+.
+:Parameter_426
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_427
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_428
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '2' ;
+.
+
+
+
+
+
+:Property_19
+  rdf:type exchange:Property ;
+  exchange:name "monitor_retries_headroom" ;
+  exchange:hasParameter :Parameter_426 ;
+  exchange:hasParameter :Parameter_427 ;
+  exchange:hasParameter :Parameter_428 ;
+.
+:Parameter_429
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;  
+.
+
+:Parameter_430
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_431
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+:Property_20
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:hasParameter :Parameter_429 ;
+  exchange:hasParameter :Parameter_430 ;
+  exchange:hasParameter :Parameter_431 ;
+.
+
+:Parameter_432
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_1
+  rdf:type exchange:Attribute ;
+  exchange:name "job_id" ;
+  exchange:hasParameter :Parameter_432 ;
+.
+:Parameter_433
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_2
+  rdf:type exchange:Attribute ;
+  exchange:name "job_id" ;
+  exchange:hasParameter :Parameter_433 ;
+.
+:Parameter_434
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_3
+  rdf:type exchange:Attribute ;
+  exchange:name "audit" ;
+  exchange:hasParameter :Parameter_434 ;
+.
+:Parameter_435
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_4
+  rdf:type exchange:Attribute ;
+  exchange:name "username" ;
+  exchange:hasParameter :Parameter_435 ;
+.
+:Parameter_436
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_5
+  rdf:type exchange:Attribute ;
+  exchange:name "ssh-key" ;
+  exchange:hasParameter :Parameter_436 ;
+.
+:Parameter_437
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_6
+  rdf:type exchange:Attribute ;
+  exchange:name "job_id" ;
+  exchange:hasParameter :Parameter_437 ;
+.
+:Parameter_438
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_7
+  rdf:type exchange:Attribute ;
+  exchange:name "job_walltime" ;
+  exchange:hasParameter :Parameter_438 ;
+.
+:Parameter_439
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_8
+  rdf:type exchange:Attribute ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_439 ;
+.
+:Parameter_440
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_9
+  rdf:type exchange:Attribute ;
+  exchange:name "job_workspace" ;
+  exchange:hasParameter :Parameter_440 ;
+.
+:Parameter_441
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+	
+
+
+:Attribute_10
+  rdf:type exchange:Attribute ;
+  exchange:name "job_enable_audit" ;
+  exchange:hasParameter :Parameter_441 ;
+.
+:Parameter_442
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_443
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '' ;
+.
+	
+
+
+:Attribute_11
+  rdf:type exchange:Attribute ;
+  exchange:name "job_id" ;
+  exchange:hasParameter :Parameter_442 ;
+  exchange:hasParameter :Parameter_443 ;
+.
+:Parameter_444
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_445
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '' ;
+.
+	
+
+
+:Attribute_12
+  rdf:type exchange:Attribute ;
+  exchange:name "audit" ;
+  exchange:hasParameter :Parameter_444 ;
+  exchange:hasParameter :Parameter_445 ;
+.
+
+:Parameter_446
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_447
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_319 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_446 ;
+  exchange:hasParameter :Parameter_447 ;
+.
+:Parameter_448
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_449
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_338 ;
+.
+
+:Interface_2
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_448 ;
+  exchange:hasParameter :Parameter_449 ;
+.
+:Parameter_450
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_451
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_357 ;
+.
+
+:Interface_3
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_450 ;
+  exchange:hasParameter :Parameter_451 ;
+.
+:Parameter_452
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_453
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_363 ;
+  exchange:hasParameter :Parameter_369 ;
+.
+
+:Interface_4
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_452 ;
+  exchange:hasParameter :Parameter_453 ;
+.
+:Parameter_454
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_455
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_375 ;
+.
+
+:Interface_5
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_454 ;
+  exchange:hasParameter :Parameter_455 ;
+.
+
+:Parameter_456
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.capabilities.Root' ;
+.
+
+:Parameter_457
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_source_types" ;
+  exchange:listValue "hpc/sodalite.nodes.hpc.job.torque" ;
+.
+	
+:Capability_1
+  rdf:type exchange:Capability ;
+  exchange:name "configured_job" ;
+  exchange:hasParameter :Parameter_456 ;
+  exchange:hasParameter :Parameter_457 ;
+.
+:Parameter_458
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.capabilities.Compute' ;
+.
+
+:Parameter_459
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_source_types" ;
+  exchange:listValue "hpc/sodalite.nodes.hpc.job.torque" ;
+.
+	
+:Capability_2
+  rdf:type exchange:Capability ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_458 ;
+  exchange:hasParameter :Parameter_459 ;
+.
+:Parameter_460
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.capabilities.Compute' ;
+.
+
+:Parameter_461
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_source_types" ;
+  exchange:listValue "hpc/sodalite.nodes.hpc.job.torque" ;
+.
+	
+:Capability_3
+  rdf:type exchange:Capability ;
+  exchange:name "job_node" ;
+  exchange:hasParameter :Parameter_460 ;
+  exchange:hasParameter :Parameter_461 ;
+.
+:Parameter_462
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'hpc/sodalite.capabilities.hpc.StartedJob' ;
+.
+
+:Parameter_463
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_source_types" ;
+  exchange:listValue "hpc/sodalite.nodes.hpc.job.torque.result" ;
+.
+	
+:Capability_4
+  rdf:type exchange:Capability ;
+  exchange:name "job" ;
+  exchange:hasParameter :Parameter_462 ;
+  exchange:hasParameter :Parameter_463 ;
+.
+
+:Parameter_464
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_465
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'tosca.nodes.Compute' ;  
+.
+
+:Parameter_466
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.DependsOn' ;  
+.
+
+:Requirement_1
+  rdf:type exchange:Requirement ;
+  exchange:name "job_node" ;
+  exchange:hasParameter :Parameter_464 ;
+  exchange:hasParameter :Parameter_465 ;
+  exchange:hasParameter :Parameter_466 ;
+.		
+:Parameter_467
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_468
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'hpc/sodalite.nodes.hpc.wm.torque' ;  
+.
+
+:Parameter_469
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_2
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_467 ;
+  exchange:hasParameter :Parameter_468 ;
+  exchange:hasParameter :Parameter_469 ;
+.		
+:Parameter_470
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_471
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'hpc/sodalite.nodes.hpc.wm.torque' ;  
+.
+
+:Parameter_472
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_3
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_470 ;
+  exchange:hasParameter :Parameter_471 ;
+  exchange:hasParameter :Parameter_472 ;
+.		
+:Parameter_473
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'hpc/sodalite.capabilities.hpc.ConfiguredJob' ;  
+.
+
+:Parameter_474
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque.configuration' ;  
+.
+
+:Parameter_475
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.DependsOn' ;  
+.
+
+:Requirement_4
+  rdf:type exchange:Requirement ;
+  exchange:name "configured_job" ;
+  exchange:hasParameter :Parameter_473 ;
+  exchange:hasParameter :Parameter_474 ;
+  exchange:hasParameter :Parameter_475 ;
+.		
+:Parameter_476
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_477
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'hpc/sodalite.nodes.hpc.wm.torque' ;  
+.
+
+:Parameter_478
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_5
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_476 ;
+  exchange:hasParameter :Parameter_477 ;
+  exchange:hasParameter :Parameter_478 ;
+.		
+:Parameter_479
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'hpc/sodalite.capabilities.hpc.StartedJob' ;  
+.
+
+:Parameter_480
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'hpc/sodalite.nodes.hpc.job.torque' ;  
+.
+
+:Parameter_481
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.DependsOn' ;  
+.
+
+:Requirement_6
+  rdf:type exchange:Requirement ;
+  exchange:name "job" ;
+  exchange:hasParameter :Parameter_479 ;
+  exchange:hasParameter :Parameter_480 ;
+  exchange:hasParameter :Parameter_481 ;
+.		
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:description 'torque job configuration' ;
+  exchange:name "sodalite.nodes.hpc.job.torque.configuration.node" ;
+  exchange:derivesFrom 'hpc/sodalite.nodes.hpc.job.torque.configuration' ;  
+  exchange:requirements :Requirement_1 ; 
+  exchange:interfaces :Interface_1 ; 
+.  
+:NodeType_2
+  rdf:type exchange:Type ;
+  exchange:description 'torque job configuration' ;
+  exchange:name "sodalite.nodes.hpc.job.torque.configuration.base" ;
+  exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+  exchange:properties :Property_5 ; 
+  exchange:attributes :Attribute_1 ; 
+  exchange:requirements :Requirement_2 ; 
+  exchange:capabilities :Capability_1 ; 
+.  
+:NodeType_3
+  rdf:type exchange:Type ;
+  exchange:description 'torque job configuration' ;
+  exchange:name "sodalite.nodes.hpc.job.torque.configuration" ;
+  exchange:derivesFrom 'hpc/sodalite.nodes.hpc.job.torque.configuration.base' ;  
+  exchange:properties :Property_6 ; 
+  exchange:properties :Property_7 ; 
+  exchange:properties :Property_8 ; 
+  exchange:properties :Property_9 ; 
+  exchange:properties :Property_10 ; 
+  exchange:properties :Property_11 ; 
+  exchange:properties :Property_12 ; 
+  exchange:properties :Property_13 ; 
+  exchange:properties :Property_14 ; 
+  exchange:properties :Property_15 ; 
+  exchange:properties :Property_16 ; 
+  exchange:properties :Property_17 ; 
+  exchange:attributes :Attribute_2 ; 
+  exchange:attributes :Attribute_3 ; 
+  exchange:interfaces :Interface_2 ; 
+.  
+:NodeType_4
+  rdf:type exchange:Type ;
+  exchange:description 'torque job configuration' ;
+  exchange:name "sodalite.nodes.hpc.job.torque.preconfigured" ;
+  exchange:derivesFrom 'hpc/sodalite.nodes.hpc.job.torque.configuration.base' ;  
+  exchange:interfaces :Interface_3 ; 
+.  
+:NodeType_5
+  rdf:type exchange:Type ;
+  exchange:description 'torque wm, here we can define properties/attributes applicable for torque WM' ;
+  exchange:name "sodalite.nodes.hpc.wm.torque" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:attributes :Attribute_4 ; 
+  exchange:attributes :Attribute_5 ; 
+  exchange:capabilities :Capability_2 ; 
+  exchange:capabilities :Capability_3 ; 
+.  
+:NodeType_6
+  rdf:type exchange:Type ;
+  exchange:description 'torque job' ;
+  exchange:name "sodalite.nodes.hpc.job.torque" ;
+  exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
+  exchange:attributes :Attribute_6 ; 
+  exchange:attributes :Attribute_7 ; 
+  exchange:attributes :Attribute_8 ; 
+  exchange:attributes :Attribute_9 ; 
+  exchange:attributes :Attribute_10 ; 
+  exchange:requirements :Requirement_3 ; 
+  exchange:requirements :Requirement_4 ; 
+  exchange:capabilities :Capability_4 ; 
+  exchange:interfaces :Interface_4 ; 
+.  
+:NodeType_7
+  rdf:type exchange:Type ;
+  exchange:description 'torque job result' ;
+  exchange:name "sodalite.nodes.hpc.job.torque.result" ;
+  exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
+  exchange:properties :Property_18 ; 
+  exchange:properties :Property_19 ; 
+  exchange:properties :Property_20 ; 
+  exchange:attributes :Attribute_11 ; 
+  exchange:attributes :Attribute_12 ; 
+  exchange:requirements :Requirement_5 ; 
+  exchange:requirements :Requirement_6 ; 
+  exchange:interfaces :Interface_5 ; 
+.  
+
+
+:CapabilityType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.capabilities.hpc.ConfiguredJob" ;
+  exchange:derivesFrom 'tosca.capabilities.Root' ;  
+  
+.
+:CapabilityType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.capabilities.hpc.StartedJob" ;
+  exchange:derivesFrom 'tosca.capabilities.Root' ;  
+  
+.
+

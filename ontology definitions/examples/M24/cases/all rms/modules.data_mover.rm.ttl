@@ -1,0 +1,1755 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "ftp" ;
+  exchange:listValue "sshftp" ;
+  exchange:listValue "gsiftp" ;
+  exchange:listValue "file" ;
+.		
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "greater_than" ;
+  exchange:value "0" ;
+.		
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "ftp" ;
+  exchange:listValue "sshftp" ;
+  exchange:listValue "gsiftp" ;
+  exchange:listValue "file" ;
+.		
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "ftp" ;
+  exchange:listValue "sshftp" ;
+  exchange:listValue "gsiftp" ;
+  exchange:listValue "file" ;
+.		
+	
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'location' ; 
+.
+
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_5 ;
+  exchange:hasParameter :Parameter_6 ;
+.	
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'content' ; 
+.
+
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_8 ;
+  exchange:hasParameter :Parameter_9 ;
+.	
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'src' ; 
+.
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_11 ;
+  exchange:hasParameter :Parameter_12 ;
+.	
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'dst' ; 
+.
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_14 ;
+  exchange:hasParameter :Parameter_15 ;
+.	
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'src_protocol' ; 
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_17 ;
+  exchange:hasParameter :Parameter_18 ;
+.	
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'src_address' ; 
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_20 ;
+  exchange:hasParameter :Parameter_21 ;
+.	
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'src_port' ; 
+.
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_24 ;
+.	
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'src_path' ; 
+.
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_26 ;
+  exchange:hasParameter :Parameter_27 ;
+.	
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'dst_protocol' ; 
+.
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_29 ;
+  exchange:hasParameter :Parameter_30 ;
+.	
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'dst_address' ; 
+.
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_33 ;
+.	
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'dst_port' ; 
+.
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_35 ;
+  exchange:hasParameter :Parameter_36 ;
+.	
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'dst_path' ; 
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_38 ;
+  exchange:hasParameter :Parameter_39 ;
+.	
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'parallel_streams' ; 
+.
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_41 ;
+  exchange:hasParameter :Parameter_42 ;
+.	
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_44 ;
+  exchange:hasParameter :Parameter_45 ;
+  exchange:hasParameter :Parameter_46 ;
+.	
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_48 ;
+  exchange:hasParameter :Parameter_49 ;
+  exchange:hasParameter :Parameter_50 ;
+.	
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_52 ;
+  exchange:hasParameter :Parameter_53 ;
+  exchange:hasParameter :Parameter_54 ;
+.	
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_56 ;
+  exchange:hasParameter :Parameter_57 ;
+  exchange:hasParameter :Parameter_58 ;
+.	
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_60 ;
+  exchange:hasParameter :Parameter_61 ;
+  exchange:hasParameter :Parameter_62 ;
+.	
+:Parameter_64
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_65
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_66
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_67
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_64 ;
+  exchange:hasParameter :Parameter_65 ;
+  exchange:hasParameter :Parameter_66 ;
+.	
+:Parameter_68
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_69
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_70
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_71
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_68 ;
+  exchange:hasParameter :Parameter_69 ;
+  exchange:hasParameter :Parameter_70 ;
+.	
+:Parameter_72
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_73
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_74
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_75
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_72 ;
+  exchange:hasParameter :Parameter_73 ;
+  exchange:hasParameter :Parameter_74 ;
+.	
+:Parameter_76
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_77
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_78
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_79
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_76 ;
+  exchange:hasParameter :Parameter_77 ;
+  exchange:hasParameter :Parameter_78 ;
+.	
+:Parameter_80
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'public_address' ; 
+.
+
+:Parameter_81
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_82
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_83
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_80 ;
+  exchange:hasParameter :Parameter_81 ;
+  exchange:hasParameter :Parameter_82 ;
+.	
+:Parameter_84
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'username' ; 
+.
+
+:Parameter_85
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_86
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_87
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_84 ;
+  exchange:hasParameter :Parameter_85 ;
+  exchange:hasParameter :Parameter_86 ;
+.	
+:Parameter_88
+  rdf:type exchange:Parameter ;
+  exchange:name "attribute" ;  
+  exchange:value 'ssh-key' ; 
+.
+
+:Parameter_89
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_90
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'sodalite.nodes.hpc.job.torque.configuration.base.host' ; 
+.
+
+:Parameter_91
+  rdf:type exchange:Parameter ;
+  exchange:name "get_attribute" ;
+  exchange:hasParameter :Parameter_88 ;
+  exchange:hasParameter :Parameter_89 ;
+  exchange:hasParameter :Parameter_90 ;
+.	
+
+
+:Parameter_92
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_47 ; 
+.
+
+:Parameter_93
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_public_address" ;
+  exchange:hasParameter :Parameter_92 ;
+.	
+
+:Parameter_94
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_51 ; 
+.
+
+:Parameter_95
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_username" ;
+  exchange:hasParameter :Parameter_94 ;
+.	
+
+:Parameter_96
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_55 ; 
+.
+
+:Parameter_97
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_keypath" ;
+  exchange:hasParameter :Parameter_96 ;
+.	
+
+:Parameter_98
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_7 ; 
+.
+
+:Parameter_99
+  rdf:type exchange:Parameter ;
+  exchange:name "location" ;
+  exchange:hasParameter :Parameter_98 ;
+.	
+
+:Parameter_100
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_10 ; 
+.
+
+:Parameter_101
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:hasParameter :Parameter_100 ;
+.	
+
+:Parameter_102
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_59 ; 
+.
+
+:Parameter_103
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_public_address" ;
+  exchange:hasParameter :Parameter_102 ;
+.	
+
+:Parameter_104
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_63 ; 
+.
+
+:Parameter_105
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_username" ;
+  exchange:hasParameter :Parameter_104 ;
+.	
+
+:Parameter_106
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_67 ; 
+.
+
+:Parameter_107
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_keypath" ;
+  exchange:hasParameter :Parameter_106 ;
+.	
+
+:Parameter_108
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_13 ; 
+.
+
+:Parameter_109
+  rdf:type exchange:Parameter ;
+  exchange:name "src" ;
+  exchange:hasParameter :Parameter_108 ;
+.	
+
+:Parameter_110
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_16 ; 
+.
+
+:Parameter_111
+  rdf:type exchange:Parameter ;
+  exchange:name "dst" ;
+  exchange:hasParameter :Parameter_110 ;
+.	
+
+:Parameter_112
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_71 ; 
+.
+
+:Parameter_113
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_public_address" ;
+  exchange:hasParameter :Parameter_112 ;
+.	
+
+:Parameter_114
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_75 ; 
+.
+
+:Parameter_115
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_username" ;
+  exchange:hasParameter :Parameter_114 ;
+.	
+
+:Parameter_116
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_79 ; 
+.
+
+:Parameter_117
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_keypath" ;
+  exchange:hasParameter :Parameter_116 ;
+.	
+
+:Parameter_118
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_83 ; 
+.
+
+:Parameter_119
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_public_address" ;
+  exchange:hasParameter :Parameter_118 ;
+.	
+
+:Parameter_120
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_87 ; 
+.
+
+:Parameter_121
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_username" ;
+  exchange:hasParameter :Parameter_120 ;
+.	
+
+:Parameter_122
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_91 ; 
+.
+
+:Parameter_123
+  rdf:type exchange:Parameter ;
+  exchange:name "remote_host_keypath" ;
+  exchange:hasParameter :Parameter_122 ;
+.	
+
+:Parameter_124
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_19 ; 
+.
+
+:Parameter_125
+  rdf:type exchange:Parameter ;
+  exchange:name "src_protocol" ;
+  exchange:hasParameter :Parameter_124 ;
+.	
+
+:Parameter_126
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_22 ; 
+.
+
+:Parameter_127
+  rdf:type exchange:Parameter ;
+  exchange:name "src_address" ;
+  exchange:hasParameter :Parameter_126 ;
+.	
+
+:Parameter_128
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_25 ; 
+.
+
+:Parameter_129
+  rdf:type exchange:Parameter ;
+  exchange:name "src_port" ;
+  exchange:hasParameter :Parameter_128 ;
+.	
+
+:Parameter_130
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_28 ; 
+.
+
+:Parameter_131
+  rdf:type exchange:Parameter ;
+  exchange:name "src_path" ;
+  exchange:hasParameter :Parameter_130 ;
+.	
+
+:Parameter_132
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_31 ; 
+.
+
+:Parameter_133
+  rdf:type exchange:Parameter ;
+  exchange:name "dst_protocol" ;
+  exchange:hasParameter :Parameter_132 ;
+.	
+
+:Parameter_134
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_34 ; 
+.
+
+:Parameter_135
+  rdf:type exchange:Parameter ;
+  exchange:name "dst_address" ;
+  exchange:hasParameter :Parameter_134 ;
+.	
+
+:Parameter_136
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_37 ; 
+.
+
+:Parameter_137
+  rdf:type exchange:Parameter ;
+  exchange:name "dst_port" ;
+  exchange:hasParameter :Parameter_136 ;
+.	
+
+:Parameter_138
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_40 ; 
+.
+
+:Parameter_139
+  rdf:type exchange:Parameter ;
+  exchange:name "dst_path" ;
+  exchange:hasParameter :Parameter_138 ;
+.	
+
+:Parameter_140
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_43 ; 
+.
+
+:Parameter_141
+  rdf:type exchange:Parameter ;
+  exchange:name "parallel_streams" ;
+  exchange:hasParameter :Parameter_140 ;
+.	
+
+:Parameter_142
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_93 ;
+  exchange:hasParameter :Parameter_95 ;
+  exchange:hasParameter :Parameter_97 ;
+  exchange:hasParameter :Parameter_99 ;
+  exchange:hasParameter :Parameter_101 ;
+.
+
+:Parameter_143
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/data-movement/library/data/mover/playbooks/create-text-file.yml' ;
+.
+
+:Parameter_144
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for remote_host, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: "{{ remote_host_public_address }}"\n        groups: "{{ remote_host_public_address }}"\n        ansible_host: "{{ remote_host_public_address }}"\n        ansible_user: "{{ remote_host_username }}"\n        ansible_ssh_private_key_file: "{{ remote_host_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n      when: remote_host_public_address != "localhost"\n- hosts: "{{ remote_host_public_address }}"\n  gather_facts: no\n  tasks:\n    - name: Ansible create file with content example\n      copy:\n        dest: "{{ location }}"\n        content: "{{ content }}"' ;
+.
+
+
+:Parameter_145
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_143 ;
+  exchange:hasParameter :Parameter_144 ;
+.
+
+
+:Parameter_146
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_145 ;
+.
+
+:Parameter_147
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_142 ;
+  exchange:hasParameter :Parameter_146 ;
+.
+:Parameter_148
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_103 ;
+  exchange:hasParameter :Parameter_105 ;
+  exchange:hasParameter :Parameter_107 ;
+  exchange:hasParameter :Parameter_109 ;
+  exchange:hasParameter :Parameter_111 ;
+.
+
+:Parameter_149
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/data-movement/library/data/mover/playbooks/create-url.yml' ;
+.
+
+:Parameter_150
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for remote_host, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: remote_host\n        groups: remote_host\n        ansible_host: "{{ remote_host_public_address }}"\n        ansible_user: "{{ remote_host_username }}"\n        ansible_ssh_private_key_file: "{{ remote_host_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n- hosts: remote_host\n  gather_facts: yes\n  vars:\n    dst_parsed: \'{{ (dst == None) | ternary("", dst) }}\'\n    dst_path: \'{{ (dst_parsed != "" and dst_parsed[0] == "/") | ternary(dst_parsed, ansible_env.HOME + "/" + dst_parsed) }}\'\n  tasks:\n    - name: "Move data via get_url"\n      get_url:\n        url: "{{ src }}"\n        dest: "{{ dst_path }}"' ;
+.
+
+
+:Parameter_151
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_149 ;
+  exchange:hasParameter :Parameter_150 ;
+.
+
+
+:Parameter_152
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_151 ;
+.
+
+:Parameter_153
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_148 ;
+  exchange:hasParameter :Parameter_152 ;
+.
+:Parameter_154
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_113 ;
+  exchange:hasParameter :Parameter_115 ;
+  exchange:hasParameter :Parameter_117 ;
+.
+
+:Parameter_155
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/data-movement/library/data/mover/playbooks/configure-gridftp-client.yml' ;
+.
+
+:Parameter_156
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for remote_host, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: "{{ remote_host_public_address }}"\n        groups: "{{ remote_host_public_address }}"\n        ansible_host: "{{ remote_host_public_address }}"\n        ansible_user: "{{ remote_host_username }}"\n        ansible_ssh_private_key_file: "{{ remote_host_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n      when: remote_host_public_address != "localhost"\n- hosts: "{{ remote_host_public_address }}"\n  gather_facts: no\n  tasks:\n    - name: "Create proxy"\n      shell: grid-proxy-init -debug -verify' ;
+.
+
+
+:Parameter_157
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_155 ;
+  exchange:hasParameter :Parameter_156 ;
+.
+
+
+:Parameter_158
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_157 ;
+.
+
+:Parameter_159
+  rdf:type exchange:Parameter ;
+  exchange:name "configure" ;
+  exchange:hasParameter :Parameter_154 ;
+  exchange:hasParameter :Parameter_158 ;
+.
+:Parameter_160
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_119 ;
+  exchange:hasParameter :Parameter_121 ;
+  exchange:hasParameter :Parameter_123 ;
+  exchange:hasParameter :Parameter_125 ;
+  exchange:hasParameter :Parameter_127 ;
+  exchange:hasParameter :Parameter_129 ;
+  exchange:hasParameter :Parameter_131 ;
+  exchange:hasParameter :Parameter_133 ;
+  exchange:hasParameter :Parameter_135 ;
+  exchange:hasParameter :Parameter_137 ;
+  exchange:hasParameter :Parameter_139 ;
+  exchange:hasParameter :Parameter_141 ;
+.
+
+:Parameter_161
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/hpc/data-movement/library/data/mover/playbooks/start-gridftp-client.yml' ;
+.
+
+:Parameter_162
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: >\n        Create temporary inventory for remote_host, \n        since opera requires internal envvars to access the target. \n        Need more examples to access static nodes without specifying them in the inventory file\n      add_host:\n        name: "{{ remote_host_public_address }}"\n        groups: "{{ remote_host_public_address }}"\n        ansible_host: "{{ remote_host_public_address }}"\n        ansible_user: "{{ remote_host_username }}"\n        ansible_ssh_private_key_file: "{{ remote_host_keypath }}"\n        ansible_ssh_common_args: >\n          -o IdentitiesOnly=yes\n          -o BatchMode=yes\n          -o UserKnownHostsFile=/dev/null\n          -o StrictHostKeyChecking=no\n      when: remote_host_public_address != "localhost"\n- hosts: "{{ remote_host_public_address }}"\n  gather_facts: no\n  tasks:\n    - name: "Transfer data"\n      shell: >\n        globus-url-copy\n        -vb -r -cd\n        {% if parallel_streams is defined and parallel_streams > 1 %} -p {{ parallel_streams }}{% endif %} \n        {{ src_protocol }}://{{ src_address if src_address != "localhost" }}{% if src_port is defined and src_port != None %}:{{ src_port }}{% endif %}/{{ src_path }}\n        {{ dst_protocol }}://{{ dst_address if dst_address != "localhost" }}{% if dst_port is defined and dst_port != None %}:{{ dst_port }}{% endif %}/{{ dst_path }}' ;
+.
+
+
+:Parameter_163
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_161 ;
+  exchange:hasParameter :Parameter_162 ;
+.
+
+
+:Parameter_164
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_163 ;
+.
+
+:Parameter_165
+  rdf:type exchange:Parameter ;
+  exchange:name "start" ;
+  exchange:hasParameter :Parameter_160 ;
+  exchange:hasParameter :Parameter_164 ;
+.
+
+:Parameter_166
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_167
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_168
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_1 ;
+.
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "protocol" ;
+  exchange:hasParameter :Parameter_166 ;
+  exchange:hasParameter :Parameter_167 ;
+  exchange:hasParameter :Parameter_168 ;
+.
+:Parameter_169
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_170
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "address" ;
+  exchange:hasParameter :Parameter_169 ;
+  exchange:hasParameter :Parameter_170 ;
+.
+:Parameter_171
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.datatypes.network.PortDef' ;  
+.
+
+:Parameter_172
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "port" ;
+  exchange:hasParameter :Parameter_171 ;
+  exchange:hasParameter :Parameter_172 ;
+.
+:Parameter_173
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_174
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "path" ;
+  exchange:hasParameter :Parameter_173 ;
+  exchange:hasParameter :Parameter_174 ;
+.
+:Parameter_175
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_176
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "location" ;
+  exchange:hasParameter :Parameter_175 ;
+  exchange:hasParameter :Parameter_176 ;
+.
+:Parameter_177
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_178
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "content" ;
+  exchange:hasParameter :Parameter_177 ;
+  exchange:hasParameter :Parameter_178 ;
+.
+:Parameter_179
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_180
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "src" ;
+  exchange:hasParameter :Parameter_179 ;
+  exchange:hasParameter :Parameter_180 ;
+.
+:Parameter_181
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_182
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'true' ;
+.
+
+
+
+
+
+
+:Property_8
+  rdf:type exchange:Property ;
+  exchange:name "dst" ;
+  exchange:hasParameter :Parameter_181 ;
+  exchange:hasParameter :Parameter_182 ;
+.
+:Parameter_183
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_184
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_185
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'Sample gridftp transfer' ;
+.
+
+
+
+
+
+:Property_9
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_183 ;
+  exchange:hasParameter :Parameter_184 ;
+  exchange:hasParameter :Parameter_185 ;
+.
+:Parameter_186
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;  
+.
+
+:Parameter_187
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_188
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value '1' ;
+.
+
+
+
+:Parameter_189
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_2 ;
+.
+
+
+:Property_10
+  rdf:type exchange:Property ;
+  exchange:name "parallel_streams" ;
+  exchange:hasParameter :Parameter_186 ;
+  exchange:hasParameter :Parameter_187 ;
+  exchange:hasParameter :Parameter_188 ;
+  exchange:hasParameter :Parameter_189 ;
+.
+:Parameter_190
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_191
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_192
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_3 ;
+.
+
+
+:Property_11
+  rdf:type exchange:Property ;
+  exchange:name "src_protocol" ;
+  exchange:hasParameter :Parameter_190 ;
+  exchange:hasParameter :Parameter_191 ;
+  exchange:hasParameter :Parameter_192 ;
+.
+:Parameter_193
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_194
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_12
+  rdf:type exchange:Property ;
+  exchange:name "src_address" ;
+  exchange:hasParameter :Parameter_193 ;
+  exchange:hasParameter :Parameter_194 ;
+.
+:Parameter_195
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.datatypes.network.PortDef' ;  
+.
+
+:Parameter_196
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_13
+  rdf:type exchange:Property ;
+  exchange:name "src_port" ;
+  exchange:hasParameter :Parameter_195 ;
+  exchange:hasParameter :Parameter_196 ;
+.
+:Parameter_197
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_198
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_14
+  rdf:type exchange:Property ;
+  exchange:name "src_path" ;
+  exchange:hasParameter :Parameter_197 ;
+  exchange:hasParameter :Parameter_198 ;
+.
+:Parameter_199
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_200
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_201
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_4 ;
+.
+
+
+:Property_15
+  rdf:type exchange:Property ;
+  exchange:name "dst_protocol" ;
+  exchange:hasParameter :Parameter_199 ;
+  exchange:hasParameter :Parameter_200 ;
+  exchange:hasParameter :Parameter_201 ;
+.
+:Parameter_202
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_203
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_16
+  rdf:type exchange:Property ;
+  exchange:name "dst_address" ;
+  exchange:hasParameter :Parameter_202 ;
+  exchange:hasParameter :Parameter_203 ;
+.
+:Parameter_204
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.datatypes.network.PortDef' ;  
+.
+
+:Parameter_205
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_17
+  rdf:type exchange:Property ;
+  exchange:name "dst_port" ;
+  exchange:hasParameter :Parameter_204 ;
+  exchange:hasParameter :Parameter_205 ;
+.
+:Parameter_206
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;  
+.
+
+:Parameter_207
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_18
+  rdf:type exchange:Property ;
+  exchange:name "dst_path" ;
+  exchange:hasParameter :Parameter_206 ;
+  exchange:hasParameter :Parameter_207 ;
+.
+
+:Parameter_208
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_1
+  rdf:type exchange:Attribute ;
+  exchange:name "username" ;
+  exchange:hasParameter :Parameter_208 ;
+.
+:Parameter_209
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_2
+  rdf:type exchange:Attribute ;
+  exchange:name "ssh-key" ;
+  exchange:hasParameter :Parameter_209 ;
+.
+
+:Parameter_210
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_211
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_147 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_210 ;
+  exchange:hasParameter :Parameter_211 ;
+.
+:Parameter_212
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_213
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_153 ;
+.
+
+:Interface_2
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_212 ;
+  exchange:hasParameter :Parameter_213 ;
+.
+:Parameter_214
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_215
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_159 ;
+  exchange:hasParameter :Parameter_165 ;
+.
+
+:Interface_3
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_214 ;
+  exchange:hasParameter :Parameter_215 ;
+.
+
+
+:Parameter_216
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_217
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'tosca.nodes.Compute' ;  
+.
+
+:Parameter_218
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_1
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_216 ;
+  exchange:hasParameter :Parameter_217 ;
+  exchange:hasParameter :Parameter_218 ;
+.		
+:Parameter_219
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_220
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'tosca.nodes.Compute' ;  
+.
+
+:Parameter_221
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_2
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:hasParameter :Parameter_219 ;
+  exchange:hasParameter :Parameter_220 ;
+  exchange:hasParameter :Parameter_221 ;
+.		
+:Parameter_222
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'tosca.capabilities.Compute' ;  
+.
+
+:Parameter_223
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'tosca.nodes.Compute' ;  
+.
+
+:Parameter_224
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.HostedOn' ;  
+.
+
+:Requirement_3
+  rdf:type exchange:Requirement ;
+  exchange:name "client" ;
+  exchange:hasParameter :Parameter_222 ;
+  exchange:hasParameter :Parameter_223 ;
+  exchange:hasParameter :Parameter_224 ;
+.		
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:description 'Some remote node' ;
+  exchange:name "sodalite.nodes.remote.client" ;
+  exchange:derivesFrom 'tosca.nodes.Compute' ;  
+  exchange:attributes :Attribute_1 ; 
+  exchange:attributes :Attribute_2 ; 
+.  
+:NodeType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.data.textFile" ;
+  exchange:derivesFrom 'tosca.nodes.Root' ;  
+  exchange:properties :Property_5 ; 
+  exchange:properties :Property_6 ; 
+  exchange:requirements :Requirement_1 ; 
+  exchange:interfaces :Interface_1 ; 
+.  
+:NodeType_3
+  rdf:type exchange:Type ;
+  exchange:description 'Moves data from "src" node to "dst" node' ;
+  exchange:name "sodalite.data.mover" ;
+  exchange:derivesFrom 'tosca.nodes.Root' ;  
+.  
+:NodeType_4
+  rdf:type exchange:Type ;
+  exchange:description 'Moves data from "src" url to "dst" location on the "host".\n      				 "dst" can be either absolute path or relative. "dst" is relative to $HOME directory' ;
+  exchange:name "sodalite.data.mover.url" ;
+  exchange:derivesFrom 'hpc/sodalite.data.mover' ;  
+  exchange:properties :Property_7 ; 
+  exchange:properties :Property_8 ; 
+  exchange:requirements :Requirement_2 ; 
+  exchange:interfaces :Interface_2 ; 
+.  
+:NodeType_5
+  rdf:type exchange:Type ;
+  exchange:description 'Moves data from "src" location to "dst" location.\n      				  "src" and "dst" must be absolute path' ;
+  exchange:name "sodalite.data.mover.gridftp" ;
+  exchange:derivesFrom 'sodalite.data.mover' ;  
+  exchange:properties :Property_9 ; 
+  exchange:properties :Property_10 ; 
+  exchange:properties :Property_11 ; 
+  exchange:properties :Property_12 ; 
+  exchange:properties :Property_13 ; 
+  exchange:properties :Property_14 ; 
+  exchange:properties :Property_15 ; 
+  exchange:properties :Property_16 ; 
+  exchange:properties :Property_17 ; 
+  exchange:properties :Property_18 ; 
+  exchange:requirements :Requirement_3 ; 
+  exchange:interfaces :Interface_3 ; 
+.  
+
+:DataType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.data.mover.gridftpSpec" ;
+  exchange:derivesFrom 'tosca.datatypes.Root' ;
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+.  
+
+

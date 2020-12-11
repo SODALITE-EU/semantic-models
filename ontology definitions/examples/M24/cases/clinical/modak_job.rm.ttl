@@ -1,0 +1,3637 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/rm/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/rm/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:RM_1
+  rdf:type exchange:RM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "x86" ;
+  exchange:listValue "arm" ;
+  exchange:listValue "amd" ;
+  exchange:listValue "power" ;
+.		
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "nvidia" ;
+  exchange:listValue "amd" ;
+  exchange:listValue "fpga" ;
+.		
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "tensorflow" ;
+  exchange:listValue "pytorch" ;
+  exchange:listValue "keras" ;
+  exchange:listValue "cntk" ;
+  exchange:listValue "mxnet" ;
+.		
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "image_classification" ;
+  exchange:listValue "object_detection" ;
+  exchange:listValue "translation" ;
+  exchange:listValue "recommendation" ;
+  exchange:listValue "reinforncement_learning" ;
+.		
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "Imagenet" ;
+  exchange:listValue "CIFAR" ;
+  exchange:listValue "MNIST" ;
+.		
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "tensorflow" ;
+  exchange:listValue "pytorch" ;
+  exchange:listValue "cntk" ;
+  exchange:listValue "mxnet" ;
+  exchange:listValue "keras" ;
+.		
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "mpi" ;
+  exchange:listValue "openmp" ;
+  exchange:listValue "opencc" ;
+  exchange:listValue "opencl" ;
+.		
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "IMAGE" ;
+  exchange:listValue "RESTART" ;
+.		
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "mvapch" ;
+  exchange:listValue "opnmpi" ;
+.		
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "small" ;
+  exchange:listValue "medium" ;
+  exchange:listValue "large" ;
+.		
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "block" ;
+  exchange:listValue "simple" ;
+.		
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "pgi" ;
+  exchange:listValue "cray" ;
+.		
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "pgi" ;
+  exchange:listValue "cray" ;
+.		
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_values" ;
+  exchange:listValue "ai_training" ;
+  exchange:listValue "hpc" ;
+  exchange:listValue "big_data" ;
+  exchange:listValue "ai_inference" ;
+.		
+	
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'job_script' ; 
+.
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_15 ;
+  exchange:hasParameter :Parameter_16 ;
+.	
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'endpoint' ; 
+.
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "req_cap" ;  
+  exchange:value 'modak_endpoint' ; 
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_18 ;
+  exchange:hasParameter :Parameter_19 ;
+  exchange:hasParameter :Parameter_20 ;
+.	
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'job_options' ; 
+.
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_22 ;
+  exchange:hasParameter :Parameter_23 ;
+.	
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'application' ; 
+.
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_25 ;
+  exchange:hasParameter :Parameter_26 ;
+.	
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'target' ; 
+.
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_28 ;
+  exchange:hasParameter :Parameter_29 ;
+.	
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "property" ;  
+  exchange:value 'optimisation' ; 
+.
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "entity" ;  
+  exchange:value 'SELF' ; 
+.
+
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "get_property" ;
+  exchange:hasParameter :Parameter_31 ;
+  exchange:hasParameter :Parameter_32 ;
+.	
+
+
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_17 ; 
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "job_script" ;
+  exchange:hasParameter :Parameter_34 ;
+.	
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_21 ; 
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "modak_endpoint" ;
+  exchange:hasParameter :Parameter_36 ;
+.	
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_24 ; 
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "job_options" ;
+  exchange:hasParameter :Parameter_38 ;
+.	
+
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_27 ; 
+.
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "application" ;
+  exchange:hasParameter :Parameter_40 ;
+.	
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_30 ; 
+.
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "target" ;
+  exchange:hasParameter :Parameter_42 ;
+.	
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;  
+  exchange:hasParameter :Parameter_33 ; 
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "optimisation" ;
+  exchange:hasParameter :Parameter_44 ;
+.	
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "inputs" ;
+  exchange:hasParameter :Parameter_35 ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_39 ;
+  exchange:hasParameter :Parameter_41 ;
+  exchange:hasParameter :Parameter_43 ;
+  exchange:hasParameter :Parameter_45 ;
+.
+
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "path" ;
+  exchange:value '/home/yosu/Projects/Sodalite/Git/iac-management/use-cases/modules/hpc/modak/job/playbooks/create-modak-job.yml' ;
+.
+
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "content" ;
+  exchange:value '---\n- hosts: all\n  gather_facts: no\n  tasks:\n    - name: "Create optimization.ai_training.config.type variable"\n      set_fact:\n        optimisation_updated_params: "{{ optimisation | combine( { \'app_type-ai_training\': { \'config\': { \'type\' : ai_config_type } } } , recursive=True) }}"\n      vars:\n        ai_config_type: "{{ optimisation[\'app_type-ai_training\'][\'config\'][\'config_type\'] }}"\n      when: optimisation[\'app_type-ai_training\'][\'config\'][\'config_type\'] is defined\n    - name: Create request data\n      set_fact:\n        request:\n          job:\n            job_options: "{{ job_options }}"\n            application: "{{ application }}"\n            target: "{{ target }}"\n            optimisation: "{{ optimisation_updated_params if optimisation_updated_params is defined else optimisation }}"\n    # just for debugging purposes\n    - copy: content="{{ request | to_nice_json }}" dest=/tmp/ansible-request-{{ request[\'job\'][\'application\'][\'app_tag\'] }}.json\n    - name: Send request to MODAK\n      uri:\n        url: "{{ modak_endpoint }}"\n        method: POST\n        body_format: json\n        body: "{{ request }}"\n      register: response\n    # just for debugging purposes\n    - copy: content="{{ response.json | to_nice_json }}" dest=/tmp/ansible-response-{{ request[\'job\'][\'application\'][\'app_tag\'] }}.json\n    - set_fact:\n        artifact_url: "{{ response.json.job.job_script }}"\n    - set_fact:\n        container_runtime: "{{ response.json.job.application.container_runtime if response.json.job.application.container_runtime is defined else \'\' }}"\n    - name: Set artifact url\n      set_stats:\n        data:\n          artifact_url: "{{ artifact_url }}"\n          container_runtime: "{{ container_runtime }}"\n    - name: Save job\n      get_url:\n        url: "{{ artifact_url }}"\n        dest: "{{ job_script }}"' ;
+.
+
+
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "primary" ;
+  exchange:hasParameter :Parameter_47 ;
+  exchange:hasParameter :Parameter_48 ;
+.
+
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "implementation" ;
+  exchange:hasParameter :Parameter_49 ;
+.
+
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "create" ;
+  exchange:hasParameter :Parameter_46 ;
+  exchange:hasParameter :Parameter_50 ;
+.
+
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "job_name" ;
+  exchange:hasParameter :Parameter_52 ;
+  exchange:hasParameter :Parameter_53 ;
+.
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "account" ;
+  exchange:hasParameter :Parameter_54 ;
+  exchange:hasParameter :Parameter_55 ;
+  exchange:hasParameter :Parameter_56 ;
+.
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "queue" ;
+  exchange:hasParameter :Parameter_57 ;
+  exchange:hasParameter :Parameter_58 ;
+  exchange:hasParameter :Parameter_59 ;
+.
+:Parameter_60
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_61
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "wall_time_limit" ;
+  exchange:hasParameter :Parameter_60 ;
+  exchange:hasParameter :Parameter_61 ;
+.
+:Parameter_62
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_63
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "node_count" ;
+  exchange:hasParameter :Parameter_62 ;
+  exchange:hasParameter :Parameter_63 ;
+.
+:Parameter_64
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_65
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "core_count" ;
+  exchange:hasParameter :Parameter_64 ;
+  exchange:hasParameter :Parameter_65 ;
+.
+:Parameter_66
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_67
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_68
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "process_count_per_node" ;
+  exchange:hasParameter :Parameter_66 ;
+  exchange:hasParameter :Parameter_67 ;
+  exchange:hasParameter :Parameter_68 ;
+.
+:Parameter_69
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_70
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_71
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_8
+  rdf:type exchange:Property ;
+  exchange:name "core_count_per_process" ;
+  exchange:hasParameter :Parameter_69 ;
+  exchange:hasParameter :Parameter_70 ;
+  exchange:hasParameter :Parameter_71 ;
+.
+:Parameter_72
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'scalar-unit.size' ;
+.
+
+:Parameter_73
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_74
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_9
+  rdf:type exchange:Property ;
+  exchange:name "memory_limit" ;
+  exchange:hasParameter :Parameter_72 ;
+  exchange:hasParameter :Parameter_73 ;
+  exchange:hasParameter :Parameter_74 ;
+.
+:Parameter_75
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'scalar-unit.size' ;
+.
+
+:Parameter_76
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_77
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_10
+  rdf:type exchange:Property ;
+  exchange:name "minimum_memory_per_processor" ;
+  exchange:hasParameter :Parameter_75 ;
+  exchange:hasParameter :Parameter_76 ;
+  exchange:hasParameter :Parameter_77 ;
+.
+:Parameter_78
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_79
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_80
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_11
+  rdf:type exchange:Property ;
+  exchange:name "request_gpus" ;
+  exchange:hasParameter :Parameter_78 ;
+  exchange:hasParameter :Parameter_79 ;
+  exchange:hasParameter :Parameter_80 ;
+.
+:Parameter_81
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_82
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_83
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_12
+  rdf:type exchange:Property ;
+  exchange:name "request_specific_nodes" ;
+  exchange:hasParameter :Parameter_81 ;
+  exchange:hasParameter :Parameter_82 ;
+  exchange:hasParameter :Parameter_83 ;
+.
+:Parameter_84
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_85
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_86
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_13
+  rdf:type exchange:Property ;
+  exchange:name "job_array" ;
+  exchange:hasParameter :Parameter_84 ;
+  exchange:hasParameter :Parameter_85 ;
+  exchange:hasParameter :Parameter_86 ;
+.
+:Parameter_87
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_88
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_14
+  rdf:type exchange:Property ;
+  exchange:name "standard_output_file" ;
+  exchange:hasParameter :Parameter_87 ;
+  exchange:hasParameter :Parameter_88 ;
+.
+:Parameter_89
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_90
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_15
+  rdf:type exchange:Property ;
+  exchange:name "standard_error_file" ;
+  exchange:hasParameter :Parameter_89 ;
+  exchange:hasParameter :Parameter_90 ;
+.
+:Parameter_91
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_92
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_16
+  rdf:type exchange:Property ;
+  exchange:name "combine_stdout_stderr" ;
+  exchange:hasParameter :Parameter_91 ;
+  exchange:hasParameter :Parameter_92 ;
+.
+:Parameter_93
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_94
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_95
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_17
+  rdf:type exchange:Property ;
+  exchange:name "architecture_constraint" ;
+  exchange:hasParameter :Parameter_93 ;
+  exchange:hasParameter :Parameter_94 ;
+  exchange:hasParameter :Parameter_95 ;
+.
+:Parameter_96
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_97
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_98
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_18
+  rdf:type exchange:Property ;
+  exchange:name "copy_environment" ;
+  exchange:hasParameter :Parameter_96 ;
+  exchange:hasParameter :Parameter_97 ;
+  exchange:hasParameter :Parameter_98 ;
+.
+:Parameter_99
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_100
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_101
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_19
+  rdf:type exchange:Property ;
+  exchange:name "copy_environment_variable" ;
+  exchange:hasParameter :Parameter_99 ;
+  exchange:hasParameter :Parameter_100 ;
+  exchange:hasParameter :Parameter_101 ;
+.
+:Parameter_102
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_103
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_104
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_20
+  rdf:type exchange:Property ;
+  exchange:name "job_dependency" ;
+  exchange:hasParameter :Parameter_102 ;
+  exchange:hasParameter :Parameter_103 ;
+  exchange:hasParameter :Parameter_104 ;
+.
+:Parameter_105
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_106
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_107
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_21
+  rdf:type exchange:Property ;
+  exchange:name "request_event_notification" ;
+  exchange:hasParameter :Parameter_105 ;
+  exchange:hasParameter :Parameter_106 ;
+  exchange:hasParameter :Parameter_107 ;
+.
+:Parameter_108
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_109
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_110
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_22
+  rdf:type exchange:Property ;
+  exchange:name "email_address" ;
+  exchange:hasParameter :Parameter_108 ;
+  exchange:hasParameter :Parameter_109 ;
+  exchange:hasParameter :Parameter_110 ;
+.
+:Parameter_111
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_112
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_113
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_23
+  rdf:type exchange:Property ;
+  exchange:name "defer_job" ;
+  exchange:hasParameter :Parameter_111 ;
+  exchange:hasParameter :Parameter_112 ;
+  exchange:hasParameter :Parameter_113 ;
+.
+:Parameter_114
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_115
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_116
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_24
+  rdf:type exchange:Property ;
+  exchange:name "node_exclusive" ;
+  exchange:hasParameter :Parameter_114 ;
+  exchange:hasParameter :Parameter_115 ;
+  exchange:hasParameter :Parameter_116 ;
+.
+:Parameter_117
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_118
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_25
+  rdf:type exchange:Property ;
+  exchange:name "src" ;
+  exchange:hasParameter :Parameter_117 ;
+  exchange:hasParameter :Parameter_118 ;
+.
+:Parameter_119
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_120
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_26
+  rdf:type exchange:Property ;
+  exchange:name "build_command" ;
+  exchange:hasParameter :Parameter_119 ;
+  exchange:hasParameter :Parameter_120 ;
+.
+:Parameter_121
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_122
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_27
+  rdf:type exchange:Property ;
+  exchange:name "app_tag" ;
+  exchange:hasParameter :Parameter_121 ;
+  exchange:hasParameter :Parameter_122 ;
+.
+:Parameter_123
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_124
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_28
+  rdf:type exchange:Property ;
+  exchange:name "container_runtime" ;
+  exchange:hasParameter :Parameter_123 ;
+  exchange:hasParameter :Parameter_124 ;
+.
+:Parameter_125
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_126
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_29
+  rdf:type exchange:Property ;
+  exchange:name "app_type" ;
+  exchange:hasParameter :Parameter_125 ;
+  exchange:hasParameter :Parameter_126 ;
+.
+:Parameter_127
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_128
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_30
+  rdf:type exchange:Property ;
+  exchange:name "executable" ;
+  exchange:hasParameter :Parameter_127 ;
+  exchange:hasParameter :Parameter_128 ;
+.
+:Parameter_129
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_130
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_31
+  rdf:type exchange:Property ;
+  exchange:name "arguments" ;
+  exchange:hasParameter :Parameter_129 ;
+  exchange:hasParameter :Parameter_130 ;
+.
+:Parameter_131
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_132
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_133
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_32
+  rdf:type exchange:Property ;
+  exchange:name "mpi_ranks" ;
+  exchange:hasParameter :Parameter_131 ;
+  exchange:hasParameter :Parameter_132 ;
+  exchange:hasParameter :Parameter_133 ;
+.
+:Parameter_134
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_135
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_136
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+
+
+
+:Property_33
+  rdf:type exchange:Property ;
+  exchange:name "threads" ;
+  exchange:hasParameter :Parameter_134 ;
+  exchange:hasParameter :Parameter_135 ;
+  exchange:hasParameter :Parameter_136 ;
+.
+:Parameter_137
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_138
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+:Parameter_139
+  rdf:type exchange:Parameter ;
+  exchange:name "default" ;
+  exchange:value 'null' ;	  
+.
+
+
+:Parameter_140
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.build' ;
+.
+
+:Parameter_141
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_140
+.
+
+
+
+:Property_34
+  rdf:type exchange:Property ;
+  exchange:name "build" ;
+  exchange:hasParameter :Parameter_137 ;
+  exchange:hasParameter :Parameter_138 ;
+  exchange:hasParameter :Parameter_139 ;
+  exchange:hasParameter :Parameter_141 ;
+.
+:Parameter_142
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_143
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_35
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:hasParameter :Parameter_142 ;
+  exchange:hasParameter :Parameter_143 ;
+.
+:Parameter_144
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_145
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_36
+  rdf:type exchange:Property ;
+  exchange:name "queue_type" ;
+  exchange:hasParameter :Parameter_144 ;
+  exchange:hasParameter :Parameter_145 ;
+.
+:Parameter_146
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_147
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_148
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_1 ;
+.
+
+
+:Property_37
+  rdf:type exchange:Property ;
+  exchange:name "cpu_type" ;
+  exchange:hasParameter :Parameter_146 ;
+  exchange:hasParameter :Parameter_147 ;
+  exchange:hasParameter :Parameter_148 ;
+.
+:Parameter_149
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_150
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_151
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_2 ;
+.
+
+
+:Property_38
+  rdf:type exchange:Property ;
+  exchange:name "acc_type" ;
+  exchange:hasParameter :Parameter_149 ;
+  exchange:hasParameter :Parameter_150 ;
+  exchange:hasParameter :Parameter_151 ;
+.
+:Parameter_152
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_153
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_39
+  rdf:type exchange:Property ;
+  exchange:name "tuner" ;
+  exchange:hasParameter :Parameter_152 ;
+  exchange:hasParameter :Parameter_153 ;
+.
+:Parameter_154
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_155
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_40
+  rdf:type exchange:Property ;
+  exchange:name "input" ;
+  exchange:hasParameter :Parameter_154 ;
+  exchange:hasParameter :Parameter_155 ;
+.
+:Parameter_156
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_157
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_158
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_3 ;
+.
+
+
+:Property_41
+  rdf:type exchange:Property ;
+  exchange:name "ai_framework" ;
+  exchange:hasParameter :Parameter_156 ;
+  exchange:hasParameter :Parameter_157 ;
+  exchange:hasParameter :Parameter_158 ;
+.
+:Parameter_159
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_160
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_161
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_4 ;
+.
+
+
+:Property_42
+  rdf:type exchange:Property ;
+  exchange:name "config_type" ;
+  exchange:hasParameter :Parameter_159 ;
+  exchange:hasParameter :Parameter_160 ;
+  exchange:hasParameter :Parameter_161 ;
+.
+:Parameter_162
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_163
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_43
+  rdf:type exchange:Property ;
+  exchange:name "distributed_training" ;
+  exchange:hasParameter :Parameter_162 ;
+  exchange:hasParameter :Parameter_163 ;
+.
+:Parameter_164
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_165
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_44
+  rdf:type exchange:Property ;
+  exchange:name "layers" ;
+  exchange:hasParameter :Parameter_164 ;
+  exchange:hasParameter :Parameter_165 ;
+.
+:Parameter_166
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_167
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_45
+  rdf:type exchange:Property ;
+  exchange:name "parameters" ;
+  exchange:hasParameter :Parameter_166 ;
+  exchange:hasParameter :Parameter_167 ;
+.
+:Parameter_168
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_169
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_46
+  rdf:type exchange:Property ;
+  exchange:name "prefetch" ;
+  exchange:hasParameter :Parameter_168 ;
+  exchange:hasParameter :Parameter_169 ;
+.
+:Parameter_170
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_171
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_47
+  rdf:type exchange:Property ;
+  exchange:name "cache" ;
+  exchange:hasParameter :Parameter_170 ;
+  exchange:hasParameter :Parameter_171 ;
+.
+:Parameter_172
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_173
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_48
+  rdf:type exchange:Property ;
+  exchange:name "location" ;
+  exchange:hasParameter :Parameter_172 ;
+  exchange:hasParameter :Parameter_173 ;
+.
+:Parameter_174
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_175
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_176
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_5 ;
+.
+
+
+:Property_49
+  rdf:type exchange:Property ;
+  exchange:name "basedata" ;
+  exchange:hasParameter :Parameter_174 ;
+  exchange:hasParameter :Parameter_175 ;
+  exchange:hasParameter :Parameter_176 ;
+.
+:Parameter_177
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_178
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_50
+  rdf:type exchange:Property ;
+  exchange:name "size" ;
+  exchange:hasParameter :Parameter_177 ;
+  exchange:hasParameter :Parameter_178 ;
+.
+:Parameter_179
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_180
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_51
+  rdf:type exchange:Property ;
+  exchange:name "count" ;
+  exchange:hasParameter :Parameter_179 ;
+  exchange:hasParameter :Parameter_180 ;
+.
+:Parameter_181
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_182
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_183
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.data.etl' ;
+.
+
+:Parameter_184
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_183
+.
+
+
+
+:Property_52
+  rdf:type exchange:Property ;
+  exchange:name "etl" ;
+  exchange:hasParameter :Parameter_181 ;
+  exchange:hasParameter :Parameter_182 ;
+  exchange:hasParameter :Parameter_184 ;
+.
+:Parameter_185
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_186
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_53
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_185 ;
+  exchange:hasParameter :Parameter_186 ;
+.
+:Parameter_187
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_188
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_189
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_6 ;
+.
+
+
+:Property_54
+  rdf:type exchange:Property ;
+  exchange:name "backend" ;
+  exchange:hasParameter :Parameter_187 ;
+  exchange:hasParameter :Parameter_188 ;
+  exchange:hasParameter :Parameter_189 ;
+.
+:Parameter_190
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_191
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_55
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_190 ;
+  exchange:hasParameter :Parameter_191 ;
+.
+:Parameter_192
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_193
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_56
+  rdf:type exchange:Property ;
+  exchange:name "xla" ;
+  exchange:hasParameter :Parameter_192 ;
+  exchange:hasParameter :Parameter_193 ;
+.
+:Parameter_194
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_195
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_57
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_194 ;
+  exchange:hasParameter :Parameter_195 ;
+.
+:Parameter_196
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_197
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_58
+  rdf:type exchange:Property ;
+  exchange:name "glow" ;
+  exchange:hasParameter :Parameter_196 ;
+  exchange:hasParameter :Parameter_197 ;
+.
+:Parameter_198
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_199
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_200
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.config' ;
+.
+
+:Parameter_201
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_200
+.
+
+
+
+:Property_59
+  rdf:type exchange:Property ;
+  exchange:name "config" ;
+  exchange:hasParameter :Parameter_198 ;
+  exchange:hasParameter :Parameter_199 ;
+  exchange:hasParameter :Parameter_201 ;
+.
+:Parameter_202
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_203
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_204
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.data' ;
+.
+
+:Parameter_205
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_204
+.
+
+
+
+:Property_60
+  rdf:type exchange:Property ;
+  exchange:name "data" ;
+  exchange:hasParameter :Parameter_202 ;
+  exchange:hasParameter :Parameter_203 ;
+  exchange:hasParameter :Parameter_205 ;
+.
+:Parameter_206
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_207
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_208
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.ai_framework-keras' ;
+.
+
+:Parameter_209
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_208
+.
+
+
+
+:Property_61
+  rdf:type exchange:Property ;
+  exchange:name "ai_framework-keras" ;
+  exchange:hasParameter :Parameter_206 ;
+  exchange:hasParameter :Parameter_207 ;
+  exchange:hasParameter :Parameter_209 ;
+.
+:Parameter_210
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_211
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_212
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.ai_framework-tensorflow' ;
+.
+
+:Parameter_213
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_212
+.
+
+
+
+:Property_62
+  rdf:type exchange:Property ;
+  exchange:name "ai_framework-tensorflow" ;
+  exchange:hasParameter :Parameter_210 ;
+  exchange:hasParameter :Parameter_211 ;
+  exchange:hasParameter :Parameter_213 ;
+.
+:Parameter_214
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_215
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_216
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training.ai_framework-pytorch' ;
+.
+
+:Parameter_217
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_216
+.
+
+
+
+:Property_63
+  rdf:type exchange:Property ;
+  exchange:name "ai_framework-pytorch" ;
+  exchange:hasParameter :Parameter_214 ;
+  exchange:hasParameter :Parameter_215 ;
+  exchange:hasParameter :Parameter_217 ;
+.
+:Parameter_218
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_219
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_220
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_7 ;
+.
+
+
+:Property_64
+  rdf:type exchange:Property ;
+  exchange:name "parallelisation" ;
+  exchange:hasParameter :Parameter_218 ;
+  exchange:hasParameter :Parameter_219 ;
+  exchange:hasParameter :Parameter_220 ;
+.
+:Parameter_221
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_222
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_65
+  rdf:type exchange:Property ;
+  exchange:name "prefetch" ;
+  exchange:hasParameter :Parameter_221 ;
+  exchange:hasParameter :Parameter_222 ;
+.
+:Parameter_223
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_224
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_66
+  rdf:type exchange:Property ;
+  exchange:name "cache" ;
+  exchange:hasParameter :Parameter_223 ;
+  exchange:hasParameter :Parameter_224 ;
+.
+:Parameter_225
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_226
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_67
+  rdf:type exchange:Property ;
+  exchange:name "location" ;
+  exchange:hasParameter :Parameter_225 ;
+  exchange:hasParameter :Parameter_226 ;
+.
+:Parameter_227
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_228
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_229
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_8 ;
+.
+
+
+:Property_68
+  rdf:type exchange:Property ;
+  exchange:name "basedata" ;
+  exchange:hasParameter :Parameter_227 ;
+  exchange:hasParameter :Parameter_228 ;
+  exchange:hasParameter :Parameter_229 ;
+.
+:Parameter_230
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_231
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_69
+  rdf:type exchange:Property ;
+  exchange:name "size" ;
+  exchange:hasParameter :Parameter_230 ;
+  exchange:hasParameter :Parameter_231 ;
+.
+:Parameter_232
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_233
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_70
+  rdf:type exchange:Property ;
+  exchange:name "count" ;
+  exchange:hasParameter :Parameter_232 ;
+  exchange:hasParameter :Parameter_233 ;
+.
+:Parameter_234
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_235
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_236
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.data.etl' ;
+.
+
+:Parameter_237
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_236
+.
+
+
+
+:Property_71
+  rdf:type exchange:Property ;
+  exchange:name "etl" ;
+  exchange:hasParameter :Parameter_234 ;
+  exchange:hasParameter :Parameter_235 ;
+  exchange:hasParameter :Parameter_237 ;
+.
+:Parameter_238
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_239
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_240
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_9 ;
+.
+
+
+:Property_72
+  rdf:type exchange:Property ;
+  exchange:name "library" ;
+  exchange:hasParameter :Parameter_238 ;
+  exchange:hasParameter :Parameter_239 ;
+  exchange:hasParameter :Parameter_240 ;
+.
+:Parameter_241
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_242
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_73
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_241 ;
+  exchange:hasParameter :Parameter_242 ;
+.
+:Parameter_243
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'float' ;
+.
+
+:Parameter_244
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_74
+  rdf:type exchange:Property ;
+  exchange:name "scaling_efficiency" ;
+  exchange:hasParameter :Parameter_243 ;
+  exchange:hasParameter :Parameter_244 ;
+.
+:Parameter_245
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_246
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_75
+  rdf:type exchange:Property ;
+  exchange:name "core_subscription" ;
+  exchange:hasParameter :Parameter_245 ;
+  exchange:hasParameter :Parameter_246 ;
+.
+:Parameter_247
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_248
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_249
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_10 ;
+.
+
+
+:Property_76
+  rdf:type exchange:Property ;
+  exchange:name "message_size" ;
+  exchange:hasParameter :Parameter_247 ;
+  exchange:hasParameter :Parameter_248 ;
+  exchange:hasParameter :Parameter_249 ;
+.
+:Parameter_250
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_251
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_77
+  rdf:type exchange:Property ;
+  exchange:name "number_of_threads" ;
+  exchange:hasParameter :Parameter_250 ;
+  exchange:hasParameter :Parameter_251 ;
+.
+:Parameter_252
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'float' ;
+.
+
+:Parameter_253
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_78
+  rdf:type exchange:Property ;
+  exchange:name "scaling_efficiency" ;
+  exchange:hasParameter :Parameter_252 ;
+  exchange:hasParameter :Parameter_253 ;
+.
+:Parameter_254
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_255
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_256
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_11 ;
+.
+
+
+:Property_79
+  rdf:type exchange:Property ;
+  exchange:name "affinity" ;
+  exchange:hasParameter :Parameter_254 ;
+  exchange:hasParameter :Parameter_255 ;
+  exchange:hasParameter :Parameter_256 ;
+.
+:Parameter_257
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_258
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_259
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_12 ;
+.
+
+
+:Property_80
+  rdf:type exchange:Property ;
+  exchange:name "compiler" ;
+  exchange:hasParameter :Parameter_257 ;
+  exchange:hasParameter :Parameter_258 ;
+  exchange:hasParameter :Parameter_259 ;
+.
+:Parameter_260
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_261
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_81
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_260 ;
+  exchange:hasParameter :Parameter_261 ;
+.
+:Parameter_262
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_263
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_82
+  rdf:type exchange:Property ;
+  exchange:name "number_of_acc" ;
+  exchange:hasParameter :Parameter_262 ;
+  exchange:hasParameter :Parameter_263 ;
+.
+:Parameter_264
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_265
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_266
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_13 ;
+.
+
+
+:Property_83
+  rdf:type exchange:Property ;
+  exchange:name "compiler" ;
+  exchange:hasParameter :Parameter_264 ;
+  exchange:hasParameter :Parameter_265 ;
+  exchange:hasParameter :Parameter_266 ;
+.
+:Parameter_267
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_268
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_84
+  rdf:type exchange:Property ;
+  exchange:name "version" ;
+  exchange:hasParameter :Parameter_267 ;
+  exchange:hasParameter :Parameter_268 ;
+.
+:Parameter_269
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'integer' ;
+.
+
+:Parameter_270
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_85
+  rdf:type exchange:Property ;
+  exchange:name "number_of_acc" ;
+  exchange:hasParameter :Parameter_269 ;
+  exchange:hasParameter :Parameter_270 ;
+.
+:Parameter_271
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_272
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_273
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.config' ;
+.
+
+:Parameter_274
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_273
+.
+
+
+
+:Property_86
+  rdf:type exchange:Property ;
+  exchange:name "config" ;
+  exchange:hasParameter :Parameter_271 ;
+  exchange:hasParameter :Parameter_272 ;
+  exchange:hasParameter :Parameter_274 ;
+.
+:Parameter_275
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_276
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_277
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.data' ;
+.
+
+:Parameter_278
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_277
+.
+
+
+
+:Property_87
+  rdf:type exchange:Property ;
+  exchange:name "data" ;
+  exchange:hasParameter :Parameter_275 ;
+  exchange:hasParameter :Parameter_276 ;
+  exchange:hasParameter :Parameter_278 ;
+.
+:Parameter_279
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_280
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_281
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.parallelisation-mpi' ;
+.
+
+:Parameter_282
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_281
+.
+
+
+
+:Property_88
+  rdf:type exchange:Property ;
+  exchange:name "parallelisation-mpi" ;
+  exchange:hasParameter :Parameter_279 ;
+  exchange:hasParameter :Parameter_280 ;
+  exchange:hasParameter :Parameter_282 ;
+.
+:Parameter_283
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_284
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_285
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.parallelisation-openmp' ;
+.
+
+:Parameter_286
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_285
+.
+
+
+
+:Property_89
+  rdf:type exchange:Property ;
+  exchange:name "parallelisation-openmp" ;
+  exchange:hasParameter :Parameter_283 ;
+  exchange:hasParameter :Parameter_284 ;
+  exchange:hasParameter :Parameter_286 ;
+.
+:Parameter_287
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_288
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_289
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.parallelisation-opencc' ;
+.
+
+:Parameter_290
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_289
+.
+
+
+
+:Property_90
+  rdf:type exchange:Property ;
+  exchange:name "parallelisation-opencc" ;
+  exchange:hasParameter :Parameter_287 ;
+  exchange:hasParameter :Parameter_288 ;
+  exchange:hasParameter :Parameter_290 ;
+.
+:Parameter_291
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_292
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_293
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc.parallelisation-opencl' ;
+.
+
+:Parameter_294
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_293
+.
+
+
+
+:Property_91
+  rdf:type exchange:Property ;
+  exchange:name "parallelisation-opencl" ;
+  exchange:hasParameter :Parameter_291 ;
+  exchange:hasParameter :Parameter_292 ;
+  exchange:hasParameter :Parameter_294 ;
+.
+:Parameter_295
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_296
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_92
+  rdf:type exchange:Property ;
+  exchange:name "enable_opt_build" ;
+  exchange:hasParameter :Parameter_295 ;
+  exchange:hasParameter :Parameter_296 ;
+.
+:Parameter_297
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'boolean' ;
+.
+
+:Parameter_298
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_93
+  rdf:type exchange:Property ;
+  exchange:name "enable_autotuning" ;
+  exchange:hasParameter :Parameter_297 ;
+  exchange:hasParameter :Parameter_298 ;
+.
+:Parameter_299
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_300
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+:Parameter_301
+  rdf:type exchange:Parameter ;
+  exchange:name "constraints" ;
+  exchange:hasParameter :Parameter_14 ;
+.
+
+
+:Property_94
+  rdf:type exchange:Property ;
+  exchange:name "app_type" ;
+  exchange:hasParameter :Parameter_299 ;
+  exchange:hasParameter :Parameter_300 ;
+  exchange:hasParameter :Parameter_301 ;
+.
+:Parameter_302
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_303
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_304
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.opt_build' ;
+.
+
+:Parameter_305
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_304
+.
+
+
+
+:Property_95
+  rdf:type exchange:Property ;
+  exchange:name "opt_build" ;
+  exchange:hasParameter :Parameter_302 ;
+  exchange:hasParameter :Parameter_303 ;
+  exchange:hasParameter :Parameter_305 ;
+.
+:Parameter_306
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_307
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_308
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.autotuning' ;
+.
+
+:Parameter_309
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_308
+.
+
+
+
+:Property_96
+  rdf:type exchange:Property ;
+  exchange:name "autotuning" ;
+  exchange:hasParameter :Parameter_306 ;
+  exchange:hasParameter :Parameter_307 ;
+  exchange:hasParameter :Parameter_309 ;
+.
+:Parameter_310
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_311
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_312
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_training' ;
+.
+
+:Parameter_313
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_312
+.
+
+
+
+:Property_97
+  rdf:type exchange:Property ;
+  exchange:name "app_type-ai_training" ;
+  exchange:hasParameter :Parameter_310 ;
+  exchange:hasParameter :Parameter_311 ;
+  exchange:hasParameter :Parameter_313 ;
+.
+:Parameter_314
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_315
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_316
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.hpc' ;
+.
+
+:Parameter_317
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_316
+.
+
+
+
+:Property_98
+  rdf:type exchange:Property ;
+  exchange:name "app_type-hpc" ;
+  exchange:hasParameter :Parameter_314 ;
+  exchange:hasParameter :Parameter_315 ;
+  exchange:hasParameter :Parameter_317 ;
+.
+:Parameter_318
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_319
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_320
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.big_data' ;
+.
+
+:Parameter_321
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_320
+.
+
+
+
+:Property_99
+  rdf:type exchange:Property ;
+  exchange:name "app_type-big_data" ;
+  exchange:hasParameter :Parameter_318 ;
+  exchange:hasParameter :Parameter_319 ;
+  exchange:hasParameter :Parameter_321 ;
+.
+:Parameter_322
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_323
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_324
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation.ai_inference' ;
+.
+
+:Parameter_325
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_324
+.
+
+
+
+:Property_100
+  rdf:type exchange:Property ;
+  exchange:name "app_type-ai_inference" ;
+  exchange:hasParameter :Parameter_322 ;
+  exchange:hasParameter :Parameter_323 ;
+  exchange:hasParameter :Parameter_325 ;
+.
+:Parameter_326
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_327
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_101
+  rdf:type exchange:Property ;
+  exchange:name "endpoint" ;
+  exchange:hasParameter :Parameter_326 ;
+  exchange:hasParameter :Parameter_327 ;
+.
+:Parameter_328
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Parameter_329
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+
+
+
+:Property_102
+  rdf:type exchange:Property ;
+  exchange:name "job_script" ;
+  exchange:hasParameter :Parameter_328 ;
+  exchange:hasParameter :Parameter_329 ;
+.
+:Parameter_330
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_331
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_332
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.job_options' ;
+.
+
+:Parameter_333
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_332
+.
+
+
+
+:Property_103
+  rdf:type exchange:Property ;
+  exchange:name "job_options" ;
+  exchange:hasParameter :Parameter_330 ;
+  exchange:hasParameter :Parameter_331 ;
+  exchange:hasParameter :Parameter_333 ;
+.
+:Parameter_334
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_335
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_336
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.application' ;
+.
+
+:Parameter_337
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_336
+.
+
+
+
+:Property_104
+  rdf:type exchange:Property ;
+  exchange:name "application" ;
+  exchange:hasParameter :Parameter_334 ;
+  exchange:hasParameter :Parameter_335 ;
+  exchange:hasParameter :Parameter_337 ;
+.
+:Parameter_338
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_339
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_340
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.target' ;
+.
+
+:Parameter_341
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_340
+.
+
+
+
+:Property_105
+  rdf:type exchange:Property ;
+  exchange:name "target" ;
+  exchange:hasParameter :Parameter_338 ;
+  exchange:hasParameter :Parameter_339 ;
+  exchange:hasParameter :Parameter_341 ;
+.
+:Parameter_342
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'map' ;
+.
+
+:Parameter_343
+  rdf:type exchange:Parameter ;
+  exchange:name "required" ;
+  exchange:value 'false' ;
+.
+
+
+
+:Parameter_344
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.datatypes.modak.optimisation' ;
+.
+
+:Parameter_345
+  rdf:type exchange:Parameter ;
+  exchange:name "entry_schema" ;
+  exchange:hasParameter :Parameter_344
+.
+
+
+
+:Property_106
+  rdf:type exchange:Property ;
+  exchange:name "optimisation" ;
+  exchange:hasParameter :Parameter_342 ;
+  exchange:hasParameter :Parameter_343 ;
+  exchange:hasParameter :Parameter_345 ;
+.
+
+:Parameter_346
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_1
+  rdf:type exchange:Attribute ;
+  exchange:name "artifact_url" ;
+  exchange:hasParameter :Parameter_346 ;
+.
+:Parameter_347
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+	
+
+
+:Attribute_2
+  rdf:type exchange:Attribute ;
+  exchange:name "container_runtime" ;
+  exchange:hasParameter :Parameter_347 ;
+.
+
+:Parameter_348
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'tosca.interfaces.node.lifecycle.Standard' ;
+.
+
+:Parameter_349
+  rdf:type exchange:Parameter ;
+  exchange:name "operations" ;
+  exchange:hasParameter :Parameter_51 ;
+.
+
+:Interface_1
+  rdf:type exchange:Interface ;
+  exchange:name "Standard" ;
+  exchange:hasParameter :Parameter_348 ;
+  exchange:hasParameter :Parameter_349 ;
+.
+
+:Parameter_350
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'sodalite.capabilities.modak.ModakEndpoint' ;
+.
+
+:Parameter_351
+  rdf:type exchange:Parameter ;
+  exchange:name "valid_source_types" ;
+  exchange:listValue "sodalite.nodes.modak.job" ;
+.
+	
+:Capability_1
+  rdf:type exchange:Capability ;
+  exchange:name "modak_endpoint" ;
+  exchange:hasParameter :Parameter_350 ;
+  exchange:hasParameter :Parameter_351 ;
+.
+
+:Parameter_352
+  rdf:type exchange:Parameter ;
+  exchange:name "capability" ;
+  exchange:value 'sodalite.capabilities.modak.ModakEndpoint' ;
+.
+
+:Parameter_353
+  rdf:type exchange:Parameter ;
+  exchange:name "node" ;
+  exchange:value 'sodalite.nodes.modak' ;
+.
+
+:Parameter_354
+  rdf:type exchange:Parameter ;
+  exchange:name "relationship" ;	  
+  exchange:value 'tosca.relationships.DependsOn' ;
+.
+
+:Requirement_1
+  rdf:type exchange:Requirement ;
+  exchange:name "modak_endpoint" ;
+  exchange:hasParameter :Parameter_352 ;
+  exchange:hasParameter :Parameter_353 ;
+  exchange:hasParameter :Parameter_354 ;
+.		
+
+:NodeType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.modak" ;
+  exchange:derivesFrom "tosca.nodes.Root" ;
+  exchange:properties :Property_101 ; 
+  exchange:capabilities :Capability_1 ; 
+.  
+:NodeType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.nodes.modak.job" ;
+  exchange:derivesFrom "tosca.nodes.Root" ;
+  exchange:properties :Property_102 ; 
+  exchange:properties :Property_103 ; 
+  exchange:properties :Property_104 ; 
+  exchange:properties :Property_105 ; 
+  exchange:properties :Property_106 ; 
+  exchange:attributes :Attribute_1 ; 
+  exchange:attributes :Attribute_2 ; 
+  exchange:requirements :Requirement_1 ; 
+  exchange:interfaces :Interface_1 ; 
+.  
+
+:DataType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.job_options" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_1 ; 
+  exchange:properties :Property_2 ; 
+  exchange:properties :Property_3 ; 
+  exchange:properties :Property_4 ; 
+  exchange:properties :Property_5 ; 
+  exchange:properties :Property_6 ; 
+  exchange:properties :Property_7 ; 
+  exchange:properties :Property_8 ; 
+  exchange:properties :Property_9 ; 
+  exchange:properties :Property_10 ; 
+  exchange:properties :Property_11 ; 
+  exchange:properties :Property_12 ; 
+  exchange:properties :Property_13 ; 
+  exchange:properties :Property_14 ; 
+  exchange:properties :Property_15 ; 
+  exchange:properties :Property_16 ; 
+  exchange:properties :Property_17 ; 
+  exchange:properties :Property_18 ; 
+  exchange:properties :Property_19 ; 
+  exchange:properties :Property_20 ; 
+  exchange:properties :Property_21 ; 
+  exchange:properties :Property_22 ; 
+  exchange:properties :Property_23 ; 
+  exchange:properties :Property_24 ; 
+.  
+:DataType_2
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.build" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_25 ; 
+  exchange:properties :Property_26 ; 
+.  
+:DataType_3
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.application" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_27 ; 
+  exchange:properties :Property_28 ; 
+  exchange:properties :Property_29 ; 
+  exchange:properties :Property_30 ; 
+  exchange:properties :Property_31 ; 
+  exchange:properties :Property_32 ; 
+  exchange:properties :Property_33 ; 
+  exchange:properties :Property_34 ; 
+.  
+:DataType_4
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.target" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_35 ; 
+  exchange:properties :Property_36 ; 
+.  
+:DataType_5
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.opt_build" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_37 ; 
+  exchange:properties :Property_38 ; 
+.  
+:DataType_6
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.autotuning" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_39 ; 
+  exchange:properties :Property_40 ; 
+.  
+:DataType_7
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.config" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_41 ; 
+  exchange:properties :Property_42 ; 
+  exchange:properties :Property_43 ; 
+  exchange:properties :Property_44 ; 
+  exchange:properties :Property_45 ; 
+.  
+:DataType_8
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.data.etl" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_46 ; 
+  exchange:properties :Property_47 ; 
+.  
+:DataType_9
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.data" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_48 ; 
+  exchange:properties :Property_49 ; 
+  exchange:properties :Property_50 ; 
+  exchange:properties :Property_51 ; 
+  exchange:properties :Property_52 ; 
+.  
+:DataType_10
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.ai_framework-keras" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_53 ; 
+  exchange:properties :Property_54 ; 
+.  
+:DataType_11
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.ai_framework-tensorflow" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_55 ; 
+  exchange:properties :Property_56 ; 
+.  
+:DataType_12
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training.ai_framework-pytorch" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_57 ; 
+  exchange:properties :Property_58 ; 
+.  
+:DataType_13
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_training" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_59 ; 
+  exchange:properties :Property_60 ; 
+  exchange:properties :Property_61 ; 
+  exchange:properties :Property_62 ; 
+  exchange:properties :Property_63 ; 
+.  
+:DataType_14
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.config" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_64 ; 
+.  
+:DataType_15
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.data.etl" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_65 ; 
+  exchange:properties :Property_66 ; 
+.  
+:DataType_16
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.data" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_67 ; 
+  exchange:properties :Property_68 ; 
+  exchange:properties :Property_69 ; 
+  exchange:properties :Property_70 ; 
+  exchange:properties :Property_71 ; 
+.  
+:DataType_17
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.parallelisation-mpi" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_72 ; 
+  exchange:properties :Property_73 ; 
+  exchange:properties :Property_74 ; 
+  exchange:properties :Property_75 ; 
+  exchange:properties :Property_76 ; 
+.  
+:DataType_18
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.parallelisation-openmp" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_77 ; 
+  exchange:properties :Property_78 ; 
+  exchange:properties :Property_79 ; 
+.  
+:DataType_19
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.parallelisation-opencc" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_80 ; 
+  exchange:properties :Property_81 ; 
+  exchange:properties :Property_82 ; 
+.  
+:DataType_20
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc.parallelisation-opencl" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_83 ; 
+  exchange:properties :Property_84 ; 
+  exchange:properties :Property_85 ; 
+.  
+:DataType_21
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.hpc" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_86 ; 
+  exchange:properties :Property_87 ; 
+  exchange:properties :Property_88 ; 
+  exchange:properties :Property_89 ; 
+  exchange:properties :Property_90 ; 
+  exchange:properties :Property_91 ; 
+.  
+:DataType_22
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.big_data" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+.  
+:DataType_23
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation.ai_inference" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+.  
+:DataType_24
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.datatypes.modak.optimisation" ;
+  exchange:derivesFrom "tosca.datatypes.Root" ;
+  exchange:properties :Property_92 ; 
+  exchange:properties :Property_93 ; 
+  exchange:properties :Property_94 ; 
+  exchange:properties :Property_95 ; 
+  exchange:properties :Property_96 ; 
+  exchange:properties :Property_97 ; 
+  exchange:properties :Property_98 ; 
+  exchange:properties :Property_99 ; 
+  exchange:properties :Property_100 ; 
+.  
+
+:CapabilityType_1
+  rdf:type exchange:Type ;
+  exchange:name "sodalite.capabilities.modak.ModakEndpoint" ;
+  exchange:derivesFrom "tosca.capabilities.Root" ;
+.
+

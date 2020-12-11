@@ -1,0 +1,1030 @@
+# baseURI: https://www.sodalite.eu/ontologies/exchange/hpc_clinical/
+# imports: https://www.sodalite.eu/ontologies/exchange/
+
+@prefix : <https://www.sodalite.eu/ontologies/exchange/hpc_clinical/> .
+@prefix exchange: <https://www.sodalite.eu/ontologies/exchange/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports exchange: ;
+  owl:versionInfo "Created by the SODALITE IDE" ;
+.
+
+:AADM_1
+  rdf:type exchange:AADM ;
+  exchange:userId "27827d44-0f6c-11ea-8d71-362b9e155667" ;
+.
+
+
+:Parameter_1
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_1
+  rdf:type exchange:Input ;
+  exchange:name "frontend-address" ;
+  exchange:hasParameter :Parameter_1 ;
+.
+:Parameter_2
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_2
+  rdf:type exchange:Input ;
+  exchange:name "user" ;
+  exchange:hasParameter :Parameter_2 ;
+.
+:Parameter_3
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_3
+  rdf:type exchange:Input ;
+  exchange:name "key-location" ;
+  exchange:hasParameter :Parameter_3 ;
+.
+:Parameter_4
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_4
+  rdf:type exchange:Input ;
+  exchange:name "email" ;
+  exchange:hasParameter :Parameter_4 ;
+.
+:Parameter_5
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_5
+  rdf:type exchange:Input ;
+  exchange:name "images-location" ;
+  exchange:hasParameter :Parameter_5 ;
+.
+:Parameter_6
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_6
+  rdf:type exchange:Input ;
+  exchange:name "modak-endpoint" ;
+  exchange:hasParameter :Parameter_6 ;
+.
+:Parameter_7
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_7
+  rdf:type exchange:Input ;
+  exchange:name "density-mapping-job-script" ;
+  exchange:hasParameter :Parameter_7 ;
+.
+:Parameter_8
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_8
+  rdf:type exchange:Input ;
+  exchange:name "probabilistic-mapping-job-script" ;
+  exchange:hasParameter :Parameter_8 ;
+.
+:Parameter_9
+  rdf:type exchange:Parameter ;
+  exchange:name "type" ;
+  exchange:value 'string' ;
+.
+
+:Input_9
+  rdf:type exchange:Input ;
+  exchange:name "boundary-conditions-job-script" ;
+  exchange:hasParameter :Parameter_9 ;
+.
+
+:Parameter_10
+  rdf:type exchange:Parameter ;
+  exchange:name "combine_stdout_stderr" ;
+  exchange:value "true" ;
+.
+
+:Parameter_11
+  rdf:type exchange:Parameter ;
+  exchange:name "email_address" ;
+  exchange:value "tokmakov@hlrs.de" ;
+.
+
+:Parameter_12
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:value "density-mapper" ;
+.
+
+:Parameter_13
+  rdf:type exchange:Parameter ;
+  exchange:name "node_count" ;
+  exchange:value "1" ;
+.
+
+:Parameter_14
+  rdf:type exchange:Parameter ;
+  exchange:name "process_count_per_node" ;
+  exchange:value "1" ;
+.
+
+:Parameter_15
+  rdf:type exchange:Parameter ;
+  exchange:name "request_event_notification" ;
+  exchange:value "abe" ;
+.
+
+:Parameter_16
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_error_file" ;
+  exchange:value "density-mapper.err" ;
+.
+
+:Parameter_17
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_output_file" ;
+  exchange:value "density-mapper.out" ;
+.
+
+:Parameter_18
+  rdf:type exchange:Parameter ;
+  exchange:name "wall_time_limit" ;
+  exchange:value "1:00:00" ;
+.
+
+:Parameter_19
+  rdf:type exchange:Parameter ;
+  exchange:name "app_tag" ;
+  exchange:value "density-mapper" ;
+.
+
+:Parameter_20
+  rdf:type exchange:Parameter ;
+  exchange:name "app_type" ;
+  exchange:value "python" ;
+.
+
+:Parameter_21
+  rdf:type exchange:Parameter ;
+  exchange:name "container_runtime" ;
+  exchange:value "cadt" ;
+.
+
+:Parameter_22
+  rdf:type exchange:Parameter ;
+  exchange:name "executable" ;
+  exchange:value "cadt < $PBS_O_WORKDIR/input/cadt-density-output-iso.input" ;
+.
+
+:Parameter_23
+  rdf:type exchange:Parameter ;
+  exchange:name "name" ;
+  exchange:value "hlrs_testbed" ;
+.
+
+:Parameter_24
+  rdf:type exchange:Parameter ;
+  exchange:name "queue_type" ;
+  exchange:value "torque" ;
+.
+
+:Parameter_25
+  rdf:type exchange:Parameter ;
+  exchange:name "combine_stdout_stderr" ;
+  exchange:value "true" ;
+.
+
+:Parameter_26
+  rdf:type exchange:Parameter ;
+  exchange:name "email_address" ;
+  exchange:value "tokmakov@hlrs.de" ;
+.
+
+:Parameter_27
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:value "probabilistic-mapper" ;
+.
+
+:Parameter_28
+  rdf:type exchange:Parameter ;
+  exchange:name "node_count" ;
+  exchange:value "2" ;
+.
+
+:Parameter_29
+  rdf:type exchange:Parameter ;
+  exchange:name "process_count_per_node" ;
+  exchange:value "2" ;
+.
+
+:Parameter_30
+  rdf:type exchange:Parameter ;
+  exchange:name "request_event_notification" ;
+  exchange:value "abe" ;
+.
+
+:Parameter_31
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_error_file" ;
+  exchange:value "probabilistic-mapper.err" ;
+.
+
+:Parameter_32
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_output_file" ;
+  exchange:value "probabilistic-mapper.out" ;
+.
+
+:Parameter_33
+  rdf:type exchange:Parameter ;
+  exchange:name "wall_time_limit" ;
+  exchange:value "1:00:00" ;
+.
+
+:Parameter_34
+  rdf:type exchange:Parameter ;
+  exchange:name "app_tag" ;
+  exchange:value "probabilistic-mapper" ;
+.
+
+:Parameter_35
+  rdf:type exchange:Parameter ;
+  exchange:name "app_type" ;
+  exchange:value "hpc" ;
+.
+
+:Parameter_36
+  rdf:type exchange:Parameter ;
+  exchange:name "container_runtime" ;
+  exchange:value "moduli" ;
+.
+
+:Parameter_37
+  rdf:type exchange:Parameter ;
+  exchange:name "executable" ;
+  exchange:value "bash -c \"cd /workdir/modpy/build/lib/moduli/ && python3 main_mpi.py -s -f $PBS_O_WORKDIR/output/iso/L1L2-iso.dens -o $PBS_O_WORKDIR/output/moduli\"" ;
+.
+
+:Parameter_38
+  rdf:type exchange:Parameter ;
+  exchange:name "mpi_ranks" ;
+  exchange:value "4" ;
+.
+
+:Parameter_39
+  rdf:type exchange:Parameter ;
+  exchange:name "threads" ;
+  exchange:value "2" ;
+.
+
+:Parameter_40
+  rdf:type exchange:Parameter ;
+  exchange:name "name" ;
+  exchange:value "hlrs_testbed" ;
+.
+
+:Parameter_41
+  rdf:type exchange:Parameter ;
+  exchange:name "queue_type" ;
+  exchange:value "torque" ;
+.
+
+:Parameter_42
+  rdf:type exchange:Parameter ;
+  exchange:name "combine_stdout_stderr" ;
+  exchange:value "true" ;
+.
+
+:Parameter_43
+  rdf:type exchange:Parameter ;
+  exchange:name "email_address" ;
+  exchange:value "tokmakov@hlrs.de" ;
+.
+
+:Parameter_44
+  rdf:type exchange:Parameter ;
+  exchange:name "job_name" ;
+  exchange:value "boundary-conditions" ;
+.
+
+:Parameter_45
+  rdf:type exchange:Parameter ;
+  exchange:name "node_count" ;
+  exchange:value "1" ;
+.
+
+:Parameter_46
+  rdf:type exchange:Parameter ;
+  exchange:name "process_count_per_node" ;
+  exchange:value "1" ;
+.
+
+:Parameter_47
+  rdf:type exchange:Parameter ;
+  exchange:name "request_event_notification" ;
+  exchange:value "abe" ;
+.
+
+:Parameter_48
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_error_file" ;
+  exchange:value "boundary-conditions.err" ;
+.
+
+:Parameter_49
+  rdf:type exchange:Parameter ;
+  exchange:name "standard_output_file" ;
+  exchange:value "boundary-conditions.out" ;
+.
+
+:Parameter_50
+  rdf:type exchange:Parameter ;
+  exchange:name "wall_time_limit" ;
+  exchange:value "1:00:00" ;
+.
+
+:Parameter_51
+  rdf:type exchange:Parameter ;
+  exchange:name "app_tag" ;
+  exchange:value "boundary-conditions" ;
+.
+
+:Parameter_52
+  rdf:type exchange:Parameter ;
+  exchange:name "app_type" ;
+  exchange:value "python" ;
+.
+
+:Parameter_53
+  rdf:type exchange:Parameter ;
+  exchange:name "container_runtime" ;
+  exchange:value "cadt" ;
+.
+
+:Parameter_54
+  rdf:type exchange:Parameter ;
+  exchange:name "executable" ;
+  exchange:value "cadt < $PBS_O_WORKDIR/input/cadt-med-output-iso.input" ;
+.
+
+:Parameter_55
+  rdf:type exchange:Parameter ;
+  exchange:name "name" ;
+  exchange:value "hlrs_testbed" ;
+.
+
+:Parameter_56
+  rdf:type exchange:Parameter ;
+  exchange:name "queue_type" ;
+  exchange:value "torque" ;
+.
+
+:Parameter_57
+  rdf:type exchange:Parameter ;
+  exchange:name "SINGULARITY_DIR" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+
+:Parameter_58
+  rdf:type exchange:Parameter ;
+  exchange:name "SINGULARITY_DIR" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+
+:Parameter_59
+  rdf:type exchange:Parameter ;
+  exchange:name "SINGULARITY_DIR" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+
+
+:Property_1
+  rdf:type exchange:Property ;
+  exchange:name "endpoint" ;
+  exchange:value "{ get_input: modak-endpoint }" ;
+.
+:Property_2
+  rdf:type exchange:Property ;
+  exchange:name "output" ;
+  exchange:value "cadt.sif" ;
+.
+:Property_3
+  rdf:type exchange:Property ;
+  exchange:name "image" ;
+  exchange:value "cadt:1.0.0" ;
+.
+:Property_4
+  rdf:type exchange:Property ;
+  exchange:name "registry" ;
+  exchange:value "private" ;
+.
+:Property_5
+  rdf:type exchange:Property ;
+  exchange:name "certs_location" ;
+  exchange:value "certs" ;
+.
+:Property_6
+  rdf:type exchange:Property ;
+  exchange:name "images_location" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+:Property_7
+  rdf:type exchange:Property ;
+  exchange:name "output" ;
+  exchange:value "moduli.sif" ;
+.
+:Property_8
+  rdf:type exchange:Property ;
+  exchange:name "image" ;
+  exchange:value "moduli:1.0.0" ;
+.
+:Property_9
+  rdf:type exchange:Property ;
+  exchange:name "registry" ;
+  exchange:value "private" ;
+.
+:Property_10
+  rdf:type exchange:Property ;
+  exchange:name "certs_location" ;
+  exchange:value "certs" ;
+.
+:Property_11
+  rdf:type exchange:Property ;
+  exchange:name "images_location" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+:Property_12
+  rdf:type exchange:Property ;
+  exchange:name "output" ;
+  exchange:value "code-aster.sif" ;
+.
+:Property_13
+  rdf:type exchange:Property ;
+  exchange:name "image" ;
+  exchange:value "quay.io/tianyikillua/code_aster" ;
+.
+:Property_14
+  rdf:type exchange:Property ;
+  exchange:name "registry" ;
+  exchange:value "docker" ;
+.
+:Property_15
+  rdf:type exchange:Property ;
+  exchange:name "images_location" ;
+  exchange:value "/mnt/nfs/home/kamil/images" ;
+.
+:Property_16
+  rdf:type exchange:Property ;
+  exchange:name "job_script" ;
+  exchange:value "{ get_input: density-mapping-job-script }" ;
+.
+:Property_17
+  rdf:type exchange:Property ;
+  exchange:name "job_options" ;
+  exchange:hasParameter :Parameter_10 ;
+  exchange:hasParameter :Parameter_11 ;
+  exchange:hasParameter :Parameter_12 ;
+  exchange:hasParameter :Parameter_13 ;
+  exchange:hasParameter :Parameter_14 ;
+  exchange:hasParameter :Parameter_15 ;
+  exchange:hasParameter :Parameter_16 ;
+  exchange:hasParameter :Parameter_17 ;
+  exchange:hasParameter :Parameter_18 ;
+.
+:Property_18
+  rdf:type exchange:Property ;
+  exchange:name "application" ;
+  exchange:hasParameter :Parameter_19 ;
+  exchange:hasParameter :Parameter_20 ;
+  exchange:hasParameter :Parameter_21 ;
+  exchange:hasParameter :Parameter_22 ;
+.
+:Property_19
+  rdf:type exchange:Property ;
+  exchange:name "target" ;
+  exchange:hasParameter :Parameter_23 ;
+  exchange:hasParameter :Parameter_24 ;
+.
+:Property_20
+  rdf:type exchange:Property ;
+  exchange:name "optimisation" ;
+  exchange:value "{}" ;
+.
+:Property_21
+  rdf:type exchange:Property ;
+  exchange:name "job_script" ;
+  exchange:value "{ get_input: probabilistic-mapping-job-script }" ;
+.
+:Property_22
+  rdf:type exchange:Property ;
+  exchange:name "job_options" ;
+  exchange:hasParameter :Parameter_25 ;
+  exchange:hasParameter :Parameter_26 ;
+  exchange:hasParameter :Parameter_27 ;
+  exchange:hasParameter :Parameter_28 ;
+  exchange:hasParameter :Parameter_29 ;
+  exchange:hasParameter :Parameter_30 ;
+  exchange:hasParameter :Parameter_31 ;
+  exchange:hasParameter :Parameter_32 ;
+  exchange:hasParameter :Parameter_33 ;
+.
+:Property_23
+  rdf:type exchange:Property ;
+  exchange:name "application" ;
+  exchange:hasParameter :Parameter_34 ;
+  exchange:hasParameter :Parameter_35 ;
+  exchange:hasParameter :Parameter_36 ;
+  exchange:hasParameter :Parameter_37 ;
+  exchange:hasParameter :Parameter_38 ;
+  exchange:hasParameter :Parameter_39 ;
+.
+:Property_24
+  rdf:type exchange:Property ;
+  exchange:name "target" ;
+  exchange:hasParameter :Parameter_40 ;
+  exchange:hasParameter :Parameter_41 ;
+.
+:Property_25
+  rdf:type exchange:Property ;
+  exchange:name "optimisation" ;
+  exchange:value "{}" ;
+.
+:Property_26
+  rdf:type exchange:Property ;
+  exchange:name "job_script" ;
+  exchange:value "{ get_input: boundary-conditions-job-script }" ;
+.
+:Property_27
+  rdf:type exchange:Property ;
+  exchange:name "job_options" ;
+  exchange:hasParameter :Parameter_42 ;
+  exchange:hasParameter :Parameter_43 ;
+  exchange:hasParameter :Parameter_44 ;
+  exchange:hasParameter :Parameter_45 ;
+  exchange:hasParameter :Parameter_46 ;
+  exchange:hasParameter :Parameter_47 ;
+  exchange:hasParameter :Parameter_48 ;
+  exchange:hasParameter :Parameter_49 ;
+  exchange:hasParameter :Parameter_50 ;
+.
+:Property_28
+  rdf:type exchange:Property ;
+  exchange:name "application" ;
+  exchange:hasParameter :Parameter_51 ;
+  exchange:hasParameter :Parameter_52 ;
+  exchange:hasParameter :Parameter_53 ;
+  exchange:hasParameter :Parameter_54 ;
+.
+:Property_29
+  rdf:type exchange:Property ;
+  exchange:name "target" ;
+  exchange:hasParameter :Parameter_55 ;
+  exchange:hasParameter :Parameter_56 ;
+.
+:Property_30
+  rdf:type exchange:Property ;
+  exchange:name "optimisation" ;
+  exchange:value "{}" ;
+.
+:Property_31
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:value "density-mapping" ;
+.
+:Property_32
+  rdf:type exchange:Property ;
+  exchange:name "script" ;
+  exchange:value "{ get_input: density-mapping-job-script }" ;
+.
+:Property_33
+  rdf:type exchange:Property ;
+  exchange:name "workspace" ;
+  exchange:value "~/workflow-modak" ;
+.
+:Property_34
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:value "true" ;
+.
+:Property_35
+  rdf:type exchange:Property ;
+  exchange:name "env" ;
+  exchange:hasParameter :Parameter_57 ;
+.
+:Property_36
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:value "probabilistic-mapper" ;
+.
+:Property_37
+  rdf:type exchange:Property ;
+  exchange:name "script" ;
+  exchange:value "{ get_input: probabilistic-mapping-job-script }" ;
+.
+:Property_38
+  rdf:type exchange:Property ;
+  exchange:name "workspace" ;
+  exchange:value "~/workflow-modak" ;
+.
+:Property_39
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:value "true" ;
+.
+:Property_40
+  rdf:type exchange:Property ;
+  exchange:name "env" ;
+  exchange:hasParameter :Parameter_58 ;
+.
+:Property_41
+  rdf:type exchange:Property ;
+  exchange:name "name" ;
+  exchange:value "boundary-conditions" ;
+.
+:Property_42
+  rdf:type exchange:Property ;
+  exchange:name "script" ;
+  exchange:value "{ get_input: boundary-conditions-job-script }" ;
+.
+:Property_43
+  rdf:type exchange:Property ;
+  exchange:name "workspace" ;
+  exchange:value "~/workflow-modak" ;
+.
+:Property_44
+  rdf:type exchange:Property ;
+  exchange:name "enable_audit" ;
+  exchange:value "true" ;
+.
+:Property_45
+  rdf:type exchange:Property ;
+  exchange:name "env" ;
+  exchange:hasParameter :Parameter_59 ;
+.
+
+:Attribute_1
+  rdf:type exchange:Attribute ;
+  exchange:name "public_address" ;
+  exchange:value "{ get_input: frontend-address }" ;
+.
+:Attribute_2
+  rdf:type exchange:Attribute ;
+  exchange:name "username" ;
+  exchange:value "{ get_input: user }" ;
+.
+:Attribute_3
+  rdf:type exchange:Attribute ;
+  exchange:name "ssh-key" ;
+  exchange:value "{ get_input: key-location }" ;
+.
+
+:Requirement_1
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_2
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_3
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_4
+  rdf:type exchange:Requirement ;
+  exchange:name "modak_endpoint" ;
+  exchange:value 'modak-instance' ;  
+.
+:Requirement_5
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'cadt-image' ;  
+.
+:Requirement_6
+  rdf:type exchange:Requirement ;
+  exchange:name "modak_endpoint" ;
+  exchange:value 'modak-instance' ;  
+.
+:Requirement_7
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'moduli-image' ;  
+.
+:Requirement_8
+  rdf:type exchange:Requirement ;
+  exchange:name "modak_endpoint" ;
+  exchange:value 'modak-instance' ;  
+.
+:Requirement_9
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'cadt-image' ;  
+.
+:Requirement_10
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_11
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'density-mapping-modak-job' ;  
+.
+:Requirement_12
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_13
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'probabilistic-mapping-modak-job' ;  
+.
+:Requirement_14
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_15
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'boundary-conditions-modak-job' ;  
+.
+:Requirement_16
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_17
+  rdf:type exchange:Requirement ;
+  exchange:name "configured_job" ;
+  exchange:value 'density-mapping-job-config' ;  
+.
+:Requirement_18
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_19
+  rdf:type exchange:Requirement ;
+  exchange:name "configured_job" ;
+  exchange:value 'probabilistic-mapping-job-config' ;  
+.
+:Requirement_20
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'density-mapping-job-result' ;  
+.
+:Requirement_21
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_22
+  rdf:type exchange:Requirement ;
+  exchange:name "configured_job" ;
+  exchange:value 'boundary-conditions-job-config' ;  
+.
+:Requirement_23
+  rdf:type exchange:Requirement ;
+  exchange:name "dependency" ;
+  exchange:value 'probabilistic-mapping-job-result' ;  
+.
+:Requirement_24
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_25
+  rdf:type exchange:Requirement ;
+  exchange:name "job" ;
+  exchange:value 'density-mapping-job' ;  
+.
+:Requirement_26
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_27
+  rdf:type exchange:Requirement ;
+  exchange:name "job" ;
+  exchange:value 'probabilistic-mapping-job' ;  
+.
+:Requirement_28
+  rdf:type exchange:Requirement ;
+  exchange:name "host" ;
+  exchange:value 'hpc-wm-torque' ;  
+.
+:Requirement_29
+  rdf:type exchange:Requirement ;
+  exchange:name "job" ;
+  exchange:value 'boundary-conditions-job' ;  
+.
+
+
+:Template_1
+  rdf:type exchange:Template ;
+  exchange:name "hpc-wm-torque" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.wm.torque' ;  
+  
+  exchange:attributes :Attribute_1 ;
+  exchange:attributes :Attribute_2 ;
+  exchange:attributes :Attribute_3 ;
+.  
+:Template_2
+  rdf:type exchange:Template ;
+  exchange:name "modak-instance" ;
+  exchange:type 'modak/sodalite.nodes.modak' ;  
+  
+  exchange:properties :Property_1 ;
+.  
+:Template_3
+  rdf:type exchange:Template ;
+  exchange:name "cadt-image" ;
+  exchange:type 'hpc/sodalite.image_puller.singularity' ;  
+  
+  exchange:properties :Property_2 ;
+  exchange:properties :Property_3 ;
+  exchange:properties :Property_4 ;
+  exchange:properties :Property_5 ;
+  exchange:properties :Property_6 ;
+  exchange:requirements :Requirement_1 ; 
+.  
+:Template_4
+  rdf:type exchange:Template ;
+  exchange:name "moduli-image" ;
+  exchange:type 'hpc/sodalite.image_puller.singularity' ;  
+  
+  exchange:properties :Property_7 ;
+  exchange:properties :Property_8 ;
+  exchange:properties :Property_9 ;
+  exchange:properties :Property_10 ;
+  exchange:properties :Property_11 ;
+  exchange:requirements :Requirement_2 ; 
+.  
+:Template_5
+  rdf:type exchange:Template ;
+  exchange:name "code-aster-image" ;
+  exchange:type 'hpc/sodalite.image_puller.singularity' ;  
+  
+  exchange:properties :Property_12 ;
+  exchange:properties :Property_13 ;
+  exchange:properties :Property_14 ;
+  exchange:properties :Property_15 ;
+  exchange:requirements :Requirement_3 ; 
+.  
+:Template_6
+  rdf:type exchange:Template ;
+  exchange:name "density-mapping-modak-job" ;
+  exchange:type 'modak/sodalite.nodes.modak.job' ;  
+  
+  exchange:properties :Property_16 ;
+  exchange:properties :Property_17 ;
+  exchange:properties :Property_18 ;
+  exchange:properties :Property_19 ;
+  exchange:properties :Property_20 ;
+  exchange:requirements :Requirement_4 ; 
+  exchange:requirements :Requirement_5 ; 
+.  
+:Template_7
+  rdf:type exchange:Template ;
+  exchange:name "probabilistic-mapping-modak-job" ;
+  exchange:type 'modak/sodalite.nodes.modak.job' ;  
+  
+  exchange:properties :Property_21 ;
+  exchange:properties :Property_22 ;
+  exchange:properties :Property_23 ;
+  exchange:properties :Property_24 ;
+  exchange:properties :Property_25 ;
+  exchange:requirements :Requirement_6 ; 
+  exchange:requirements :Requirement_7 ; 
+.  
+:Template_8
+  rdf:type exchange:Template ;
+  exchange:name "boundary-conditions-modak-job" ;
+  exchange:type 'modak/sodalite.nodes.modak.job' ;  
+  
+  exchange:properties :Property_26 ;
+  exchange:properties :Property_27 ;
+  exchange:properties :Property_28 ;
+  exchange:properties :Property_29 ;
+  exchange:properties :Property_30 ;
+  exchange:requirements :Requirement_8 ; 
+  exchange:requirements :Requirement_9 ; 
+.  
+:Template_9
+  rdf:type exchange:Template ;
+  exchange:name "density-mapping-job-config" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.preconfigured' ;  
+  
+  exchange:properties :Property_31 ;
+  exchange:properties :Property_32 ;
+  exchange:properties :Property_33 ;
+  exchange:properties :Property_34 ;
+  exchange:properties :Property_35 ;
+  exchange:requirements :Requirement_10 ; 
+  exchange:requirements :Requirement_11 ; 
+.  
+:Template_10
+  rdf:type exchange:Template ;
+  exchange:name "probabilistic-mapping-job-config" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.preconfigured' ;  
+  
+  exchange:properties :Property_36 ;
+  exchange:properties :Property_37 ;
+  exchange:properties :Property_38 ;
+  exchange:properties :Property_39 ;
+  exchange:properties :Property_40 ;
+  exchange:requirements :Requirement_12 ; 
+  exchange:requirements :Requirement_13 ; 
+.  
+:Template_11
+  rdf:type exchange:Template ;
+  exchange:name "boundary-conditions-job-config" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.preconfigured' ;  
+  
+  exchange:properties :Property_41 ;
+  exchange:properties :Property_42 ;
+  exchange:properties :Property_43 ;
+  exchange:properties :Property_44 ;
+  exchange:properties :Property_45 ;
+  exchange:requirements :Requirement_14 ; 
+  exchange:requirements :Requirement_15 ; 
+.  
+:Template_12
+  rdf:type exchange:Template ;
+  exchange:name "density-mapping-job" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque' ;  
+  
+  exchange:requirements :Requirement_16 ; 
+  exchange:requirements :Requirement_17 ; 
+.  
+:Template_13
+  rdf:type exchange:Template ;
+  exchange:name "probabilistic-mapping-job" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque' ;  
+  
+  exchange:requirements :Requirement_18 ; 
+  exchange:requirements :Requirement_19 ; 
+  exchange:requirements :Requirement_20 ; 
+.  
+:Template_14
+  rdf:type exchange:Template ;
+  exchange:name "boundary-conditions-job" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque' ;  
+  
+  exchange:requirements :Requirement_21 ; 
+  exchange:requirements :Requirement_22 ; 
+  exchange:requirements :Requirement_23 ; 
+.  
+:Template_15
+  rdf:type exchange:Template ;
+  exchange:name "density-mapping-job-result" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.result' ;  
+  
+  exchange:requirements :Requirement_24 ; 
+  exchange:requirements :Requirement_25 ; 
+.  
+:Template_16
+  rdf:type exchange:Template ;
+  exchange:name "probabilistic-mapping-job-result" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.result' ;  
+  
+  exchange:requirements :Requirement_26 ; 
+  exchange:requirements :Requirement_27 ; 
+.  
+:Template_17
+  rdf:type exchange:Template ;
+  exchange:name "boundary-conditions-job-result" ;
+  exchange:type 'hpc/sodalite.nodes.hpc.job.torque.result' ;  
+  
+  exchange:requirements :Requirement_28 ; 
+  exchange:requirements :Requirement_29 ; 
+.  
+
