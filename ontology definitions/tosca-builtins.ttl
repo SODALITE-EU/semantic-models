@@ -1759,6 +1759,18 @@ DUL:hasParameter
 :greater_or_equal
   rdf:type owl:DatatypeProperty ;
 .
+:greater_than
+  rdf:type owl:DatatypeProperty ;
+.
+:less_than
+  rdf:type owl:DatatypeProperty ;
+.
+:less_or_equal
+  rdf:type owl:DatatypeProperty ;
+.
+:equal
+  rdf:type owl:DatatypeProperty ;
+.
 :hasDataValue
   rdf:type owl:DatatypeProperty ;
   rdfs:subPropertyOf DUL:hasDataValue ;
@@ -2327,12 +2339,10 @@ DUL:hasParameter
 :end_time
    rdf:type rdf:Property ;
 .
+:requirement
+  rdf:type rdf:Property ;
+.
 :targets
   rdf:type owl:ObjectProperty ;
-  rdfs:range :Target ;
   rdfs:subPropertyOf soda:specification ;
-.
-:Target
-  rdf:type owl:Class ;
-  rdfs:subClassOf soda:SodaliteConcept ;
 .
