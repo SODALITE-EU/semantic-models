@@ -171,3 +171,8 @@
   rdf:domain :SodaliteSituation ;
   rdfs:range xsd:string ;
 .
+:hasNamespace
+  rdf:type owl:DatatypeProperty ;
+  rdf:domain :AbstractApplicationDeployment;
+  rdfs:range xsd:string ;
+.
