@@ -231,7 +231,7 @@
 .		
 
 :NodeType_1
-  rdf:type exchange:NodeType ;
+  rdf:type exchange:Type ;
   exchange:name "sodalite.nodes.ConfigurationDemo" ;
   exchange:derivesFrom 'tosca.nodes.SoftwareComponent' ;  
   exchange:properties :Property_1 ; 
