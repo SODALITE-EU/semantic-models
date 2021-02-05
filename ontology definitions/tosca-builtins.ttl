@@ -1879,6 +1879,10 @@ DUL:hasParameter
 :occurrences
   rdf:type rdf:Property ;
 .
+:Operation
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Feature ;
+.
 :operations
   rdf:type owl:ObjectProperty ;
   rdfs:subPropertyOf soda:specification ;
