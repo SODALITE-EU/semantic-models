@@ -1,3 +1,4 @@
+[![SODALITE](images/sodalite-logo.png)](https://www.sodalite.eu/)
 # semantic-models
 
 The repository contains two main folders:
@@ -6,3 +7,7 @@ The repository contains two main folders:
     - import: imported ontologies
     - examples: example instantiation of the core SODALITE models
  
+Precisely, the SODALITE Conceptual Model consits of two core ontologies:
+* **SODALITE Ontology Design Pattern** : *ontology definitions/sodalite-metamodel.ttl*
+* **TOSCA ontology**: *ontology definitions/sodalite-metamodel.ttl*
+static knowledge about TOSCA normatives
