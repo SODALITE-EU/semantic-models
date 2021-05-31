@@ -278,6 +278,15 @@ DUL:hasParameter
   rdf:type :List ;
   :hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Node> ;
 .
+:Output
+  rdf:type owl:Class ;
+  rdfs:subClassOf soda:SodaliteSituation ;
+.
+:output
+  rdf:type owl:ObjectProperty ;
+  rdfs:range soda:SodaliteConcept ;
+  rdfs:subPropertyOf soda:specification ;
+.
 :Max
   rdf:type owl:Class ;
   rdfs:subClassOf DUL:Region ;
