@@ -2361,7 +2361,7 @@ DUL:hasParameter
 .
 :Artifact
   rdf:type owl:Class ;
-  rdfs:subClassOf :Feature ;
+  rdfs:subClassOf soda:SodaliteConcept;
 .
 :file_ext
   rdf:type owl:DatatypeProperty ;
