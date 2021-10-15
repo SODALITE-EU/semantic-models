@@ -1,0 +1,1161 @@
+@prefix : <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soda: <https://www.sodalite.eu/ontologies/sodalite-metamodel/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix optimizations: <https://www.sodalite.eu/ontologies/optimizations#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/js6g1qvcealf8p6ocrn10qj2ih/AADM_8b48dmbnem1ju6o68kt0jumktp>
+  a soda:AbstractApplicationDeployment .
+
+<https://www.sodalite.eu/ontologies/workspace/1/js6g1qvcealf8p6ocrn10qj2ih/27827d44-0f6c-11ea-8d71-362b9e155667>
+  a soda:User .
+
+<https://www.sodalite.eu/ontologies/workspace/1/js6g1qvcealf8p6ocrn10qj2ih/AADM_8b48dmbnem1ju6o68kt0jumktp>
+  soda:includesTemplate <https://www.sodalite.eu/ontologies/workspace/1/radon/scale_down>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/scale_up>, <https://www.sodalite.eu/ontologies/workspace/1/radon/autoscale>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/workstation>, <https://www.sodalite.eu/ontologies/workspace/1/radon/openstack_vm>;
+  soda:createdAt "2021-10-15T23:38:14.079+03:00";
+  soda:createdBy <https://www.sodalite.eu/ontologies/workspace/1/js6g1qvcealf8p6ocrn10qj2ih/27827d44-0f6c-11ea-8d71-362b9e155667>;
+  soda:includesOutput <https://www.sodalite.eu/ontologies/workspace/1/radon/topology_template_outputs_vrejkmptbevamt5vcpuq7r5cga>;
+  soda:hasName "policy.aadm.ttl";
+  soda:hasDSL "";
+  soda:hasNamespace "radon" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/js6g1qvcealf8p6ocrn10qj2ih/AADM_8b48dmbnem1ju6o68kt0jumktp>
+  a soda:AbstractApplicationDeployment .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM> a
+    owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Compute>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_lpj91fs9g4ig301fmdf8rqscu2>;
+  soda:hasName "radon.nodes.OpenStack.VM";
+  soda:hasClass "node_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.ScaleDown>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Scaling>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_cc3bdecl7a6l6qruartq03cmb7>;
+  soda:hasName "radon.policies.scaling.ScaleDown";
+  soda:hasClass "policy_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.ScaleUp>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Scaling>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_ns8uon5t2lkufgvvdlrqd8ld5p>;
+  soda:hasName "radon.policies.scaling.ScaleUp";
+  soda:hasClass "policy_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.AutoScale>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.policies.Scaling>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_rm1tlim2h14t646in7u4ji4oip>;
+  soda:hasName "radon.policies.scaling.AutoScale";
+  soda:hasClass "policy_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.interfaces.scaling.ScaleDown>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.Root>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_vqrvr23g0u8u3uob40iqfbnhmt>;
+  soda:hasName "radon.interfaces.scaling.ScaleDown";
+  soda:hasClass "interface_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.interfaces.scaling.ScaleUp>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.Root>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_l3fm8131aib9jd441gbrqsvhod>;
+  soda:hasName "radon.interfaces.scaling.ScaleUp";
+  soda:hasClass "interface_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.interfaces.scaling.AutoScale>
+  a owl:Class;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.Root>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_5pmehp5mfnbh6ifgafbrjm7nr1>;
+  soda:hasName "radon.interfaces.scaling.AutoScale";
+  soda:hasClass "interface_types" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_lpj91fs9g4ig301fmdf8rqscu2>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/attributes> <https://www.sodalite.eu/ontologies/workspace/1/radon/Attribute4b5lhlpklokpha0aqg3bklbkcm>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/Attribute6phbk6th2ku6env6lu7nv3bovk>;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_9v9qnjda01fdmhdn8qi497ii9>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_usrq8gae8pgij9gvk7p2ijoss4>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_r0teiobvu3sg8ao23k8tgd0keh>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_e5f2dkoeu43orr7mr4h73mc52>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_cvfemt93mf5horg8bot2ftif1c>;
+  <https://www.sodalite.eu/ontologies/tosca/interfaces> <https://www.sodalite.eu/ontologies/workspace/1/radon/InterfaceClassifier_kehb6gfmpprvts6aa7gc6bncgp> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_9v9qnjda01fdmhdn8qi497ii9>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/name>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_efsnsdjmnn4fkngrk83lp78m2f>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6pd0acj3vhkfg58datposleb6e> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_efsnsdjmnn4fkngrk83lp78m2f>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6pd0acj3vhkfg58datposleb6e>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/string> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_usrq8gae8pgij9gvk7p2ijoss4>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/image>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_d4ombvinufo0ji5sd27t12uugj>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8p1uibnpi0onfuclg2vl7e9298> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/image> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_d4ombvinufo0ji5sd27t12uugj>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8p1uibnpi0onfuclg2vl7e9298>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/string> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_r0teiobvu3sg8ao23k8tgd0keh>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/flavor>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_iso53qq315icamoli9e2a3mtjp>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5nc4lvcrpch1c2c271vgg7c521> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/flavor> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_iso53qq315icamoli9e2a3mtjp>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5nc4lvcrpch1c2c271vgg7c521>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/string> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_e5f2dkoeu43orr7mr4h73mc52>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/network>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6649gbnnj7qat5r6essshadgu8>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_osmequoulm0fqi260cofjoacg3> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/network> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6649gbnnj7qat5r6essshadgu8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_osmequoulm0fqi260cofjoacg3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/string> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_cvfemt93mf5horg8bot2ftif1c>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/key_name>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_iu0tlqodhsg2c5nek5l0hmttqq>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_a4jm8s0c0q33be1di4vompldek> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/key_name> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_iu0tlqodhsg2c5nek5l0hmttqq>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_a4jm8s0c0q33be1di4vompldek>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/string> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Attribute4b5lhlpklokpha0aqg3bklbkcm>
+  a <https://www.sodalite.eu/ontologies/tosca/Attribute>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_space>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4qnq2b9ntes2hd0ia11hrp7vqi>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4lj90ce3t6phiumtv0a7umeu9g> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/available_space> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4qnq2b9ntes2hd0ia11hrp7vqi>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4lj90ce3t6phiumtv0a7umeu9g>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/default>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1000"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Attribute6phbk6th2ku6env6lu7nv3bovk>
+  a <https://www.sodalite.eu/ontologies/tosca/Attribute>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_instances>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_al3fvc0breugr6koistmcn2mnc>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5kjtkaj007c1n1q8om4kfc90ek> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/available_instances> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_al3fvc0breugr6koistmcn2mnc>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/default>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "42"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5kjtkaj007c1n1q8om4kfc90ek>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/InterfaceClassifier_kehb6gfmpprvts6aa7gc6bncgp>
+  a <https://www.sodalite.eu/ontologies/tosca/Interface>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/Standard>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_q3vb3gvm0q0pftt5opteg7cv83>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_vuop2cjag4u784vvbo2dgjkrcd> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_q3vb3gvm0q0pftt5opteg7cv83>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/tosca.interfaces.node.lifecycle.Standard> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_vuop2cjag4u784vvbo2dgjkrcd>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/create>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_s1lf2u2j2fjru7t7lc83752ol3> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_s1lf2u2j2fjru7t7lc83752ol3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/implementation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ctc0ja6vctunhe2if3efqh3f1o> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ctc0ja6vctunhe2if3efqh3f1o>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/primary>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_sp9k1ptap9utf0cl8qcpf4o8s5>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_eu11kc1c8phu67fnf11ilorr71> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/content> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_sp9k1ptap9utf0cl8qcpf4o8s5>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/content>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> """---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: OpenStack tasks
+      debug:
+        msg: Insert OpenStack tasks
+""" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/path> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_eu11kc1c8phu67fnf11ilorr71>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/path>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "/home/yosu/Projects/Sodalite/Git/xopera-opera/examples/policy_triggers/playbooks/create.yaml" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_cc3bdecl7a6l6qruartq03cmb7>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_g57leq963ofupf05g68q13lpuk>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_ejn0u9sqgieet2p09dnmn4j9l2>;
+  <https://www.sodalite.eu/ontologies/tosca/triggers> <https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_q3pk2bpeg1odv1vqjkf291g6id>;
+  <https://www.sodalite.eu/ontologies/tosca/targets> <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ojat37ptq4kj816ud2hdvrjnhd> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_g57leq963ofupf05g68q13lpuk>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/cpu_upper_bound>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bhil4kd8hd1mp263hl8n6732nn>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t3aru3cs8sg03fl3emn1q86qc0>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t1mf0sc3lm7933emoagjpcjfkp>;
+  dcterms:description "The upper bound for the CPU" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/cpu_upper_bound> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bhil4kd8hd1mp263hl8n6732nn>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/float> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t3aru3cs8sg03fl3emn1q86qc0>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_34v4aq9o1t76e9o407ilgnqjla> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_34v4aq9o1t76e9o407ilgnqjla>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/less_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "20.0" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t1mf0sc3lm7933emoagjpcjfkp>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_ejn0u9sqgieet2p09dnmn4j9l2>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6q2b4jiiev71as7bp6lsqmqdg>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cgpsrc80jggmcslggvs8i02n66>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_50b9b5re0ct7utllqleukrnc72>;
+  dcterms:description "The amount by which to scale" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6q2b4jiiev71as7bp6lsqmqdg>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cgpsrc80jggmcslggvs8i02n66>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_50b9b5re0ct7utllqleukrnc72>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kqtc6fb0pgve166li7fr4pael9> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kqtc6fb0pgve166li7fr4pael9>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/less_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "-1"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/radon.triggers.scaling> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_q3pk2bpeg1odv1vqjkf291g6id>
+  a <https://www.sodalite.eu/ontologies/tosca/Trigger>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.triggers.scaling>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_lnggbq0qvs17mr98ha0sa70o24>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_gu4gjegrl9s80ru57hkj0488ia>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_25ubo4s889ijb7pgstsjhauvvc>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_80c3hurhiuvg4idfejrskqc5fh>;
+  dcterms:description "A trigger for scaling down" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_lnggbq0qvs17mr98ha0sa70o24>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/action>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cvhd4g9j2r9qovdfmsm5c9vo6e> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cvhd4g9j2r9qovdfmsm5c9vo6e>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/call_operation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_h7kfjpm50u5dv9p8m9gd4rv5t5>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8jgiomlau03jf025augf0kk26r> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_h7kfjpm50u5dv9p8m9gd4rv5t5>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/operation>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/radon.interfaces.scaling.ScaleDown.scale_down" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8jgiomlau03jf025augf0kk26r>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/inputs>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_igbjlrjebcotlf22e7hec06s5b> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_igbjlrjebcotlf22e7hec06s5b>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ljfi8esqj2v1qbttdsnet05skh> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ljfi8esqj2v1qbttdsnet05skh>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/get_property>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_k45p8n423fpv58lp0026ehncu3>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1vpaf0me9tpnaltesvkj4qfdfn> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/entity> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_k45p8n423fpv58lp0026ehncu3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/entity>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "SELF" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/property> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1vpaf0me9tpnaltesvkj4qfdfn>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/property>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "adjustment" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_gu4gjegrl9s80ru57hkj0488ia>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/event>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "scale_down_trigger" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_25ubo4s889ijb7pgstsjhauvvc>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/condition>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bqafcoo3m218muc7cplhocuk7b> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/constraint> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bqafcoo3m218muc7cplhocuk7b>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/constraint>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cmk8qusno00o5vfbrf2dd47siu> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cmk8qusno00o5vfbrf2dd47siu>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/not>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mu4s7it2diklnuuedh0a8sgvoe> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mu4s7it2diklnuuedh0a8sgvoe>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/and>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bhldkkcut52lqjrv8ggvmu8u79>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hd3qmrl9jb8ercjoe6ed6ksk9k> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bhldkkcut52lqjrv8ggvmu8u79>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_instances>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8v26q9u0s5p45eql4edjrj2rqp> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8v26q9u0s5p45eql4edjrj2rqp>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "42" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hd3qmrl9jb8ercjoe6ed6ksk9k>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_space>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_54svhn98u2d08u5f1v5l919j4> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_54svhn98u2d08u5f1v5l919j4>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1000" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_80c3hurhiuvg4idfejrskqc5fh>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/target_filter>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hi581kpogt4l69u27qp9n2sqm3> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hi581kpogt4l69u27qp9n2sqm3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/node>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ojat37ptq4kj816ud2hdvrjnhd>
+  a soda:SodaliteParameter;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/List_eum0p9ih1n7u9v63ks3460bapp> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/List_eum0p9ih1n7u9v63ks3460bapp>
+  a <https://www.sodalite.eu/ontologies/tosca/List>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_ns8uon5t2lkufgvvdlrqd8ld5p>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_euq6nqbkp9iqecvusat20ff9ug>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_2poaohmkh91g39b23o6s7058u2>;
+  <https://www.sodalite.eu/ontologies/tosca/triggers> <https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_eluleca22b2bt56gtodn7tij19>;
+  <https://www.sodalite.eu/ontologies/tosca/targets> <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1092tn634iqugfpk9fch7ubo6h> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_euq6nqbkp9iqecvusat20ff9ug>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/cpu_upper_bound>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_unu5rluj5equ2ijoqd6fioqshi>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_2vrbeuskqq8lniq3175rscm87a>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_gmnj7gh629s31k5ilm7ltsto5a>;
+  dcterms:description "The upper bound for the CPU" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_unu5rluj5equ2ijoqd6fioqshi>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/float> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_2vrbeuskqq8lniq3175rscm87a>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kidha65mumfp54lv98r6sk1ol6> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kidha65mumfp54lv98r6sk1ol6>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "80.0" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_gmnj7gh629s31k5ilm7ltsto5a>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_2poaohmkh91g39b23o6s7058u2>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_7h023orl0fsike641eojufbj9p>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ak3p6rvq5ddqhbkvd8413l7cs4>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1ghalnalavuih3nb3iiuvutsdr>;
+  dcterms:description "The amount by which to scale" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_7h023orl0fsike641eojufbj9p>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ak3p6rvq5ddqhbkvd8413l7cs4>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8p3qkq3khdik3scok2bojr72uj> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8p3qkq3khdik3scok2bojr72uj>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1ghalnalavuih3nb3iiuvutsdr>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> false .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_eluleca22b2bt56gtodn7tij19>
+  a <https://www.sodalite.eu/ontologies/tosca/Trigger>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.triggers.scaling>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mvlcipguj7bb84r0u80s8n7v51>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_pfejrl8baa7kntilc4jst2hsgu>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_29gvbaqdh5l51dt9gdioh7hqdh>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_fs5dq6b26unqoc9nt5j5atkjbi>;
+  dcterms:description "A trigger for scaling up" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mvlcipguj7bb84r0u80s8n7v51>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/event>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "scale_up_trigger" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_pfejrl8baa7kntilc4jst2hsgu>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/condition>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_du1modas7j4iadm1dbu6ie5enq> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_du1modas7j4iadm1dbu6ie5enq>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/constraint>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_chqqslh2diopchd6nit6hc9isg> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_chqqslh2diopchd6nit6hc9isg>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/not>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_n9d06tujpgr01gge70ugavo6ou> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_n9d06tujpgr01gge70ugavo6ou>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/and>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jh9jghjmgnco91fsrq04g1h80v>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tu6h00nq38g9mk95mtakpi8sak> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jh9jghjmgnco91fsrq04g1h80v>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_instances>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b9vajptld5sg42748pi91is6ue> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b9vajptld5sg42748pi91is6ue>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "42" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tu6h00nq38g9mk95mtakpi8sak>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_space>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4sf1dg6m8od6t58e2l800u80qf> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4sf1dg6m8od6t58e2l800u80qf>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1000" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_29gvbaqdh5l51dt9gdioh7hqdh>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/target_filter>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t0n8eb41jbssm0i7ni3pfemfoc> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t0n8eb41jbssm0i7ni3pfemfoc>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/node>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_fs5dq6b26unqoc9nt5j5atkjbi>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/action>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_7vgk05m4rqglp00qech957rgih> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_7vgk05m4rqglp00qech957rgih>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/call_operation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1lv74t4jp943drkfmue1dob8g6>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1l31jpnj8pgh793ub069lqjao8> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1lv74t4jp943drkfmue1dob8g6>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/operation>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/radon.interfaces.scaling.ScaleUp.scale_up" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1l31jpnj8pgh793ub069lqjao8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/inputs>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8i8mgt04d87spcvl6klk4722p> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8i8mgt04d87spcvl6klk4722p>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_61ahckjldeukkd5lh0e77a61va> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_61ahckjldeukkd5lh0e77a61va>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/get_property>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_vrplkmsrddjnlc3rsodr5jh50q>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1f102u5ioto61j7p2qmupc1f2n> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_vrplkmsrddjnlc3rsodr5jh50q>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/property>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "adjustment" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1f102u5ioto61j7p2qmupc1f2n>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/entity>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "SELF" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1092tn634iqugfpk9fch7ubo6h>
+  a soda:SodaliteParameter;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/List_e7m7nls2mndcl08riafkv546a9> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/List_e7m7nls2mndcl08riafkv546a9>
+  a <https://www.sodalite.eu/ontologies/tosca/List>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_rm1tlim2h14t646in7u4ji4oip>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_3dm8evv23hls6gbh9ffcmk4o8t>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_eepdhf0vfj7fs2qtm8mijuua5m> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_3dm8evv23hls6gbh9ffcmk4o8t>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/min_size>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rgfjhkqlbir206s2l8nd3t38il>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4t609htc5nu5ro1v4dk2tdin9u>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_c6ntokfvmpk2ko0v11vh232bc3>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_d9mo72upt178kfelvat4a0ki7k>;
+  dcterms:description "The minimum number of instances" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/min_size> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rgfjhkqlbir206s2l8nd3t38il>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_sm95g3agqmhjtitfejsle1rn0p> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_sm95g3agqmhjtitfejsle1rn0p>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_4t609htc5nu5ro1v4dk2tdin9u>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/status>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "supported" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/status> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_c6ntokfvmpk2ko0v11vh232bc3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> true .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_d9mo72upt178kfelvat4a0ki7k>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_eepdhf0vfj7fs2qtm8mijuua5m>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/max_size>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tghcstjb0b8dceomh52gfhffiq>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_c0m4nhak0belgto1n33t0ge0rm>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_3pgkn59mn14rf0ghhb15he4fnm>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6pi471crjg922j0laboicjshqt>;
+  dcterms:description "The maximum number of instances" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/max_size> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tghcstjb0b8dceomh52gfhffiq>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/required>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> true .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_c0m4nhak0belgto1n33t0ge0rm>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/tosca/integer> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_3pgkn59mn14rf0ghhb15he4fnm>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/constraints>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_s2ama366nqsnpiae2usvvhdto8> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_s2ama366nqsnpiae2usvvhdto8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_or_equal>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "10"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6pi471crjg922j0laboicjshqt>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/status>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "supported" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_vqrvr23g0u8u3uob40iqfbnhmt>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/operations> <https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_q63a6nllim2oup14l5s6ile29a> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/scale_down> a rdf:Property,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.ScaleDown>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_1j91fb03i5rri7uc8p2nlgu4g6>;
+  soda:hasName "scale_down" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_q63a6nllim2oup14l5s6ile29a>
+  a <https://www.sodalite.eu/ontologies/tosca/Operation>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/scale_down>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_p1rff2tnvjjol004m1rpu9se3g> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_p1rff2tnvjjol004m1rpu9se3g>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kci7fse3v41v5rs1cdb33r4u97>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_eaat4veavg5aungpr52i5mb1rt> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/value> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_kci7fse3v41v5rs1cdb33r4u97>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/value>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_eaat4veavg5aungpr52i5mb1rt>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "integer" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_l3fm8131aib9jd441gbrqsvhod>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/operations> <https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_vgml930s1ftn9rf7teiqvc2b5j> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/scale_up> a rdf:Property, <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.ScaleUp>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_bckvc7imump8bqevvdlg738tls>;
+  soda:hasName "scale_up" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_vgml930s1ftn9rf7teiqvc2b5j>
+  a <https://www.sodalite.eu/ontologies/tosca/Operation>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/scale_up>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tpo4b6mccbpelu3dcsvc27hpdb>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_r2ultoota9qvijm5ott7jetgji>;
+  dcterms:description "Operation for scaling up." .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_tpo4b6mccbpelu3dcsvc27hpdb>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6eae19qeeflv3bsc0atvpi1hin>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1ir418fv7urinh187sfp3gi682> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_6eae19qeeflv3bsc0atvpi1hin>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/value>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1ir418fv7urinh187sfp3gi682>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "integer" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_r2ultoota9qvijm5ott7jetgji>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/implementation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_h39epkdi8vcsamjn5q9vb0evkn> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_h39epkdi8vcsamjn5q9vb0evkn>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/primary>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_52504tvuhbpek0idflgv5t4snp>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1qcmsga9d6ahefc67t0ipe9k0j> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_52504tvuhbpek0idflgv5t4snp>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/path>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "/home/yosu/Projects/Sodalite/Git/xopera-opera/examples/policy_triggers/playbooks/scale_up.yaml" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_1qcmsga9d6ahefc67t0ipe9k0j>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/content>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> """---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Scale up tasks
+      debug:
+        msg: Insert tasks for scaling up
+""" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_5pmehp5mfnbh6ifgafbrjm7nr1>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/operations> <https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_2u6rfm55ffh608ockb5gno408m>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_muvn1nmir80uq3dj7mnl89fver> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/retrieve_info> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_2u6rfm55ffh608ockb5gno408m>
+  a <https://www.sodalite.eu/ontologies/tosca/Operation>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/retrieve_info>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_98p2iriceq6ub3qtudsh0h1kl4>;
+  dcterms:description "Operation for autoscaling." .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_98p2iriceq6ub3qtudsh0h1kl4>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/implementation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rck7ucrm8chvr3h2tfublrekk0> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rck7ucrm8chvr3h2tfublrekk0>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/primary>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mh92mll1ge3h2efje88lo5js1f>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hf0q5vsfhc1v9fh14oksv8smur> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mh92mll1ge3h2efje88lo5js1f>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/path>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "/home/yosu/Projects/Sodalite/Git/xopera-opera/examples/policy_triggers/playbooks/retrieve_info.yaml" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hf0q5vsfhc1v9fh14oksv8smur>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/content>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> """---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Retrieve info tasks
+      debug:
+        msg: Insert tasks for retrieving info before auto-scaling
+""" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/autoscale> a rdf:Property, <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.policies.scaling.AutoScale>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_n9b8h6gkp77ekod7lcsdhpurvl>;
+  soda:hasName "autoscale" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/OperationClassifer_muvn1nmir80uq3dj7mnl89fver>
+  a <https://www.sodalite.eu/ontologies/tosca/Operation>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/autoscale>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8h09i8k64v17go4qajvksb4cv3>;
+  dcterms:description "Operation for autoscaling." .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_8h09i8k64v17go4qajvksb4cv3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/implementation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rtrf75c75be5f9n88kj4db3c6n> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rtrf75c75be5f9n88kj4db3c6n>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/primary>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_oa7o1l4l7d0hh8oul3tu8g7pde>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ftvsdet8bf2cbbqr8hh54mrl2> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_oa7o1l4l7d0hh8oul3tu8g7pde>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/content>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> """---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Autoscale tasks
+      debug:
+        msg: Insert tasks for auto-scaling
+""" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_ftvsdet8bf2cbbqr8hh54mrl2>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/path>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "/home/yosu/Projects/Sodalite/Git/xopera-opera/examples/policy_triggers/playbooks/auto_scale.yaml" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/workstation> a <https://www.sodalite.eu/ontologies/tosca/tosca.nodes.Compute>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_f03i1c6idl2039i8i73mb4riad>;
+  soda:hasName "workstation" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/openstack_vm> a <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.nodes.OpenStack.VM>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_4gi8diu1hon1p6b24eg6tt9tvu>;
+  soda:hasName "openstack_vm" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/topology_template_outputs_vrejkmptbevamt5vcpuq7r5cga>
+  a <https://www.sodalite.eu/ontologies/tosca/Output>;
+  soda:hasContext <https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_jn0ec3kfk8jb9s20dnb3us7c3r>;
+  soda:hasName "topology_template_outputs_" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_f03i1c6idl2039i8i73mb4riad>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/attributes> <https://www.sodalite.eu/ontologies/workspace/1/radon/AttrClassifier_40pbogtvq29f41cshptdemklrg>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/AttrClassifier_ghpiabgct1caatl6t07g4cp88f> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/AttrClassifier_40pbogtvq29f41cshptdemklrg>
+  a <https://www.sodalite.eu/ontologies/tosca/Attribute>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/private_address>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "localhost" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/AttrClassifier_ghpiabgct1caatl6t07g4cp88f>
+  a <https://www.sodalite.eu/ontologies/tosca/Attribute>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/public_address>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "localhost" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_4gi8diu1hon1p6b24eg6tt9tvu>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/requirements> <https://www.sodalite.eu/ontologies/workspace/1/radon/ReqClassifier_5gf53t9ma9lb4j26cmecf7hubu>;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_oopo2qsd22tcipkqdjktj8gabr>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_kql5setd28bvcp7uqfvqru7bam>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_mpq6fjg868uvc8894ado15pksl>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_9dhvuhhkmmv0sh5ov6e8cra51e>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_6mr5n2babbvma98m1i2pn4g3mj> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_oopo2qsd22tcipkqdjktj8gabr>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/key_name>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "my_key" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_kql5setd28bvcp7uqfvqru7bam>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/network>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "provider_64_net" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_mpq6fjg868uvc8894ado15pksl>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/flavor>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "m1.xsmall" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_9dhvuhhkmmv0sh5ov6e8cra51e>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/image>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "centos7" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_6mr5n2babbvma98m1i2pn4g3mj>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/name>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "HostVM" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ReqClassifier_5gf53t9ma9lb4j26cmecf7hubu>
+  a <https://www.sodalite.eu/ontologies/tosca/Requirement>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/host>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_9m4j7m1pn1c82s39o32eig4beu> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_9m4j7m1pn1c82s39o32eig4beu>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/node>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/workstation> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_1j91fb03i5rri7uc8p2nlgu4g6>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_edueuam6269gudahgbk8cfhbn3>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_q7ulhjorjp71um099shkttof1e> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_edueuam6269gudahgbk8cfhbn3>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/cpu_upper_bound>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "10"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_q7ulhjorjp71um099shkttof1e>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "-1"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_bckvc7imump8bqevvdlg738tls>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_6apdlfm6gkrhk6uokfl2ms5rk7>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_dcn1mbs08sfp6gt0c358nild0h> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_6apdlfm6gkrhk6uokfl2ms5rk7>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/adjustment>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_dcn1mbs08sfp6gt0c358nild0h>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/cpu_upper_bound>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "90"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_n9b8h6gkp77ekod7lcsdhpurvl>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/properties> <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_1o4g308l9pk7hv7cskva96lea7>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_avsn3fjpoaalhgs6mdsb5mqnlv>;
+  <https://www.sodalite.eu/ontologies/tosca/triggers> <https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_dpgiokmugqprnirs2g6s8jqh7a>;
+  <https://www.sodalite.eu/ontologies/tosca/targets> <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_21foj8894m4m8llaiionlekt1j> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_1o4g308l9pk7hv7cskva96lea7>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/max_size>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "10"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/PropClassifier_avsn3fjpoaalhgs6mdsb5mqnlv>
+  a <https://www.sodalite.eu/ontologies/tosca/Property>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/min_size>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "3"^^xsd:int .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/TriggerClassifer_dpgiokmugqprnirs2g6s8jqh7a>
+  a <https://www.sodalite.eu/ontologies/tosca/Trigger>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/radon.triggers.scaling>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_efcj6qipvkknk0a6dh1oehvdt2>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jmo0uvl87e52k7veqn20rd9elh>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_p0sgv202iamf5vg9287qtkn2f5>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_qoe6s4um96u2cccc280qg6s7n2>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t41o9reoo1bib1284eiud3fq5r>;
+  dcterms:description "A trigger for autoscaling" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_efcj6qipvkknk0a6dh1oehvdt2>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/condition>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_25dncp6lma6njmfmn5pk3qo3im>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_94hocees0mbv13iu3ksjtts3vd>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_i111unt01st2kanhfkkci4rgk1>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cu1556hr35dfh591dgvbjr607s> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_25dncp6lma6njmfmn5pk3qo3im>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/evaluations>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> 2 .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_94hocees0mbv13iu3ksjtts3vd>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/method>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "average" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_i111unt01st2kanhfkkci4rgk1>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/constraint>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b3pebero04qdkdt66ufqs4a38k> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b3pebero04qdkdt66ufqs4a38k>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/not>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jf3rs7kt6senbg4lvokfsi80m9> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jf3rs7kt6senbg4lvokfsi80m9>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/and>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rufvghp2ulcf4lbfunn2tfngqd>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b3sbph69nj3q4p58j3nkr57hs0> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_rufvghp2ulcf4lbfunn2tfngqd>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_instances>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_o32ldtcfbkdlkfvr4nu7ll8f8> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_o32ldtcfbkdlkfvr4nu7ll8f8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "42" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_b3sbph69nj3q4p58j3nkr57hs0>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/available_space>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_q7gkp2m6qttgjistmoi1cu7ij8> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_q7gkp2m6qttgjistmoi1cu7ij8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/greater_than>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "1000" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cu1556hr35dfh591dgvbjr607s>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/period>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "60 sec" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_jmo0uvl87e52k7veqn20rd9elh>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/event>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "auto_scale_trigger" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_p0sgv202iamf5vg9287qtkn2f5>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/action>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_lifqrrqcc535g8217s8fbkjcph> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_lifqrrqcc535g8217s8fbkjcph>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/call_operation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hlkiaks39fru1q5pcj3vo8tci8>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_l3bgfsqmi16eua81v2e13a5ruq> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_hlkiaks39fru1q5pcj3vo8tci8>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/operation>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/radon.interfaces.scaling.AutoScale.autoscale" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_l3bgfsqmi16eua81v2e13a5ruq>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/inputs> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_qoe6s4um96u2cccc280qg6s7n2>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/target_filter>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bafe0ln079rkgj98eh9v277rvb>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mtn34qu7urg07tl2qr1ir915e5>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_78u2lapb455o50cj1o6b63gbq0> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_bafe0ln079rkgj98eh9v277rvb>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/requirement>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/openstack_vm.host" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_mtn34qu7urg07tl2qr1ir915e5>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/capability>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/openstack_vm.host" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_78u2lapb455o50cj1o6b63gbq0>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/node>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/openstack_vm> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_t41o9reoo1bib1284eiud3fq5r>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/action>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cmerio7ogic5r2joqrijajaeh3> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_cmerio7ogic5r2joqrijajaeh3>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/call_operation>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_57b8a4bmdkmo8nr86glr5kb8hf>,
+    <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5o3he788ju98fr5u7ecvbimiau> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_57b8a4bmdkmo8nr86glr5kb8hf>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/operation>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "radon/radon.interfaces.scaling.AutoScale.retrieve_info" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_5o3he788ju98fr5u7ecvbimiau>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/inputs> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_21foj8894m4m8llaiionlekt1j>
+  a <https://www.sodalite.eu/ontologies/tosca/Target>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/List_jprajecoeukk1pe52agt6qtff3> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/List_jprajecoeukk1pe52agt6qtff3>
+  a <https://www.sodalite.eu/ontologies/tosca/List>;
+  <https://www.sodalite.eu/ontologies/tosca/hasObjectValue> <https://www.sodalite.eu/ontologies/workspace/1/radon/openstack_vm> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Desc_jn0ec3kfk8jb9s20dnb3us7c3r>
+  a soda:SodaliteDescription;
+  <https://www.sodalite.eu/ontologies/tosca/output> <https://www.sodalite.eu/ontologies/workspace/1/radon/Output_1rpu2jrgucv7ld5uahbgu3501t> .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/Output_1rpu2jrgucv7ld5uahbgu3501t>
+  a <https://www.sodalite.eu/ontologies/tosca/Feature>;
+  :classifies <https://www.sodalite.eu/ontologies/workspace/1/radon/public_ip>;
+  :hasParameter <https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_3lflscvv12irmbosaaqmon7u8h>;
+  dcterms:description "The public IP of the provisioned VM" .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/public_ip> a rdf:Property .
+
+<https://www.sodalite.eu/ontologies/workspace/1/radon/ParamClassifier_3lflscvv12irmbosaaqmon7u8h>
+  a soda:SodaliteParameter;
+  :classifies <https://www.sodalite.eu/ontologies/tosca/type>;
+  <https://www.sodalite.eu/ontologies/tosca/hasDataValue> "string" .
