@@ -2381,7 +2381,7 @@ DUL:hasParameter
 <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root>
   rdf:type owl:Class ;
   dcterms:description "The TOSCA Artifact Type all other TOSCA Artifact Types derive from" ;
-  rdfs:subClassOf soda:SodaliteSituation ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.entity.Root>
 .
 <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.File>
   rdf:type owl:Class ;
@@ -2410,10 +2410,10 @@ DUL:hasParameter
   rdf:type owl:Class ;
   dcterms:description "Artifact for the interpreted Python language" ;
   rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Implementation> ;
-  tosca:mime_type "application/x-python"
-  tosca:file_ext "py"
+  :mime_type "application/x-python" ;
+  :file_ext "py" ;
 .
-<https://www.sodalite.eu/ontologies/tosca/ttosca.artifacts.template>
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.template>
   rdf:type owl:Class ;
   dcterms:description "TOSCA base type for template type artifacts" ;
   rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root> ;  
