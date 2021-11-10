@@ -2359,3 +2359,62 @@ DUL:hasParameter
   rdf:type owl:ObjectProperty ;
   rdfs:subPropertyOf soda:specification ;
 .
+:Artifact
+  rdf:type owl:Class ;
+  rdfs:subClassOf soda:SodaliteConcept;
+.
+:file_ext
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SodaliteDescription ;
+  rdfs:range :string ;
+.
+:mime_type
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :SodaliteDescription ;
+  rdfs:range :string ;
+.
+:artifacts
+  rdf:type owl:ObjectProperty ;
+  rdfs:range :Artifact ;
+  rdfs:subPropertyOf soda:specification ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root>
+  rdf:type owl:Class ;
+  dcterms:description "The TOSCA Artifact Type all other TOSCA Artifact Types derive from" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.entity.Root>
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.File>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Deployment>
+  rdf:type owl:Class ;
+  dcterms:description "TOSCA base type for deployment artifacts" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Deployment.Image>
+  rdf:type owl:Class ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Deployment> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Deployment.Image.VM>
+  rdf:type owl:Class ;
+  dcterms:description "Virtual Machine (VM) Image" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Deployment.Image> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Implementation>
+  rdf:type owl:Class ;
+  dcterms:description "TOSCA base type for implementation artifacts" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root> ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Implementation.Python>
+  rdf:type owl:Class ;
+  dcterms:description "Artifact for the interpreted Python language" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Implementation> ;
+  :mime_type "application/x-python" ;
+  :file_ext "py" ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.template>
+  rdf:type owl:Class ;
+  dcterms:description "TOSCA base type for template type artifacts" ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.artifacts.Root> ;  
+.
