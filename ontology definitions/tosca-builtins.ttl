@@ -278,6 +278,10 @@ DUL:hasParameter
   rdf:type :List ;
   :hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Node> ;
 .
+:List_9
+  rdf:type :List ;
+  :hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.capabilities.Endpoint> ;
+.
 :Output
   rdf:type owl:Class ;
   rdfs:subClassOf soda:SodaliteSituation ;
@@ -665,6 +669,12 @@ DUL:hasParameter
   DUL:hasParameter :SodaliteParameter_165 ;
   DUL:hasParameter :SodaliteParameter_166 ;
 .
+:Property_45
+  rdf:type :Property ;
+  DUL:classifies :credential ;
+  DUL:hasParameter :SodaliteParameter_169 ;
+  DUL:hasParameter :SodaliteParameter_170 ;
+.
 :Property_5
   rdf:type :Property ;
   dcterms:description "ID of an existing volume (that is in the accessible scope of the requesting application)." ;
@@ -781,6 +791,13 @@ DUL:hasParameter
   rdf:type soda:SodaliteDescription ;
   :valid_target_types :SodaliteParameter_167 ;
 .
+
+:SodaliteDescription_18
+  rdf:type soda:SodaliteDescription ;
+  :valid_target_types :SodaliteParameter_168 ;
+  :properties :Property_45 ;
+.
+
 :SodaliteDescription_2
   rdf:type soda:SodaliteDescription ;
   :properties :Property_17 ;
@@ -1211,6 +1228,20 @@ DUL:hasParameter
 :SodaliteParameter_167
   rdf:type soda:SodaliteParameter ;
   :hasObjectValue :List_8 ;
+.
+:SodaliteParameter_168
+  rdf:type soda:SodaliteParameter ;
+  :hasObjectValue :List_9 ;
+.
+:SodaliteParameter_169
+  rdf:type soda:SodaliteParameter ;
+   DUL:classifies :type ;
+  :hasObjectValue <https://www.sodalite.eu/ontologies/tosca/tosca.datatypes.Credential> ;
+.
+:SodaliteParameter_170
+  rdf:type soda:SodaliteParameter ;
+  DUL:classifies :required ;
+  :hasDataValue "false"^^xsd:boolean ;
 .
 :SodaliteParameter_17
   rdf:type soda:SodaliteParameter ;
@@ -1726,6 +1757,9 @@ DUL:hasParameter
 :create
   rdf:type rdf:Property ;
 .
+:credential
+  rdf:type rdf:Property ;
+.
 :default
   rdf:type rdf:Property ;
 .
@@ -2228,6 +2262,12 @@ DUL:hasParameter
   dcterms:description "The HostedOn type represents a hosting relationship between two nodes." ;
   rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.Root> ;
   soda:hasContext :SodaliteDescription_9 ;
+.
+<https://www.sodalite.eu/ontologies/tosca/tosca.relationships.ConnectsTo>
+  rdf:type owl:Class ;
+  dcterms:description "The ConnectsTo type represents a connecting relationship between two nodes." ;
+  rdfs:subClassOf <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.Root> ;
+  soda:hasContext :SodaliteDescription_18 ;
 .
 <https://www.sodalite.eu/ontologies/tosca/tosca.relationships.Root>
   rdf:type owl:Class ;
